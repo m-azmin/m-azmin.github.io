@@ -10,18 +10,39 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap"rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Monsterrat&display=swap"rel="stylesheet">
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
+		<header>
+			<div class="navbar">
+				<ul>
+					<li><a style="font-family: Arial, Helvetica, sans-serif;" href="#">Home</a></li>
+					<li><a style="font-family: Arial, Helvetica, sans-serif;" href="#">About</a></li>
+					<li><a style="font-family: Arial, Helvetica, sans-serif;" href="#">Contact</a></li>
+				</ul>
+			</div>
 
+            <div>
+					<label for="language-select">Language:</label>
+					<select style="height: 50px;" id="language-select">
+						<option value="ms">Bahasa Melayu</option>
+						<option value="en">English</option>
+						<option value="fr">Français</option>
+					</select>
+			</div>
+		</header>
 		<!-- Wrapper -->
 			<div id="wrapper">
 
+				
+
 				<!-- Header -->
 					<header id="header" class="alt">
-						<span class="logo"><img src="images/logo.svg" alt="" /></span>
-						<h1>My Website</h1>
-						<p>Welcome to my portfolio website<br />
+						<span class="logo"><img src="images/logs.png" alt="" /></span>
+						<h1 style="font-family: 'Monsterrat', sans-serif;">My Website</h1>
+						<p style="font-family: 'Fira Sans', sans-serif;"> Welcome to my portfolio website<br />
 						A showcase of my projects and my abilities</a>.</p>
 					</header>
 
@@ -43,16 +64,15 @@
 								<div class="spotlight">
 									<div class="content">
 										<header class="major">
-											<h2>Ipsum sed adipiscing</h2>
+											<h2>My Name is Muhammad Azmin Muhamad Yusmizan</h2>
 										</header>
-										<p>Sed lorem ipsum dolor sit amet nullam consequat feugiat consequat magna
-										adipiscing magna etiam amet veroeros. Lorem ipsum dolor tempus sit cursus.
-										Tempus nisl et nullam lorem ipsum dolor sit amet aliquam.</p>
+										<p>I am currently a first year student in electrical engineering and 
+											IT industrial course at IUT Paul Sabatier, Toulouse.</p>
 										<ul class="actions">
 											<li><a href="generic.html" class="button">Check it out</a></li>
 										</ul>
 									</div>
-									<span class="image"><img src="images/pic01.jpg" alt="" /></span>
+									<span class="image"><img src="images/umberto-jXd2FSvcRr8-unsplash.jpg" alt="" /></span>
 								</div>
 							</section>
 
@@ -177,6 +197,14 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+				const languageSelect = document.getElementById('language-select');
+
+				languageSelect.addEventListener('change', ()=>{
+					const languageCode = languageSelect.value;
+					document.documentElement.lang = languageCode;
+				});
+			</script>
 
 	</body>
 </html>
