@@ -36,7 +36,7 @@ body {
 .navbar{
 	width: 85%;
 	margin: auto;
-	padding: 35px 0;
+	padding: 35px 0%;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -2024,6 +2024,8 @@ input, select, textarea {
 				color: #ffffff !important;
 			}
 
+
+
 /* Form */
 
 	form {
@@ -2466,8 +2468,8 @@ input, select, textarea {
 
 	ul {
 		list-style: disc;
-		margin: 0 0 2em 0;
-		padding-left: 1em;
+		margin: 0 0 -1em 0;
+		padding-left: 0em;
 	}
 
 		ul li {
@@ -3159,7 +3161,7 @@ input, select, textarea {
 				#header.alt .logo img {
 					display: block;
 					margin: 0 auto;
-					max-width: 75%;
+					max-width: 20%;
 				}
 
 		@media screen and (max-width: 1280px) {
