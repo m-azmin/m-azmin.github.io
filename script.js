@@ -46,3 +46,27 @@ document.addEventListener('click', (e) => {
     langMenu.style.display = 'none';
   }
 });
+
+const filterButtons = document.querySelectorAll('.filter-btn');
+const projectCards = document.querySelectorAll('.project-card');
+
+filterButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const filter = button.getAttribute('data-filter');
+
+    // Toggle active button
+    filterButtons.forEach(btn => btn.classList.remove('active'));
+    button.classList.add('active');
+
+    // Show/hide cards
+    projectCards.forEach(card => {
+      const categories = card.getAttribute('data-category').split(' ');
+
+      if (filter === 'all' || categories.includes(filter)) {
+        card.style.display = 'flex'; // or block, depending on your layout
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  });
+});
