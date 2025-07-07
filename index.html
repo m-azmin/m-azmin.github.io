@@ -1,24 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>glo-folio-multilingual-craft</title>
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Azmin Yusmizan | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>Azmin Yusmizan</h1>
+      <ul class="nav-links">
+        <li><a href="#home" data-i18n="nav.home">Home</a></li>
+        <li><a href="#education" data-i18n="nav.education">Education</a></li>
+        <li><a href="#about" data-i18n="nav.about">About</a></li>
+        <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+        <li><a href="#hobbies" data-i18n="nav.hobbies">Hobbies</a></li>
+        <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+     <div class="language-dropdown">
+  <button id="langBtn">
+    🌐 <span id="currentLang">EN</span>
+  </button>
+  <ul class="lang-menu" id="langMenu">
+    <li data-lang="en"><span class="code">EN</span> English</li>
+    <li data-lang="ms"><span class="code">MY</span> Bahasa Melayu</li>
+    <li data-lang="fr"><span class="code">FR</span> Français</li>
+    <li data-lang="es"><span class="code">ES</span> Español</li>
+  </ul>
+</div>
 
-    <meta property="og:title" content="glo-folio-multilingual-craft" />
-    <meta property="og:description" content="Lovable Generated Project" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-  </head>
+    </nav>
+  </header>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<section id="home" class="section hero-section">
+  <div class="hero-wrapper">
+    <div class="hero-image">
+      <img src="img/profile.jpg" alt="Azmin Yusmizan">
+    </div>
+    <div class="hero-text">
+      <h2>Hello, I’m Azmin</h2>
+      <p>Electrical Engineering Student | Embedded Systems Enthusiast</p>
+      <a href="#projects" class="btn">See My Work</a>
+    </div>
+  </div>
+</section>
+
+
+<section id="about" class="section fade-in">
+  <h2>About Me</h2>
+  <div class="about-card">
+    <div class="about-text">
+      <p>
+        I’m Azmin Yusmizan, an electrical engineering student with a deep passion for innovation, embedded systems, and sustainable technologies. Over the years, I’ve cultivated a strong technical foundation in electronics, PCB design, signal processing, and automation — shaped by a unique international journey across Malaysia and France.
+      </p>
+      <p>
+        Studying at institutions like INSA Lyon, IUT Paul Sabatier Toulouse, and Université de Tours has exposed me to diverse technical cultures and collaborative projects, pushing me to be both detail-oriented and adaptable. Whether it’s building smart energy systems, programming embedded devices, or simulating high-frequency antennas, I enjoy turning complex ideas into practical, elegant solutions.
+      </p>
+      <p>
+        Beyond academics, I’m driven by curiosity, creativity, and a love for continuous learning. I find joy in reading, cooking, sketching, and playing the guitar — all of which balance the intensity of engineering with moments of calm and expression.
+      </p>
+
+      <div class="stats-grid">
+        <div class="stat-box">
+          <h3>4+</h3>
+          <p>Years in France</p>
+        </div>
+        <div class="stat-box">
+          <h3>3</h3>
+          <p>Countries Studied</p>
+        </div>
+        <div class="stat-box">
+          <h3>12+</h3>
+          <p>Technical Projects</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-image">
+      <img src="img/about-laptop.jpg" alt="Laptop and workspace" />
+    </div>
+  </div>
+</section>
+
+<section id="education" class="section fade-in">
+  <h2>Education</h2>
+  <div class="timeline">
+
+    <div class="edu-card">
+      <div class="edu-icon">🎓</div>
+      <div class="edu-content">
+        <h3>INSA Lyon</h3>
+        <span class="edu-date">2024 – Present</span>
+        <p>Bachelor in Electrical Engineering with specialization in embedded systems, electronics, and automation.</p>
+      </div>
+    </div>
+
+    <div class="edu-card">
+      <div class="edu-icon">🔌</div>
+      <div class="edu-content">
+        <h3>IUT Paul Sabatier Toulouse III</h3>
+        <span class="edu-date">2022 – 2024</span>
+        <p>DUT/BUT in Electrical Engineering and Industrial Informatics. Gained practical experience in automation, microcontrollers, and signal processing.</p>
+      </div>
+    </div>
+
+    <div class="edu-card">
+      <div class="edu-icon">🗣️</div>
+      <div class="edu-content">
+        <h3>IUT de Tours – Université de Tours</h3>
+        <span class="edu-date">2021 – 2022</span>
+        <p>Completed a French language and scientific foundation year for integration into the French higher education system.</p>
+      </div>
+    </div>
+
+    <div class="edu-card">
+      <div class="edu-icon">🏫</div>
+      <div class="edu-content">
+        <h3>Sekolah Menengah Sains Jeli</h3>
+        <span class="edu-date">2016 – 2020</span>
+        <p>Malaysian Science Secondary School. Focused on physics, mathematics, and general sciences.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+<section id="projects" class="section fade-in">
+  <h2 data-i18n="projects.title">Projects</h2>
+  <div class="project-grid">
+    
+    <div class="project-card">
+      <span class="badge">INSA Lyon</span>
+      <img src="img/brain.jpg" alt="Brain image" />
+      <h3>Medical Image Classification</h3>
+      <p>Developed machine learning algorithms for brain image analysis and classification. Applied numerical analysis techniques and data processing for medical diagnostics.</p>
+      <div class="tags">Image Processing • Data Analysis • C++</div>
+    </div>
+
+    <div class="project-card">
+      <span class="badge">INSA Lyon</span>
+      <img src="img/energy.jpg" alt="Regelec" />
+      <h3>REGELEC Smart Energy Startup</h3>
+      <p>Co-founded startup developing intelligent electrical regulation systems. Business plan, prototype, and mobile app for optimized consumption.</p>
+      <div class="tags">Startup • Energy • Mobile App</div>
+    </div>
+
+    <div class="project-card">
+      <span class="badge">IUT Paul Sabatier</span>
+      <img src="img/robot.jpg" alt="Line follower robot" />
+      <h3>Autonomous Line Follower Robot</h3>
+      <p>Designed complete robotic system from schematic to PCB. Integrated sensors, motors, and path-following control algorithms.</p>
+      <div class="tags">Robotics • PCB • Control</div>
+    </div>
+
+    <!-- Add more cards here -->
+
+  </div>
+</section>
+
+<section id="hobbies" class="section fade-in">
+  <h2 data-i18n="hobbies.title">Hobbies</h2>
+  <div class="project-grid">
+    <div class="project-card">
+      <img src="img/books.jpg" alt="Reading books" />
+      <h3>Reading</h3>
+      <p>I enjoy immersing myself in literature, science articles, and history to expand my knowledge and imagination.</p>
+    </div>
+
+    <div class="project-card">
+      <img src="img/cooking.jpg" alt="Cooking" />
+      <h3>Cooking</h3>
+      <p>I find peace in the kitchen — experimenting with Malaysian dishes and learning world cuisines.</p>
+    </div>
+
+    <div class="project-card">
+      <img src="img/jogging.jpg" alt="Jogging" />
+      <h3>Jogging</h3>
+      <p>Jogging clears my mind and keeps me energized, especially in nature or around campus parks.</p>
+    </div>
+
+    <div class="project-card">
+      <img src="img/art.jpg" alt="Art" />
+      <h3>Digital & Traditional Art</h3>
+      <p>I explore both digital illustrations and traditional sketches as a form of creative expression.</p>
+    </div>
+
+    <div class="project-card">
+      <img src="img/guitar.jpg" alt="Guitar" />
+      <h3>Playing Guitar</h3>
+      <p>Music helps me relax — I love playing acoustic melodies and learning new chords on my guitar.</p>
+    </div>
+  </div>
+</section>
+
+  <section id="contact" class="section fade-in">
+    <h2 data-i18n="contact.title">Contact Me</h2>
+    <p data-i18n="contact.text">
+      Feel free to reach out via email: 
+      <a href="mailto:muhammad-azmin.muhamad-yusmizan@insa-lyon.fr">muhammad-azmin.muhamad-yusmizan@insa-lyon.fr</a><br>
+      LinkedIn: <a href="#" target="_blank">(insert-link)</a><br>
+      GitHub: <a href="#" target="_blank">(insert-link)</a>
+    </p>
+  </section>
+
+  <footer>
+    <p>© 2025 Azmin Yusmizan. All rights reserved.</p>
+  </footer>
+</body>
 </html>
