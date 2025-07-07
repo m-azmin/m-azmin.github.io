@@ -13,6 +13,7 @@
   </head>
   <body>
     <header>
+      <button class="hamburger" id="hamburger">&#9776;</button>
       <nav>
         <h1>Azmin Yusmizan</h1>
         <ul class="nav-links">
@@ -51,52 +52,32 @@
       </div>
     </section>
 
-    <section id="about" class="section fade-in">
+    <section id="about" class="about-section">
       <h2>About Me</h2>
+
       <div class="about-card">
         <div class="about-text">
           <p>
-            I’m Azmin Yusmizan, an electrical engineering student with a deep
-            passion for innovation, embedded systems, and sustainable
-            technologies. Over the years, I’ve cultivated a strong technical
-            foundation in electronics, PCB design, signal processing, and
-            automation — shaped by a unique international journey across
-            Malaysia and France.
+            I’m Azmin Yusmizan, an electrical engineering student with a deep passion for innovation, embedded systems, and sustainable technologies. Over the years, I’ve cultivated a strong technical foundation in electronics, PCB design, signal processing, and automation — shaped by a unique international journey across Malaysia and France.
           </p>
           <p>
-            Studying at institutions like INSA Lyon, IUT Paul Sabatier Toulouse,
-            and Université de Tours has exposed me to diverse technical cultures
-            and collaborative projects, pushing me to be both detail-oriented
-            and adaptable. Whether it’s building smart energy systems,
-            programming embedded devices, or simulating high-frequency antennas,
-            I enjoy turning complex ideas into practical, elegant solutions.
+            Studying at institutions like INSA Lyon, IUT Paul Sabatier Toulouse, and Université de Tours has exposed me to diverse technical cultures and collaborative projects, pushing me to be both detail-oriented and adaptable. Whether it’s building smart energy systems, programming embedded devices, or simulating high-frequency antennas, I enjoy turning complex ideas into practical, elegant solutions.
           </p>
-          <p>
-            Beyond academics, I’m driven by curiosity, creativity, and a love
-            for continuous learning. I find joy in reading, cooking, sketching,
-            and playing the guitar — all of which balance the intensity of
-            engineering with moments of calm and expression.
-          </p>
-
-          <div class="stats-grid">
-            <div class="stat-box">
-              <h3>4+</h3>
-              <p>Years in France</p>
-            </div>
-            <div class="stat-box">
-              <h3>3</h3>
-              <p>Countries Studied</p>
-            </div>
-            <div class="stat-box">
-              <h3>12+</h3>
-              <p>Technical Projects</p>
-            </div>
-          </div>
+          <p>Beyond academics, I’m driven by curiosity, creativity, and a love for continuous learning. I find joy in reading, cooking, sketching, and playing the guitar — all of which balance the intensity of engineering with moments of calm and expression.</p>
         </div>
 
         <div class="about-image">
-          <img src="img/about-laptop.jpg" alt="Laptop and workspace" />
+          <img
+            src="img/about-laptop.jpg"
+            alt="Laptop or profile-related image"
+          />
         </div>
+      </div>
+
+      <div class="stats-container">
+        <div class="stat-box"><strong>4+</strong><br />Years in France</div>
+        <div class="stat-box"><strong>3</strong><br />Countries Studied</div>
+        <div class="stat-box"><strong>12+</strong><br />Technical Projects</div>
       </div>
     </section>
 
@@ -495,51 +476,57 @@
     </section>
 
     <section id="contact" class="section fade-in">
-  <h2>Contact Me</h2>
+      <h2>Contact Me</h2>
 
-  <div class="contact-grid">
+      <div class="contact-grid">
+        <div class="contact-item">
+          <div class="contact-icon">📧</div>
+          <div class="contact-info">
+            <h4>Email</h4>
+            <a href="mailto:muhammad-azmin.muhamad-yusmizan@insa-lyon.fr"
+              >muhammad-azmin.muhamad-yusmizan@insa-lyon.fr</a
+            >
+          </div>
+        </div>
 
-    <div class="contact-item">
-      <div class="contact-icon">📧</div>
-      <div class="contact-info">
-        <h4>Email</h4>
-        <a href="mailto:muhammad-azmin.muhamad-yusmizan@insa-lyon.fr">muhammad-azmin.muhamad-yusmizan@insa-lyon.fr</a>
+        <div class="contact-item">
+          <div class="contact-icon">💼</div>
+          <div class="contact-info">
+            <h4>LinkedIn</h4>
+            <a
+              href="https://www.linkedin.com/in/muhammad-azmin-muhamad-yusmizan-5a4367266/"
+              target="_blank"
+              >linkedin.com/in/muhammad-azmin-muhamad-yusmizan-5a4367266/</a
+            >
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">🐱</div>
+          <div class="contact-info">
+            <h4>GitHub</h4>
+            <a href="https://github.com/m-azmin" target="_blank"
+              >github.com/m-azmin</a
+            >
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div class="contact-info">
+            <h4>Location</h4>
+            <p>Villeurbanne, Lyon, France</p>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <div class="contact-item">
-      <div class="contact-icon">💼</div>
-      <div class="contact-info">
-        <h4>LinkedIn</h4>
-        <a href="https://www.linkedin.com/in/muhammad-azmin-muhamad-yusmizan-5a4367266/" target="_blank">linkedin.com/in/muhammad-azmin-muhamad-yusmizan-5a4367266/</a>
-      </div>
-    </div>
-
-    <div class="contact-item">
-      <div class="contact-icon">🐱</div>
-      <div class="contact-info">
-        <h4>GitHub</h4>
-        <a href="https://github.com/m-azmin" target="_blank">github.com/m-azmin</a>
-      </div>
-    </div>
-
-    <div class="contact-item">
-      <div class="contact-icon">📍</div>
-      <div class="contact-info">
-        <h4>Location</h4>
-        <p>Villeurbanne, Lyon, France</p>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<form class="contact-form">
-  <input type="text" placeholder="Your Name" required />
-  <input type="email" placeholder="Your Email" required />
-  <textarea rows="4" placeholder="Your Message" required></textarea>
-  <button type="submit">Send</button>
-</form>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
 
     <footer>
       <p>© 2025 Azmin Yusmizan. All rights reserved.</p>
