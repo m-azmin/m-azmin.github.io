@@ -1,0 +1,34 @@
+{
+        "nav": {
+            "home": "Accueil",
+            "about": "À propos",
+            "education": "Formation",
+            "experience": "Expérience",
+            "hobbies": "Loisirs",
+            "contact": "Contact"
+        },
+        "home": {
+            "greeting": "Bonjour, je suis Azmin",
+            "subtitle": "Étudiant en Génie Électrique | Passionné de Systèmes Embarqués",
+            "cta": "Voir mes projets"
+        },
+        "about": {
+            "title": "À propos de moi",
+            "description": "Je suis un étudiant passionné par les systèmes embarqués, l’électronique et le traitement du signal. Je suis animé par la curiosité et le désir de créer des choses utiles."
+        },
+        "education": {
+            "title": "Formation"
+        },
+        "experience": {
+            "title": "Expérience",
+            "description": "En 2024, j’ai effectué un stage chez Num’axes, une entreprise française spécialisée dans le développement de dispositifs électroniques pour animaux. Ma mission principale était de concevoir et prototyper une carte électronique (PCB) pour un collier anti-aboiement, intégrant des composants analogiques et numériques."
+        },
+        "hobbies": {
+            "title": "Loisirs",
+            "list": "Lecture, Cuisine, Jogging, Arts Numériques & Traditionnels, Guitare"
+        },
+        "contact": {
+            "title": "Contactez-moi",
+            "text": "N'hésitez pas à me contacter par email :"
+        }
+    }

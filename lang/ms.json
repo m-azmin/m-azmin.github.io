@@ -1,0 +1,34 @@
+{
+        "nav": {
+            "home": "Laman Utama",
+            "about": "Tentang Saya",
+            "education": "Pendidikan",
+            "experience": "Pengalaman",
+            "hobbies": "Hobi",
+            "contact": "Hubungi"
+        },
+        "home": {
+            "greeting": "Hai, saya Azmin",
+            "subtitle": "Pelajar Kejuruteraan Elektrik | Peminat Sistem Tertanam",
+            "cta": "Lihat Projek Saya"
+        },
+        "about": {
+            "title": "Tentang Saya",
+            "description": "Saya seorang pelajar yang berminat dalam sistem tertanam, elektronik, dan pemprosesan isyarat. Saya terdorong oleh rasa ingin tahu dan semangat untuk mencipta sesuatu yang bermakna."
+        },
+        "education": {
+            "title": "Pendidikan"
+        },
+        "experience": {
+            "title": "Pengalaman",
+            "description": "Pada tahun 2024, saya menjalani latihan industri di Num’axes, sebuah syarikat Perancis yang mengkhusus dalam pembangunan peranti elektronik untuk haiwan. Tugas utama saya adalah mereka bentuk dan prototaip papan litar bercetak (PCB) untuk kolar anjing anti-menyalak, yang menggabungkan komponen analog dan digital."
+        },
+        "hobbies": {
+            "title": "Hobi",
+            "list": "Membaca, Memasak, Joging, Seni Digital & Tradisional, Bermain Gitar"
+        },
+        "contact": {
+            "title": "Hubungi Saya",
+            "text": "Jangan segan untuk hubungi saya melalui emel:"
+        }
+    }

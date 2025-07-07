@@ -1,0 +1,34 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "education": "Education",
+    "experience": "Experience",
+    "hobbies": "Hobbies",
+    "contact": "Contact"
+  },
+  "home": {
+    "greeting": "Hello, I’m Azmin",
+    "subtitle": "Electrical Engineering Student | Embedded Systems Enthusiast",
+    "cta": "See My Work"
+  },
+  "about": {
+    "title": "About Me",
+    "description": "I'm a passionate student in embedded systems, electronics, and signal processing. I'm driven by curiosity and a desire to build impactful things."
+  },
+  "education": {
+    "title": "Education"
+  },
+  "experience": {
+    "title": "Experience",
+    "description": "In 2024, I completed an internship at Num’axes, a French company specializing in the development of electronic devices for animals. My main mission was to design and prototype a printed circuit board (PCB) for an anti-bark dog collar, integrating both analog and digital components."
+  },
+  "hobbies": {
+    "title": "Hobbies",
+    "list": "Reading, Cooking, Jogging, Digital & Traditional Arts, Playing Guitar"
+  },
+  "contact": {
+    "title": "Contact Me",
+    "text": "Feel free to reach out to me via email:"
+  }
+}
