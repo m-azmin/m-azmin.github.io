@@ -13,33 +13,34 @@
   </head>
   <body>
     <header>
-  <div class="nav-header">
-    <button class="hamburger" id="hamburger">&#9776;</button>
-    <h1>Azmin Yusmizan</h1>
-    <div class="language-dropdown">
-      <button id="langBtn">🌐 <span id="currentLang">EN</span></button>
-      <ul class="lang-menu" id="langMenu">
-        <li data-lang="en"><span class="code">EN</span> English</li>
-        <li data-lang="ms"><span class="code">MY</span> Bahasa Melayu</li>
-        <li data-lang="fr"><span class="code">FR</span> Français</li>
-        <li data-lang="es"><span class="code">ES</span> Español</li>
-      </ul>
-    </div>
-  </div>
+      <div class="nav-header">
+        <button class="hamburger" id="hamburger">&#9776;</button>
+        <h1>Azmin Yusmizan</h1>
+        <div class="language-dropdown">
+          <button id="langBtn">🌐 <span id="currentLang">EN</span></button>
+          <ul class="lang-menu" id="langMenu">
+            <li data-lang="en"><span class="code">EN</span> English</li>
+            <li data-lang="ms"><span class="code">MY</span> Bahasa Melayu</li>
+            <li data-lang="fr"><span class="code">FR</span> Français</li>
+            <li data-lang="es"><span class="code">ES</span> Español</li>
+          </ul>
+        </div>
+      </div>
 
-  <nav>
-    <ul class="nav-links">
-      <li><a href="#home" data-i18n="nav.home">Home</a></li>
-      <li><a href="#about" data-i18n="nav.about">About</a></li>
-      <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
-      <li><a href="#education" data-i18n="nav.education">Education</a></li>
-      <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
-      <li><a href="#hobbies" data-i18n="nav.hobbies">Hobbies</a></li>
-      <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
-    </ul>
-  </nav>
-</header>
-
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#home" data-i18n="nav.home">Home</a></li>
+          <li><a href="#about" data-i18n="nav.about">About</a></li>
+          <li>
+            <a href="#experience" data-i18n="nav.experience">Experience</a>
+          </li>
+          <li><a href="#education" data-i18n="nav.education">Education</a></li>
+          <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+          <li><a href="#hobbies" data-i18n="nav.hobbies">Hobbies</a></li>
+          <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
 
     <section id="home" class="section hero-section">
       <div class="hero-wrapper">
@@ -47,25 +48,51 @@
           <img src="img/profile.jpg" alt="Azmin Yusmizan" />
         </div>
         <div class="hero-text">
-          <h2>Hello, I’m Azmin</h2>
-          <p>Electrical Engineering Student | Embedded Systems Enthusiast</p>
-          <a href="#projects" class="btn">See My Work</a>
+          <h2><a data-i18n="home.greeting">Hello, I’m Azmin</a></h2>
+          <p>
+            <a data-i18n="home.subtitle"
+              >Electrical Engineering Student | Embedded Systems Enthusiast</a
+            >
+          </p>
+          <a href="#projects" class="btn" data-i18n="home.cta">See My Work</a>
         </div>
       </div>
     </section>
 
     <section id="about" class="about-section">
-      <h2>About Me</h2>
+      <h2><a data-i18n="about.title">About Me</a></h2>
 
       <div class="about-card">
         <div class="about-text">
           <p>
-            I’m Azmin Yusmizan, an electrical engineering student with a deep passion for innovation, embedded systems, and sustainable technologies. Over the years, I’ve cultivated a strong technical foundation in electronics, PCB design, signal processing, and automation — shaped by a unique international journey across Malaysia and France.
+            <a data-i18n="about.description1">
+              I’m Azmin Yusmizan, an electrical engineering student with a deep
+              passion for innovation, embedded systems, and sustainable
+              technologies. Over the years, I’ve cultivated a strong technical
+              foundation in electronics, PCB design, signal processing, and
+              automation — shaped by a unique international journey across
+              Malaysia and France.
+            </a>
           </p>
           <p>
-            Studying at institutions like INSA Lyon, IUT Paul Sabatier Toulouse, and Université de Tours has exposed me to diverse technical cultures and collaborative projects, pushing me to be both detail-oriented and adaptable. Whether it’s building smart energy systems, programming embedded devices, or simulating high-frequency antennas, I enjoy turning complex ideas into practical, elegant solutions.
+            <a data-i18n="about.description2">
+              Studying at institutions like INSA Lyon, IUT Paul Sabatier
+              Toulouse, and Université de Tours has exposed me to diverse
+              technical cultures and collaborative projects, pushing me to be
+              both detail-oriented and adaptable. Whether it’s building smart
+              energy systems, programming embedded devices, or simulating
+              high-frequency antennas, I enjoy turning complex ideas into
+              practical, elegant solutions.
+            </a>
           </p>
-          <p>Beyond academics, I’m driven by curiosity, creativity, and a love for continuous learning. I find joy in reading, cooking, sketching, and playing the guitar — all of which balance the intensity of engineering with moments of calm and expression.</p>
+          <p>
+            <a data-i18n="about.description3"
+              >Beyond academics, I’m driven by curiosity, creativity, and a love
+              for continuous learning. I find joy in reading, cooking,
+              sketching, and playing the guitar — all of which balance the
+              intensity of engineering with moments of calm and expression.</a
+            >
+          </p>
         </div>
 
         <div class="about-image">
@@ -77,38 +104,62 @@
       </div>
 
       <div class="stats-container">
-        <div class="stat-box"><strong>4+</strong><br />Years in France</div>
-        <div class="stat-box"><strong>3</strong><br />Countries Studied</div>
-        <div class="stat-box"><strong>12+</strong><br />Technical Projects</div>
+        <div class="stat-box">
+          <strong>4+</strong><br /><a data-i18n="about.years"
+            >Years in France</a
+          >
+        </div>
+        <div class="stat-box">
+          <strong>3</strong><br /><a data-i18n="about.countries"
+            >Countries Studied</a
+          >
+        </div>
+        <div class="stat-box">
+          <strong>12+</strong><br /><a data-i18n="about.project"
+            >Technical Projects</a
+          >
+        </div>
       </div>
     </section>
 
     <section id="experience" class="section fade-in">
-      <h2>Experience</h2>
+      <h2><a data-i18n="experience.bigtitle">Experience</a></h2>
       <div class="timeline">
         <div class="edu-card experience">
           <div class="edu-icon">
             <img src="img/num'axes2.jpg" alt="Num'axes Logo" />
           </div>
           <div class="edu-content">
-            <h3>Num’axes – Engineering Internship</h3>
-            <span class="edu-date">April – July 2024</span>
+            <h3>
+              <a data-i18n="experience.title"
+                >Num’axes – Engineering Internship</a
+              >
+            </h3>
+            <span class="edu-date"
+              ><a data-i18n="experience.date">April – July 2024</a></span
+            >
             <p>
-              I completed a 3-month internship at <strong>Num’axes</strong>, a
-              French company known for designing electronic devices for pet
-              training, tracking, and behavior.
+              <a data-i18n="experience.sub1">
+                I completed a 3-month internship at <strong>Num’axes</strong>, a
+                French company known for designing electronic devices for pet
+                training, tracking, and behavior.
+              </a>
             </p>
             <p>
-              My mission was to design and realize a custom PCB for a dog collar
-              system. I handled the analog and digital schematic design, circuit
-              simulation (LTSpice), protoboard testing, and PCB layout. The
-              project involved iterative testing, component validation, and
-              debugging within an R&D environment.
+              <a data-i18n="experience.sub2">
+                My mission was to design and realize a custom PCB for a dog
+                collar system. I handled the analog and digital schematic
+                design, circuit simulation (LTSpice), protoboard testing, and
+                PCB layout. The project involved iterative testing, component
+                validation, and debugging within an R&D environment.
+              </a>
             </p>
             <p>
-              This experience enhanced my practical skills in electronics,
-              teamwork, and product development under real-world constraints
-              such as EMC and form factor.
+              <a data-i18n="experience.sub3">
+                This experience enhanced my practical skills in electronics,
+                teamwork, and product development under real-world constraints
+                such as EMC and form factor.
+              </a>
             </p>
           </div>
         </div>
@@ -116,16 +167,20 @@
     </section>
 
     <section id="education" class="section fade-in">
-      <h2>Education</h2>
+      <h2><a data-i18n="education.title">Education</a></h2>
       <div class="timeline">
         <div class="edu-card">
           <div class="edu-icon">🎓</div>
           <div class="edu-content">
             <h3>INSA Lyon</h3>
-            <span class="edu-date">2024 – Present</span>
+            <span class="edu-date"
+              ><a data-i18n="education.date1">2024 – Present</a></span
+            >
             <p>
-              Bachelor in Electrical Engineering with specialization in embedded
-              systems, electronics, and automation.
+              <a data-i18n="education.sub1">
+                Master's degree in Electrical Engineering with specialization in
+                embedded systems, electronics, and automation.
+              </a>
             </p>
           </div>
         </div>
@@ -134,11 +189,15 @@
           <div class="edu-icon">🔌</div>
           <div class="edu-content">
             <h3>IUT Paul Sabatier Toulouse III</h3>
-            <span class="edu-date">2022 – 2024</span>
+            <span class="edu-date"
+              ><a data-i18n="education.date2">2022 – 2024</a></span
+            >
             <p>
-              DUT/BUT in Electrical Engineering and Industrial Informatics.
-              Gained practical experience in automation, microcontrollers, and
-              signal processing.
+              <a data-i18n="education.sub2">
+                DUT/BUT in Electrical Engineering and Industrial Informatics.
+                Gained practical experience in automation, microcontrollers, and
+                signal processing.
+              </a>
             </p>
           </div>
         </div>
@@ -147,10 +206,14 @@
           <div class="edu-icon">🗣️</div>
           <div class="edu-content">
             <h3>IUT de Tours – Université de Tours</h3>
-            <span class="edu-date">2021 – 2022</span>
+            <span class="edu-date"
+              ><a data-i18n="education.date3">2021 – 2022</a></span
+            >
             <p>
-              Completed a French language and scientific foundation year for
-              integration into the French higher education system.
+              <a data-i18n="education.sub3">
+                Completed a French language and scientific foundation year for
+                integration into the French higher education system.
+              </a>
             </p>
           </div>
         </div>
@@ -159,10 +222,14 @@
           <div class="edu-icon">🏫</div>
           <div class="edu-content">
             <h3>Sekolah Menengah Sains Jeli</h3>
-            <span class="edu-date">2016 – 2020</span>
+            <span class="edu-date"
+              ><a data-i18n="education.date4">2016 – 2020</a></span
+            >
             <p>
-              Malaysian Science Secondary School. Focused on physics,
-              mathematics, and general sciences.
+              <a data-i18n="education.sub4">
+                Malaysian Science Secondary School. Focused on physics,
+                mathematics, and general sciences.
+              </a>
             </p>
           </div>
         </div>
@@ -173,21 +240,49 @@
       <h2 data-i18n="projects.title">Projects</h2>
       <div class="project-grid">
         <div class="project-filters">
-          <button class="filter-btn active" data-filter="all">All</button>
-          <button class="filter-btn" data-filter="electronics">
+          <button
+            class="filter-btn active"
+            data-filter="all"
+            data-i18n="projects.all"
+          >
+            All
+          </button>
+          <button
+            class="filter-btn"
+            data-filter="electronics"
+            data-i18n="projects.electronic"
+          >
             Electronics
           </button>
-          <button class="filter-btn" data-filter="embedded">
+          <button
+            class="filter-btn"
+            data-filter="embedded"
+            data-i18n="projects.embedded"
+          >
             Embedded Systems
           </button>
-          <button class="filter-btn" data-filter="automation">
+          <button
+            class="filter-btn"
+            data-filter="automation"
+            data-i18n="projects.automation"
+          >
             Automation
           </button>
-          <button class="filter-btn" data-filter="rf">RF & Antennas</button>
-          <button class="filter-btn" data-filter="signal">
+          <button class="filter-btn" data-filter="rf" data-i18n="projects.rf">
+            RF & Antennas
+          </button>
+          <button
+            class="filter-btn"
+            data-filter="signal"
+            data-i18n="projects.signal"
+          >
             Signal Processing
           </button>
-          <button class="filter-btn" data-filter="management">
+          <button
+            class="filter-btn"
+            data-filter="management"
+            data-i18n="projects.management"
+          >
             Management
           </button>
         </div>
@@ -195,13 +290,13 @@
         <div class="project-card" data-category="electronics">
           <span class="badge">INSA Lyon</span>
           <img src="img/sonometer.jpg" alt="Brain image" />
-          <h3>Analog Sonometer</h3>
-          <p>
+          <h3 data-i18n="projects.sonometer">Analog Sonometer</h3>
+          <p data-i18n="projects.sonometersub">
             Designed and built a complete sonometer from ground up, including
             circuit design, LTspice simulation, prototyping, and PCB
             fabrication. Comprehensive study of acoustic measurement principles.
           </p>
-          <div class="tags">
+          <div class="tags" data-i18n="projects.sonometertags">
             PCB Design • LTspice • Circuit Analysis • Prototyping
           </div>
         </div>
@@ -209,13 +304,13 @@
         <div class="project-card" data-category="electronics">
           <span class="badge">INSA Lyon</span>
           <img src="img/dustsensor.jpg" alt="Brain image" />
-          <h3>Environmental Dust Sensor</h3>
-          <p>
+          <h3 data-i18n="projects.dust">Environmental Dust Sensor</h3>
+          <p data-i18n="projects.dustsub">
             Developed an advanced dust detection system with custom circuit
             design and embedded programming. Focused on sensor calibration and
             environmental monitoring applications.
           </p>
-          <div class="tags">
+          <div class="tags" data-i18n="projects.dusttags">
             Sensors • Embedded Systems • Circuit Design • Testing
           </div>
         </div>
@@ -223,13 +318,13 @@
         <div class="project-card" data-category="automation">
           <span class="badge">INSA Lyon</span>
           <img src="img/factoryio.jpg" alt="Brain image" />
-          <h3>Automated Sorting System</h3>
-          <p>
+          <h3 data-i18n="projects.auto">Automated Sorting System</h3>
+          <p data-i18n="projects.autosub">
             Created GRAFCET-based automation system for industrial piece sorting
             by color and number. Implemented complete factory automation
             workflow with multiple control stations.
           </p>
-          <div class="tags">
+          <div class="tags" data-i18n="projects.autotags">
             GRAFCET • Automation • Factory Systems • Sorting Systems
           </div>
         </div>
@@ -237,48 +332,54 @@
         <div class="project-card" data-category="all">
           <span class="badge">INSA Lyon</span>
           <img src="img/brain.jpg" alt="Brain image" />
-          <h3>Medical Image Classification</h3>
-          <p>
+          <h3 data-i18n="projects.clanu">Medical Image Classification</h3>
+          <p data-i18n="projects.clanusub">
             Developed machine learning algorithms for brain image analysis and
             classification. Applied numerical analysis techniques and data
             processing for medical diagnostics.
           </p>
-          <div class="tags">Image Processing • Data Analysis • C++</div>
+          <div class="tags" data-i18n="projects.clanutags">
+            Image Processing • Data Analysis • C++
+          </div>
         </div>
 
         <div class="project-card" data-category="management">
           <span class="badge">INSA Lyon</span>
           <img src="img/REGELEC.jpg" alt="Regelec" />
-          <h3>REGELEC Smart Energy Startup</h3>
-          <p>
+          <h3 data-i18n="projects.regelec">REGELEC Smart Energy Startup</h3>
+          <p data-i18n="projects.regelecsub">
             Co-founded startup developing intelligent electrical regulation
             systems. Business plan, prototype, and mobile app for optimized
             consumption.
           </p>
-          <div class="tags">Startup • Energy • Mobile App</div>
+          <div class="tags" data-i18n="projects.regelectags">
+            Startup • Energy • Mobile App
+          </div>
         </div>
 
         <div class="project-card" data-category="electronics embedded">
           <span class="badge">IUT Paul Sabatier</span>
           <img src="img/linefollower.jpg" alt="Line follower robot" />
-          <h3>Autonomous Line Follower Robot</h3>
-          <p>
+          <h3 data-i18n="projects.line">Autonomous Line Follower Robot</h3>
+          <p data-i18n="projects.linesub">
             Designed complete robotic system from schematic to PCB. Integrated
             sensors, motors, and path-following control algorithms.
           </p>
-          <div class="tags">Robotics • PCB • Control</div>
+          <div class="tags" data-i18n="projects.linetags">
+            Robotics • PCB • Control
+          </div>
         </div>
 
         <div class="project-card" data-category="electronics embedded">
           <span class="badge">IUT Paul Sabatier</span>
           <img src="img/smartcar.jpg" alt="Line follower robot" />
-          <h3>Multi-Function Smart Car</h3>
-          <p>
+          <h3 data-i18n="projects.smartcar">Multi-Function Smart Car</h3>
+          <p data-i18n="projects.smartcarsub">
             Advanced autonomous vehicle with smartphone integration, multiple
             sensors, wireless communication, and versatile functionality for
             various applications.
           </p>
-          <div class="tags">
+          <div class="tags" data-i18n="projects.smartcartags">
             IoT • PCB • Mobile Control • Wireless Communication • Multi-function
             Systems
           </div>
@@ -287,13 +388,13 @@
         <div class="project-card" data-category="automation">
           <span class="badge">IUT Paul Sabatier</span>
           <img src="img/auto.jpg" alt="Line follower robot" />
-          <h3>Industrial Pneumatic Control</h3>
-          <p>
+          <h3 data-i18n="projects.pneumatic">Industrial Pneumatic Control</h3>
+          <p data-i18n="projects.pneumaticsub">
             Developed pneumatic control station using TIA Portal for automated
             piece handling. Collaborated in team-based industrial automation
             project with multiple interconnected stations.
           </p>
-          <div class="tags">
+          <div class="tags" data-i18n="projects.pneumatictags">
             TIA Portal • Pneumatics • Industrial Control • Team Project
           </div>
         </div>
@@ -301,13 +402,13 @@
         <div class="project-card" data-category="embedded">
           <span class="badge">IUT Paul Sabatier</span>
           <img src="img/sensor3d.jpg" alt="Line follower robot" />
-          <h3>3D Distance Scanner</h3>
-          <p>
+          <h3 data-i18n="projects.scan">3D Distance Scanner</h3>
+          <p data-i18n="projects.scansub">
             Built 3D scanning system using STM32 microcontroller, distance
             sensors, and servo motors. Created comprehensive scanning and data
             acquisition system.
           </p>
-          <div class="tags">
+          <div class="tags" data-i18n="projects.scantags">
             STM32 • Servo Motors • Distance Sensors • 3D Scanning
           </div>
         </div>
@@ -315,13 +416,13 @@
         <div class="project-card" data-category="electronics">
           <span class="badge">IUT Paul Sabatier</span>
           <img src="img/ecg.png" alt="Line follower robot" />
-          <h3>Electrocardiograph System</h3>
-          <p>
+          <h3 data-i18n="projects.ecg">Electrocardiograph System</h3>
+          <p data-i18n="projects.ecgsub">
             Designed complete ECG acquisition system with analog amplifiers,
             filters, and signal conditioning circuits for biomedical signal
             processing.
           </p>
-          <div class="tags">
+          <div class="tags" data-i18n="projects.ecgtags">
             Biomedical • Amplifiers • Filters • Signal Processing
           </div>
         </div>
@@ -329,13 +430,13 @@
         <div class="project-card" data-category="electronics">
           <span class="badge">IUT Paul Sabatier</span>
           <img src="img/digitalfilter.jpg" alt="Line follower robot" />
-          <h3>Analog Filter Design</h3>
-          <p>
+          <h3 data-i18n="projects.filter">Analog Filter Design</h3>
+          <p data-i18n="projects.filtersub">
             Developed specialized analog filters including anti-aliasing and
             smoothing filters. Complete PCB design and implementation for signal
             conditioning applications.
           </p>
-          <div class="tags">
+          <div class="tags" data-i18n="projects.filtertags">
             Analog Filters • Anti-aliasing • PCB Design • Signal Conditioning
           </div>
         </div>
@@ -343,13 +444,13 @@
         <div class="project-card" data-category="embedded signal">
           <span class="badge">IUT Paul Sabatier</span>
           <img src="img/digitaleffect.jpg" alt="Line follower robot" />
-          <h3>Digital Audio Effects</h3>
-          <p>
+          <h3 data-i18n="projects.audio">Digital Audio Effects</h3>
+          <p data-i18n="projects.audiosub">
             Programmed digital signal processing algorithms in C for guitar
             effects including reverb, distortion, and rock effects. Real-time
             audio processing implementation.
           </p>
-          <div class="tags">
+          <div class="tags" data-i18n="projects.audiotags">
             C Programming • Audio Processing • Guitar Effects • Digital Signal
             Processing
           </div>
@@ -358,13 +459,13 @@
         <div class="project-card" data-category="rf">
           <span class="badge">IUT Paul Sabatier</span>
           <img src="img/capteurliq.jpg" alt="Line follower robot" />
-          <h3>RF Liquid Detection Sensor</h3>
-          <p>
+          <h3 data-i18n="projects.rfc">RF Liquid Detection Sensor</h3>
+          <p data-i18n="projects.rfsub">
             Designed RF-based sensor for liquid differentiation (water/ethanol)
             using Cadence AWR. Implemented Smith chart analysis and custom PCB
             with precision copper traces.
           </p>
-          <div class="tags">
+          <div class="tags" data-i18n="projects.rftags">
             RF Design • Cadence AWR • Smith Chart • Sensor Design
           </div>
         </div>
@@ -372,13 +473,13 @@
         <div class="project-card" data-category="rf embedded">
           <span class="badge">IUT Paul Sabatier</span>
           <img src="img/iotnetworl.jpg" alt="Line follower robot" />
-          <h3>IoT Sensor Network</h3>
-          <p>
+          <h3 data-i18n="projects.iot">IoT Sensor Network</h3>
+          <p data-i18n="projects.iotsub">
             Developed distributed IoT system with STM32 microcontrollers and
             wireless communication. Implemented sensor-actuator network for
             environmental monitoring and control.
           </p>
-          <div class="tags">
+          <div class="tags" data-i18n="projects.iottags">
             IoT • STM32 • Wireless Communication • Sensor Networks
           </div>
         </div>
@@ -386,13 +487,13 @@
         <div class="project-card" data-category="rf">
           <span class="badge">IUT Paul Sabatier</span>
           <img src="img/antenne.jpg" alt="Line follower robot" />
-          <h3>Patch Antenna Optimization</h3>
-          <p>
+          <h3 data-i18n="projects.antenna">Patch Antenna Optimization</h3>
+          <p data-i18n="projects.antennasub">
             Reverse-engineered and optimized patch antenna design using Cadence
             AWR. Achieved -17dB reflection coefficient at target frequency
             through systematic optimization.
           </p>
-          <div class="tags">
+          <div class="tags" data-i18n="projects.antennatags">
             Antenna Design • Reverse Engineering • RF Optimization • Reflection
             Coefficient
           </div>
@@ -401,13 +502,13 @@
         <div class="project-card" data-category="all">
           <span class="badge">IUT Paul Sabatier</span>
           <img src="img/solar.jpg" alt="Line follower robot" />
-          <h3>Solar Panel Analysis</h3>
-          <p>
+          <h3 data-i18n="projects.solar">Solar Panel Analysis</h3>
+          <p data-i18n="projects.solarsub">
             Comprehensive study of photovoltaic systems including modeling,
             simulation, and experimental characterization. Analysis of solar
             energy conversion efficiency and optimization.
           </p>
-          <div class="tags">
+          <div class="tags" data-i18n="projects.solarsub">
             Solar Energy • Power Electronics • Renewable Energy • System
             Analysis
           </div>
@@ -422,8 +523,8 @@
       <div class="project-grid">
         <div class="project-card">
           <img src="img/reading.jpg" alt="Reading books" />
-          <h3>Reading</h3>
-          <p>
+          <h3 data-i18n="hobbies.read">Reading</h3>
+          <p data-i18n="hobbies.readsub">
             I enjoy immersing myself in literature, science articles, and
             history to expand my knowledge and imagination.
           </p>
@@ -431,8 +532,8 @@
 
         <div class="project-card">
           <img src="img/cooking.jpg" alt="Cooking" />
-          <h3>Cooking</h3>
-          <p>
+          <h3 data-i18n="hobbies.cook">Cooking</h3>
+          <p data-i18n="hobbies.cooksub">
             I find peace in the kitchen — experimenting with Malaysian dishes
             and learning world cuisines.
           </p>
@@ -440,8 +541,8 @@
 
         <div class="project-card">
           <img src="img/jogging.jpg" alt="Jogging" />
-          <h3>Jogging</h3>
-          <p>
+          <h3 data-i18n="hobbies.jog">Jogging</h3>
+          <p data-i18n="hobbies.jogsub">
             Jogging clears my mind and keeps me energized, especially in nature
             or around campus parks.
           </p>
@@ -449,8 +550,8 @@
 
         <div class="project-card">
           <img src="img/digitalart.jpg" alt="Art" />
-          <h3>Digital & Traditional Art</h3>
-          <p>
+          <h3 data-i18n="hobbies.art">Digital & Traditional Art</h3>
+          <p data-i18n="hobbies.artsub">
             I explore both digital illustrations and traditional sketches as a
             form of creative expression.
           </p>
@@ -458,8 +559,8 @@
 
         <div class="project-card">
           <img src="img/guitar.jpg" alt="Guitar" />
-          <h3>Playing Guitar</h3>
-          <p>
+          <h3 data-i18n="hobbies.guitar">Playing Guitar</h3>
+          <p data-i18n="hobbies.guitarsub">
             Music helps me relax — I love playing acoustic melodies and learning
             new chords on my guitar.
           </p>
@@ -467,8 +568,8 @@
 
         <div class="project-card">
           <img src="img/traveling.jpg" alt="Guitar" />
-          <h3>Traveling</h3>
-          <p>
+          <h3 data-i18n="hobbies.travel">Traveling</h3>
+          <p data-i18n="hobbies.travelsub">
             Sometimes when life gets a bit hard, traveling is the only solution!
             I love to travel to new countries and I've visited a lot of
             countries before mostly in Europe and Asia.
@@ -478,7 +579,7 @@
     </section>
 
     <section id="contact" class="section fade-in">
-      <h2>Contact Me</h2>
+      <h2 data-i18n="contact.title">Contact Me</h2>
 
       <div class="contact-grid">
         <div class="contact-item">
@@ -516,18 +617,27 @@
         <div class="contact-item">
           <div class="contact-icon">📍</div>
           <div class="contact-info">
-            <h4>Location</h4>
+            <h4 data-i18n="contact.loc">Location</h4>
             <p>Villeurbanne, Lyon, France</p>
           </div>
         </div>
       </div>
     </section>
 
-    <form class="contact-form" action="https://formspree.io/f/movwovaa" method="POST">
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea rows="4" placeholder="Your Message" required></textarea>
-      <button type="submit">Send</button>
+    <form
+      class="contact-form"
+      action="https://formspree.io/f/movwovaa"
+      method="POST"
+    >
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea
+        name="message"
+        rows="4"
+        placeholder="Your Message"
+        required
+      ></textarea>
+      <button type="submit" data-i18n="contact.send">Send</button>
     </form>
 
     <footer>
