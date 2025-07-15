@@ -1,34 +1,146 @@
 {
-        "nav": {
-            "home": "Laman Utama",
-            "about": "Tentang Saya",
-            "education": "Pendidikan",
-            "experience": "Pengalaman",
-            "hobbies": "Hobi",
-            "contact": "Hubungi"
-        },
-        "home": {
-            "greeting": "Hai, saya Azmin",
-            "subtitle": "Pelajar Kejuruteraan Elektrik | Peminat Sistem Tertanam",
-            "cta": "Lihat Projek Saya"
-        },
-        "about": {
-            "title": "Tentang Saya",
-            "description": "Saya seorang pelajar yang berminat dalam sistem tertanam, elektronik, dan pemprosesan isyarat. Saya terdorong oleh rasa ingin tahu dan semangat untuk mencipta sesuatu yang bermakna."
-        },
-        "education": {
-            "title": "Pendidikan"
-        },
-        "experience": {
-            "title": "Pengalaman",
-            "description": "Pada tahun 2024, saya menjalani latihan industri di Num’axes, sebuah syarikat Perancis yang mengkhusus dalam pembangunan peranti elektronik untuk haiwan. Tugas utama saya adalah mereka bentuk dan prototaip papan litar bercetak (PCB) untuk kolar anjing anti-menyalak, yang menggabungkan komponen analog dan digital."
-        },
-        "hobbies": {
-            "title": "Hobi",
-            "list": "Membaca, Memasak, Joging, Seni Digital & Tradisional, Bermain Gitar"
-        },
-        "contact": {
-            "title": "Hubungi Saya",
-            "text": "Jangan segan untuk hubungi saya melalui emel:"
-        }
-    }
+  "nav": {
+    "home": "Laman Utama",
+    "about": "Tentang Saya",
+    "education": "Pendidikan",
+    "experience": "Pengalaman",
+    "hobbies": "Hobi",
+    "projects" : "Projek",
+    "contact": "Hubungi"
+  },
+  "home": {
+    "greeting": "Hai, saya Azmin",
+    "subtitle": "Pelajar Kejuruteraan Elektrik | Peminat Sistem Tertanam",
+    "cta": "Lihat Projek Saya"
+  },
+  "about": {
+    "title": "Tentang Saya",
+    "description1": "Nama saya Muhammad Azmin Muhamad Yusmizan, seorang pelajar kejuruteraan elektrik yang sangat meminati inovasi, sistem terbenam, dan teknologi lestari. Sepanjang tahun-tahun pengajian saya, saya telah membina asas teknikal yang kukuh dalam bidang elektronik, reka bentuk PCB, pemprosesan signal, dan automasi — dibentuk melalui perjalanan antarabangsa yang unik merentasi Malaysia dan Perancis.",
+    "description2": "Pengajian saya di institusi seperti INSA Lyon, IUT Paul Sabatier Toulouse, dan Université de Tours telah mendedahkan saya kepada pelbagai budaya teknikal dan projek kolaboratif, yang mendorong saya untuk menjadi teliti serta mudah menyesuaikan diri. Sama ada membina sistem tenaga pintar, memprogram peranti terbenam, atau mensimulasikan antena frekuensi tinggi, saya gemar menukar idea kompleks menjadi penyelesaian praktikal dan elegan.",
+    "description3": "Di luar bidang akademik, saya didorong oleh rasa ingin tahu, kreativiti, dan minat terhadap pembelajaran berterusan. Saya gemar membaca, memasak, melukis, dan bermain gitar — semua ini membantu mengimbangi ketekunan bidang kejuruteraan dengan detik ketenangan dan ekspresi diri.",
+    "years": "Tahun di Perancis",
+    "countries": "Negara dipelajari",
+    "project": "Projek Teknikal"
+  },
+  "education": {
+  "title": "Pendidikan",
+  "date1": "2024 – Kini",
+  "date2": "2022 – 2024",
+  "date3": "2021 – 2022",
+  "date4": "2016 – 2020",
+  "sub1": "Ijazah Sarjana (Master) dalam Kejuruteraan Elektrik dengan pengkhususan dalam sistem terbenam, elektronik, dan automasi.",
+  "sub2": "Bachelor dalam Kejuruteraan Elektrik dan Informatik Industri. Mendapat pengalaman praktikal dalam automasi, mikropengawal, dan pemprosesan isyarat.",
+  "sub3": "Menamatkan tahun asas bahasa Perancis dan sains sebagai persediaan untuk integrasi dalam sistem pendidikan tinggi Perancis.",
+  "sub4": "Sekolah Menengah Sains Malaysia. Memberi tumpuan kepada fizik, matematik, dan sains am."
+},
+  "experience": {
+    "bigtitle": "Pengalaman",
+    "date": "April - Julai 2024",
+    "sub1": "Saya telah menjalani latihan industri selama 3 bulan di Num’axes, sebuah syarikat Perancis yang terkenal dalam mereka bentuk peranti elektronik untuk latihan, penjejakan, dan tingkah laku haiwan peliharaan.",
+    "sub2": "Misi saya adalah untuk mereka bentuk dan menghasilkan PCB tersuai bagi sistem kolar anjing. Saya bertanggungjawab dalam reka bentuk skematik analog dan digital, simulasi litar (LTSpice), ujian pada prototaip papan litar (protoboard), serta susun atur PCB. Projek ini melibatkan ujian berulang, pengesahan komponen, dan penyahpepijatan dalam persekitaran penyelidikan dan pembangunan (R&D).",
+    "sub3": "Pengalaman ini telah memperkukuh kemahiran praktikal saya dalam bidang elektronik, kerja berpasukan, dan pembangunan produk di bawah kekangan sebenar, seperti gangguan elektromagnetik (CEM) dan faktor bentuk fizikal.",
+    "title": "Num’axes – Latihan Industri Kejureteraan"
+  },
+"hobbies": {
+  "title": "Hobi",
+  "list": "Membaca, Memasak, Joging, Seni Digital & Tradisional, Bermain Gitar",
+  
+  "read": "Membaca",
+  "readsub": "Saya gemar mendalami karya sastera, artikel sains, dan sejarah untuk memperluas pengetahuan dan imaginasi saya.",
+
+  "cook": "Memasak",
+  "cooksub": "Saya menemui ketenangan di dapur — bereksperimen dengan masakan Malaysia dan mempelajari hidangan dari seluruh dunia.",
+
+  "jog": "Joging",
+  "jogsub": "Joging membantu saya menenangkan fikiran dan memberi tenaga, terutama di alam semula jadi atau sekitar taman kampus.",
+
+  "art": "Seni Digital & Tradisional",
+  "artsub": "Saya meneroka ilustrasi digital dan lakaran tradisional sebagai bentuk ekspresi kreatif.",
+
+  "guitar": "Bermain Gitar",
+  "guitarsub": "Muzik membantu saya berehat — saya suka memainkan melodi akustik dan mempelajari kord-kord baru dengan gitar saya.",
+
+  "travel": "Mengembara",
+  "travelsub": "Kadang-kadang bila hidup terasa berat, mengembara adalah satu-satunya jalan keluar! Saya suka melancong ke negara baharu dan telah melawat banyak negara, terutamanya di Eropah dan Asia."
+}
+,
+"projects": {
+  "title": "Projek",
+  "all": "Semua",
+  "electronic": "Elektronik",
+  "embedded": "Sistem Terbenam",
+  "automation": "Automasi",
+  "rf": "RF & Antena",
+  "signal": "Pemprosesan Isyarat",
+  "management": "Pengurusan",
+  
+  "sonometer": "Sonometer Analog",
+  "sonometersub": "Mereka bentuk dan membina sonometer sepenuhnya dari awal, termasuk reka bentuk litar, simulasi LTspice, prototaip, dan fabrikasi PCB. Kajian menyeluruh tentang prinsip pengukuran akustik.",
+  "sonometertags": "Reka Bentuk PCB • LTspice • Analisis Litar • Prototip",
+
+  "dust": "Sensor Habuk Alam Sekitar",
+  "dustsub": "Membangunkan sistem pengesanan habuk lanjutan dengan reka bentuk litar tersuai dan pengaturcaraan terbenam. Fokus kepada penentukuran sensor dan aplikasi pemantauan alam sekitar.",
+  "dusttags": "Sensor • Sistem Terbenam • Reka Bentuk Litar • Ujian",
+
+  "auto": "Sistem Pengasingan Automatik",
+  "autosub": "Mereka bentuk sistem automasi berasaskan GRAFCET untuk mengasingkan objek mengikut warna dan nombor. Melaksanakan aliran kerja automasi kilang lengkap dengan pelbagai stesen kawalan.",
+  "autotags": "GRAFCET • Automasi • Sistem Kilang • Sistem Pengasingan",
+
+  "clanu": "Klasifikasi Imej Perubatan",
+  "clanusub": "Membangunkan algoritma pembelajaran mesin untuk analisis dan klasifikasi imej otak. Menggunakan teknik analisis berangka dan pemprosesan data untuk diagnostik perubatan.",
+  "clanutags": "Pemprosesan Imej • Analisis Data • C++",
+
+  "regelec": "Startup Tenaga Pintar REGELEC",
+  "regelecsub": "Mengasaskan startup yang membangunkan sistem peraturan elektrik pintar. Reka bentuk pelan perniagaan, prototaip, dan aplikasi mudah alih untuk penggunaan tenaga yang optimum.",
+  "regelectags": "Startup • Tenaga • Aplikasi Mudah Alih",
+
+  "line": "Robot Pengikut Garisan Autonomi",
+  "linesub": "Mereka bentuk sistem robotik lengkap daripada skematik hingga PCB. Mengintegrasikan sensor, motor, dan algoritma kawalan penjejakan laluan.",
+  "linetags": "Robotik • PCB • Kawalan",
+
+  "smartcar": "Kereta Pintar Pelbagai Fungsi",
+  "smartcarsub": "Kenderaan autonomi canggih dengan integrasi telefon pintar, pelbagai sensor, komunikasi tanpa wayar, dan pelbagai fungsi untuk pelbagai aplikasi.",
+  "smartcartags": "IoT • PCB • Kawalan Mudah Alih • Komunikasi Tanpa Wayar • Sistem Pelbagai Fungsi",
+
+  "pneumatic": "Kawalan Pneumatik Industri",
+  "pneumaticsub": "Membangunkan stesen kawalan pneumatik menggunakan TIA Portal untuk pengendalian objek automatik. Projek automasi industri berpasukan dengan pelbagai stesen saling berkait.",
+  "pneumatictags": "TIA Portal • Pneumatik • Kawalan Industri • Projek Berkumpulan",
+
+  "scan": "Pengimbas Jarak 3D",
+  "scansub": "Membina sistem pengimbasan 3D menggunakan mikropengawal STM32, sensor jarak, dan motor servo. Sistem lengkap untuk pengimbasan dan pemerolehan data.",
+  "scantags": "STM32 • Motor Servo • Sensor Jarak • Pengimbasan 3D",
+
+  "ecg": "Sistem Elektrokardiograf (ECG)",
+  "ecgsub": "Mereka bentuk sistem pemerolehan ECG lengkap dengan penguat analog, penapis, dan litar penyaman isyarat untuk pemprosesan isyarat bioperubatan.",
+  "ecgtags": "Bioperubatan • Penguat • Penapis • Pemprosesan Isyarat",
+
+  "filter": "Reka Bentuk Penapis Analog",
+  "filtersub": "Membangunkan penapis analog khusus termasuk penapis anti-penyalinan dan penapis pelicinan. Reka bentuk dan pelaksanaan PCB penuh untuk aplikasi penyaman isyarat.",
+  "filtertags": "Penapis Analog • Anti-penyalinan • Reka Bentuk PCB • Penyaman Isyarat",
+
+  "audio": "Kesan Audio Digital",
+  "audiosub": "Pengaturcaraan algoritma pemprosesan isyarat digital dalam C untuk kesan gitar seperti reverb, distorsi, dan kesan rock. Pelaksanaan pemprosesan audio masa nyata.",
+  "audiotags": "Pengaturcaraan C • Pemprosesan Audio • Kesan Gitar • Pemprosesan Isyarat Digital",
+
+  "rfc": "Sensor Pengesanan Cecair RF",
+  "rfsub": "Mereka bentuk sensor berasaskan RF untuk membezakan cecair (air/etanol) menggunakan Cadence AWR. Menganalisis carta Smith dan mereka bentuk PCB tersuai dengan jejak tembaga berketepatan tinggi.",
+  "rftags": "Reka Bentuk RF • Cadence AWR • Carta Smith • Reka Bentuk Sensor",
+
+  "iot": "Rangkaian Sensor IoT",
+  "iotsub": "Membangunkan sistem IoT teragih menggunakan mikropengawal STM32 dan komunikasi tanpa wayar. Melaksanakan rangkaian sensor-pemacu untuk pemantauan dan kawalan persekitaran.",
+  "iottags": "IoT • STM32 • Komunikasi Tanpa Wayar • Rangkaian Sensor",
+
+  "antenna": "Pengoptimuman Antena Patch",
+  "antennasub": "Menjalankan kejuruteraan semula dan pengoptimuman reka bentuk antena patch menggunakan Cadence AWR. Mencapai pekali pantulan -17dB pada frekuensi sasaran melalui pengoptimuman sistematik.",
+  "antennatags": "Reka Bentuk Antena • Kejuruteraan Semula • Pengoptimuman RF • Pekali Pantulan",
+
+  "solar": "Analisis Panel Suria",
+  "solarsub": "Kajian menyeluruh sistem fotovoltaik termasuk pemodelan, simulasi, dan pencirian eksperimen. Analisis kecekapan penukaran tenaga suria dan pengoptimuman.",
+  "solartags": "Tenaga Suria • Elektronik Kuasa • Tenaga Boleh Baharu • Analisis Sistem"
+}
+,
+  "contact": {
+    "title": "Hubungi Saya",
+    "text": "Jangan segan untuk hubungi saya melalui emel:"
+  }
+}
