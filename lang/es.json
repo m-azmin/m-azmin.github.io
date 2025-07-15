@@ -1,34 +1,146 @@
 {
-        "nav": {
-            "home": "Inicio",
-            "about": "Sobre mí",
-            "education": "Educación",
-            "experience": "Experiencia",
-            "hobbies": "Pasatiempos",
-            "contact": "Contacto"
-        },
-        "home": {
-            "greeting": "Hola, soy Azmin",
-            "subtitle": "Estudiante de Ingeniería Eléctrica | Apasionado por los Sistemas Embebidos",
-            "cta": "Ver mis proyectos"
-        },
-        "about": {
-            "title": "Sobre mí",
-            "description": "Soy un estudiante apasionado por los sistemas embebidos, la electrónica y el procesamiento de señales. Me motiva la curiosidad y el deseo de construir cosas significativas."
-        },
-        "education": {
-            "title": "Educación"
-        },
-        "experience": {
-            "title": "Experiencia",
-            "description": "En 2024, realicé una pasantía en Num’axes, una empresa francesa especializada en dispositivos electrónicos para animales. Mi misión principal fue diseñar y prototipar una placa de circuito impreso (PCB) para un collar antiladridos, integrando componentes analógicos y digitales."
-        },
-        "hobbies": {
-            "title": "Pasatiempos",
-            "list": "Lectura, Cocina, Trotar, Artes Digitales y Tradicionales, Tocar la Guitarra"
-        },
-        "contact": {
-            "title": "Contáctame",
-            "text": "No dudes en escribirme por correo electrónico:"
-        }
-    }
+  "nav": {
+    "home": "Inicio",
+    "about": "Sobre mí",
+    "education": "Educación",
+    "experience": "Experiencia",
+    "projects" : "Proyectos",
+    "hobbies": "Pasatiempos",
+    "contact": "Contacto"
+  },
+  "home": {
+    "greeting": "Hola, soy Azmin",
+    "subtitle": "Estudiante de Ingeniería Eléctrica | Apasionado por los Sistemas Embebidos",
+    "cta": "Ver mis proyectos"
+  },
+  "about": {
+    "title": "Sobre mí",
+    "description1": "Soy Azmin Yusmizan, estudiante de ingeniería eléctrica con una profunda pasión por la innovación, los sistemas embebidos y las tecnologías sostenibles. A lo largo de los años, he desarrollado una sólida base técnica en electrónica, diseño de PCB, procesamiento de señales y automatización, moldeada por un viaje internacional único entre Malasia y Francia.",
+    "description2": "Estudiar en instituciones como INSA Lyon, IUT Paul Sabatier Toulouse y la Université de Tours me ha expuesto a diversas culturas técnicas y proyectos colaborativos, lo que me ha impulsado a ser detallista y adaptable. Ya sea construyendo sistemas de energía inteligentes, programando dispositivos embebidos o simulando antenas de alta frecuencia, disfruto transformar ideas complejas en soluciones prácticas y elegantes.",
+    "description3": "Más allá del ámbito académico, me impulsa la curiosidad, la creatividad y el amor por el aprendizaje continuo. Encuentro alegría en la lectura, la cocina, el dibujo y tocar la guitarra — actividades que equilibran la intensidad de la ingeniería con momentos de calma y expresión.",
+    "years": "Años en Francia",
+    "countries": "Países de estudio",
+    "project": "Proyectos técnicos"
+  },
+"education": {
+  "title": "Educación",
+  "date1": "2024 – Presente",
+  "date2": "2022 – 2024",
+  "date3": "2021 – 2022",
+  "date4": "2016 – 2020",
+  "sub1": "Máster en Ingeniería Eléctrica con especialización en sistemas embebidos, electrónica y automatización.",
+  "sub2": "Grado en Ingeniería Eléctrica e Informática Industrial. Adquirí experiencia práctica en automatización, microcontroladores y procesamiento de señales.",
+  "sub3": "Año preparatorio en lengua francesa y fundamentos científicos para la integración en el sistema de educación superior francés.",
+  "sub4": "Escuela secundaria científica en Malasia, centrada en física, matemáticas y ciencias generales."
+},
+  "experience": {
+    "bigtitle": "Experiencia",
+    "date": "Abril - Julio 2024"
+  ,"sub1" : "Realicé una pasantía de 3 meses en Num’axes, una empresa francesa reconocida por diseñar dispositivos electrónicos para el adiestramiento, rastreo y comportamiento de mascotas.",
+  "sub2" : "Mi misión fue diseñar y realizar un PCB personalizado para un sistema de collar para perros. Me encargué del diseño esquemático analógico y digital, simulación de circuitos (LTSpice), pruebas en protoboard y diseño del PCB. El proyecto implicó pruebas iterativas, validación de componentes y depuración dentro de un entorno de I+D.",
+  "sub3" : "Esta experiencia fortaleció mis competencias prácticas en electrónica, trabajo en equipo y desarrollo de productos bajo restricciones reales, como las relacionadas con la CEM y el formato físico."
+  , "title": "Num’axes – pasantía de ingeniería"
+  },
+"hobbies": {
+  "title": "Pasatiempos",
+  "list": "Lectura, Cocina, Correr, Arte Digital y Tradicional, Tocar la Guitarra",
+
+  "read": "Lectura",
+  "readsub": "Disfruto sumergirme en la literatura, artículos científicos e historia para ampliar mi conocimiento e imaginación.",
+
+  "cook": "Cocina",
+  "cooksub": "Encuentro paz en la cocina — experimentando con platos malayos y aprendiendo sobre cocinas del mundo.",
+
+  "jog": "Correr",
+  "jogsub": "Correr me despeja la mente y me llena de energía, especialmente en la naturaleza o en los parques del campus.",
+
+  "art": "Arte Digital y Tradicional",
+  "artsub": "Exploro tanto ilustraciones digitales como bocetos tradicionales como forma de expresión creativa.",
+
+  "guitar": "Tocar la Guitarra",
+  "guitarsub": "La música me ayuda a relajarme — me encanta tocar melodías acústicas y aprender nuevos acordes con mi guitarra.",
+
+  "travel": "Viajar",
+  "travelsub": "A veces, cuando la vida se pone difícil, ¡viajar es la única solución! Me encanta visitar nuevos países y ya he estado en muchos, sobre todo en Europa y Asia."
+}
+,
+"projects": {
+  "title": "Proyectos",
+  "all": "Todos",
+  "electronic": "Electrónica",
+  "embedded": "Sistemas Embebidos",
+  "automation": "Automatización",
+  "rf": "RF y Antenas",
+  "signal": "Procesamiento de Señales",
+  "management": "Gestión",
+
+  "sonometer": "Sonómetro Analógico",
+  "sonometersub": "Diseñé y construí un sonómetro completo desde cero, incluyendo el diseño del circuito, simulación con LTspice, prototipado y fabricación de PCB. Estudio integral de los principios de medición acústica.",
+  "sonometertags": "Diseño de PCB • LTspice • Análisis de Circuitos • Prototipado",
+
+  "dust": "Sensor de Polvo Ambiental",
+  "dustsub": "Desarrollé un sistema avanzado de detección de polvo con diseño de circuitos personalizados y programación embebida. Enfocado en la calibración de sensores y aplicaciones de monitoreo ambiental.",
+  "dusttags": "Sensores • Sistemas Embebidos • Diseño de Circuitos • Pruebas",
+
+  "auto": "Sistema de Clasificación Automatizado",
+  "autosub": "Creé un sistema de automatización basado en GRAFCET para clasificar piezas por color y número. Implementación de flujo de trabajo completo de automatización industrial con múltiples estaciones de control.",
+  "autotags": "GRAFCET • Automatización • Sistemas Industriales • Clasificación",
+
+  "clanu": "Clasificación de Imágenes Médicas",
+  "clanusub": "Desarrollé algoritmos de aprendizaje automático para el análisis y clasificación de imágenes cerebrales. Aplicación de técnicas de análisis numérico y procesamiento de datos para diagnóstico médico.",
+  "clanutags": "Procesamiento de Imágenes • Análisis de Datos • C++",
+
+  "regelec": "Startup de Energía Inteligente REGELEC",
+  "regelecsub": "Co-fundador de una startup que desarrolla sistemas inteligentes de regulación eléctrica. Plan de negocio, prototipo y app móvil para consumo optimizado.",
+  "regelectags": "Startup • Energía • Aplicación Móvil",
+
+  "line": "Robot Seguidor de Línea Autónomo",
+  "linesub": "Diseñé un sistema robótico completo desde el esquema hasta el PCB. Integración de sensores, motores y algoritmos de control de trayectoria.",
+  "linetags": "Robótica • PCB • Control",
+
+  "smartcar": "Coche Inteligente Multifunción",
+  "smartcarsub": "Vehículo autónomo avanzado con integración a smartphone, múltiples sensores, comunicación inalámbrica y funcionalidad versátil para diversas aplicaciones.",
+  "smartcartags": "IoT • PCB • Control Móvil • Comunicación Inalámbrica • Sistemas Multifunción",
+
+  "pneumatic": "Control Neumático Industrial",
+  "pneumaticsub": "Desarrollé una estación de control neumático usando TIA Portal para manipulación automatizada de piezas. Proyecto colaborativo de automatización industrial con estaciones interconectadas.",
+  "pneumatictags": "TIA Portal • Neumática • Control Industrial • Proyecto en Equipo",
+
+  "scan": "Escáner de Distancia 3D",
+  "scansub": "Construí un sistema de escaneo 3D usando un microcontrolador STM32, sensores de distancia y servomotores. Sistema integral de escaneo y adquisición de datos.",
+  "scantags": "STM32 • Servomotores • Sensores de Distancia • Escaneo 3D",
+
+  "ecg": "Sistema de Electrocardiografía (ECG)",
+  "ecgsub": "Diseñé un sistema completo de adquisición ECG con amplificadores analógicos, filtros y circuitos de acondicionamiento de señal para procesamiento biomédico.",
+  "ecgtags": "Biomédica • Amplificadores • Filtros • Procesamiento de Señal",
+
+  "filter": "Diseño de Filtros Analógicos",
+  "filtersub": "Desarrollé filtros analógicos especializados como anti-aliasing y de suavizado. Diseño y realización completa del PCB para acondicionamiento de señales.",
+  "filtertags": "Filtros Analógicos • Anti-aliasing • Diseño PCB • Acondicionamiento de Señal",
+
+  "audio": "Efectos de Audio Digitales",
+  "audiosub": "Programé algoritmos de procesamiento de señal digital en C para efectos de guitarra como reverberación, distorsión y efectos rock. Procesamiento de audio en tiempo real.",
+  "audiotags": "Programación en C • Procesamiento de Audio • Efectos de Guitarra • DSP",
+
+  "rfc": "Sensor RF de Detección de Líquidos",
+  "rfsub": "Diseñé un sensor basado en RF para diferenciar líquidos (agua/etanol) utilizando Cadence AWR. Implementación de análisis con carta de Smith y PCB personalizado con trazas de cobre de precisión.",
+  "rftags": "Diseño RF • Cadence AWR • Carta de Smith • Diseño de Sensores",
+
+  "iot": "Red de Sensores IoT",
+  "iotsub": "Desarrollé un sistema IoT distribuido con microcontroladores STM32 y comunicación inalámbrica. Implementación de red sensor-actuador para monitoreo y control ambiental.",
+  "iottags": "IoT • STM32 • Comunicación Inalámbrica • Redes de Sensores",
+
+  "antenna": "Optimización de Antena Patch",
+  "antennasub": "Inversión y optimización del diseño de una antena patch usando Cadence AWR. Logré un coeficiente de reflexión de -17 dB en la frecuencia objetivo mediante optimización sistemática.",
+  "antennatags": "Diseño de Antenas • Ingeniería Inversa • Optimización RF • Coeficiente de Reflexión",
+
+  "solar": "Análisis de Paneles Solares",
+  "solarsub": "Estudio completo de sistemas fotovoltaicos incluyendo modelado, simulación y caracterización experimental. Análisis y optimización de eficiencia de conversión energética.",
+  "solartags": "Energía Solar • Electrónica de Potencia • Energías Renovables • Análisis de Sistemas"
+}
+,
+  "contact": {
+    "title": "Contáctame",
+    "text": "No dudes en escribirme por correo electrónico:"
+  }
+}
