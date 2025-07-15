@@ -1,34 +1,146 @@
 {
-        "nav": {
-            "home": "Accueil",
-            "about": "À propos",
-            "education": "Formation",
-            "experience": "Expérience",
-            "hobbies": "Loisirs",
-            "contact": "Contact"
-        },
-        "home": {
-            "greeting": "Bonjour, je suis Azmin",
-            "subtitle": "Étudiant en Génie Électrique | Passionné de Systèmes Embarqués",
-            "cta": "Voir mes projets"
-        },
-        "about": {
-            "title": "À propos de moi",
-            "description": "Je suis un étudiant passionné par les systèmes embarqués, l’électronique et le traitement du signal. Je suis animé par la curiosité et le désir de créer des choses utiles."
-        },
-        "education": {
-            "title": "Formation"
-        },
-        "experience": {
-            "title": "Expérience",
-            "description": "En 2024, j’ai effectué un stage chez Num’axes, une entreprise française spécialisée dans le développement de dispositifs électroniques pour animaux. Ma mission principale était de concevoir et prototyper une carte électronique (PCB) pour un collier anti-aboiement, intégrant des composants analogiques et numériques."
-        },
-        "hobbies": {
-            "title": "Loisirs",
-            "list": "Lecture, Cuisine, Jogging, Arts Numériques & Traditionnels, Guitare"
-        },
-        "contact": {
-            "title": "Contactez-moi",
-            "text": "N'hésitez pas à me contacter par email :"
-        }
-    }
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "education": "Formation",
+    "experience": "Expérience",
+    "hobbies": "Loisirs",
+    "projects" : "Projets",
+    "contact": "Contact"
+  },
+  "home": {
+    "greeting": "Bonjour, je suis Azmin",
+    "subtitle": "Étudiant en Génie Électrique | Passionné de Systèmes Embarqués",
+    "cta": "Voir mes projets"
+  },
+  "about": {
+    "title": "À propos de moi",
+    "description1": "Je suis Azmin Yusmizan, étudiant en génie électrique, animé par une passion profonde pour l'innovation, les systèmes embarqués et les technologies durables. Au fil des années, j’ai développé une solide base technique en électronique, conception de circuits imprimés, traitement du signal et automatisation — façonnée par un parcours international unique entre la Malaisie et la France.",
+    "description2": "Étudier dans des établissements comme l’INSA Lyon, l’IUT Paul Sabatier Toulouse et l’Université de Tours m’a permis de découvrir des cultures techniques variées et des projets collaboratifs, me poussant à être à la fois rigoureux et adaptable. Qu’il s’agisse de concevoir des systèmes énergétiques intelligents, de programmer des dispositifs embarqués ou de simuler des antennes hyperfréquences, j’aime transformer des idées complexes en solutions pratiques et élégantes.",
+    "description3": "Au-delà des études, je suis animé par la curiosité, la créativité et l’envie d’apprendre en continu. J’aime lire, cuisiner, dessiner et jouer de la guitare — des activités qui équilibrent l’intensité de l’ingénierie avec des moments de calme et d’expression personnelle.",
+    "years": "Ans en France",
+    "countries": "Pays étudiés",
+    "project": "Projets Techniques"
+  },
+"education": {
+  "title": "Formation",
+  "date1": "2024 – Présent",
+  "date2": "2022 – 2024",
+  "date3": "2021 – 2022",
+  "date4": "2016 – 2020",
+  "sub1": "Master en Génie Électrique avec spécialisation en systèmes embarqués, électronique et automatisme.",
+  "sub2": "DUT/BUT en Génie Électrique et Informatique Industrielle. Expérience pratique acquise en automatisation, microcontrôleurs et traitement du signal.",
+  "sub3": "Année préparatoire en langue française et en sciences pour l’intégration dans l’enseignement supérieur en France.",
+  "sub4": "École secondaire scientifique en Malaisie. Axée sur la physique, les mathématiques et les sciences générales."
+},
+  "experience": {
+    "bigtitle": "Expérience",
+    "date": "Avril - Juillet 2024",
+    "sub1": "J’ai effectué un stage de 3 mois chez Num’axes, une entreprise française reconnue pour la conception de dispositifs électroniques destinés au dressage, au suivi et au comportement des animaux de compagnie.",
+    "sub2": "Ma mission consistait à concevoir et réaliser un PCB sur mesure pour un système de collier pour chien. J’ai pris en charge la conception des schémas analogiques et numériques, la simulation de circuits (LTSpice), les tests sur protoboard, ainsi que la réalisation du layout PCB. Le projet a impliqué des tests itératifs, la validation de composants et le débogage dans un environnement de recherche et développement.",
+    "sub3": "Cette expérience a renforcé mes compétences pratiques en électronique, en travail d’équipe, et en développement de produits dans des contraintes réelles, telles que celles liées à la CEM et au format physique."
+  , "title": "Num’axes – stage d'ingénieur"
+  },
+"hobbies": {
+  "title": "Loisirs",
+  "list": "Lecture, Cuisine, Jogging, Arts Numériques & Traditionnels, Guitare",
+  
+  "read": "Lecture",
+  "readsub": "J’aime m’immerger dans la littérature, les articles scientifiques et l’histoire pour enrichir mes connaissances et mon imagination.",
+
+  "cook": "Cuisine",
+  "cooksub": "Je trouve la paix en cuisine — j’expérimente avec des plats malaisiens et découvre les cuisines du monde.",
+
+  "jog": "Jogging",
+  "jogsub": "Le jogging m’aide à clarifier mon esprit et à rester énergique, surtout dans la nature ou autour des parcs du campus.",
+
+  "art": "Arts Numériques & Traditionnels",
+  "artsub": "J’explore à la fois les illustrations numériques et les croquis traditionnels comme forme d’expression créative.",
+
+  "guitar": "Guitare",
+  "guitarsub": "La musique m’aide à me détendre — j’aime jouer des mélodies acoustiques et apprendre de nouveaux accords à la guitare.",
+
+  "travel": "Voyages",
+  "travelsub": "Parfois, quand la vie devient un peu difficile, voyager est la seule solution ! J’adore découvrir de nouveaux pays et j’en ai déjà visité beaucoup, principalement en Europe et en Asie."
+}
+,
+"projects": {
+  "title": "Projets",
+  "all": "Tous",
+  "electronic": "Électronique",
+  "embedded": "Systèmes Embarqués",
+  "automation": "Automatisation",
+  "rf": "RF & Antennes",
+  "signal": "Traitement du Signal",
+  "management": "Gestion",
+
+  "sonometer": "Sonomètre Analogique",
+  "sonometersub": "Conception et réalisation d’un sonomètre complet depuis zéro : schéma électronique, simulation LTspice, prototypage et fabrication du PCB. Étude approfondie des principes de mesure acoustique.",
+  "sonometertags": "Conception PCB • LTspice • Analyse de Circuits • Prototypage",
+
+  "dust": "Capteur de Poussière Environnementale",
+  "dustsub": "Développement d’un système avancé de détection de poussière avec conception de circuit sur mesure et programmation embarquée. Accent sur l’étalonnage des capteurs et la surveillance environnementale.",
+  "dusttags": "Capteurs • Systèmes Embarqués • Conception de Circuits • Tests",
+
+  "auto": "Système de Tri Automatisé",
+  "autosub": "Création d’un système d’automatisation basé sur GRAFCET pour trier des pièces selon leur couleur et leur nombre. Mise en place d’un flux complet d’automatisation industrielle avec plusieurs postes de commande.",
+  "autotags": "GRAFCET • Automatisation • Systèmes Industriels • Tri",
+
+  "clanu": "Classification d’Images Médicales",
+  "clanusub": "Développement d’algorithmes de machine learning pour l’analyse et la classification d’images cérébrales. Utilisation de techniques d’analyse numérique et de traitement de données pour le diagnostic médical.",
+  "clanutags": "Traitement d’Images • Analyse de Données • C++",
+
+  "regelec": "Startup Énergie Intelligente REGELEC",
+  "regelecsub": "Co-fondateur d’une startup développant des systèmes de régulation électrique intelligente. Élaboration du plan d’affaires, prototypage, et application mobile pour une consommation optimisée.",
+  "regelectags": "Startup • Énergie • Application Mobile",
+
+  "line": "Robot Suiveur de Ligne Autonome",
+  "linesub": "Conception d’un système robotique complet, du schéma au PCB. Intégration de capteurs, moteurs et algorithmes de suivi de trajectoire.",
+  "linetags": "Robotique • PCB • Contrôle",
+
+  "smartcar": "Voiture Intelligente Multifonction",
+  "smartcarsub": "Véhicule autonome avancé avec intégration smartphone, capteurs multiples, communication sans fil et fonctionnalités variées pour diverses applications.",
+  "smartcartags": "IoT • PCB • Contrôle Mobile • Communication Sans Fil • Systèmes Multifonctions",
+
+  "pneumatic": "Commande Pneumatique Industrielle",
+  "pneumaticsub": "Développement d’un poste de commande pneumatique avec TIA Portal pour la manipulation automatisée de pièces. Projet collaboratif en automatisation industrielle avec stations interconnectées.",
+  "pneumatictags": "TIA Portal • Pneumatique • Contrôle Industriel • Projet en Équipe",
+
+  "scan": "Scanner de Distance 3D",
+  "scansub": "Conception d’un système de scan 3D avec microcontrôleur STM32, capteurs de distance et servomoteurs. Système complet de numérisation et d’acquisition de données.",
+  "scantags": "STM32 • Servomoteurs • Capteurs de Distance • Scan 3D",
+
+  "ecg": "Système Électrocardiographique (ECG)",
+  "ecgsub": "Conception d’un système ECG complet avec amplificateurs analogiques, filtres et circuits de conditionnement de signal pour le traitement de signaux biomédicaux.",
+  "ecgtags": "Biomédical • Amplificateurs • Filtres • Traitement du Signal",
+
+  "filter": "Conception de Filtres Analogiques",
+  "filtersub": "Développement de filtres analogiques spécialisés incluant anti-repliement et filtrage lissant. Conception et réalisation complète du PCB pour le conditionnement de signal.",
+  "filtertags": "Filtres Analogiques • Anti-repliement • Conception PCB • Conditionnement de Signal",
+
+  "audio": "Effets Audio Numériques",
+  "audiosub": "Programmation d’algorithmes DSP en C pour effets guitare : reverb, distorsion, effets rock. Traitement audio en temps réel.",
+  "audiotags": "Programmation C • Traitement Audio • Effets Guitare • DSP",
+
+  "rfc": "Capteur RF de Détection de Liquide",
+  "rfsub": "Conception d’un capteur RF pour différencier l’eau et l’éthanol à l’aide de Cadence AWR. Analyse sur diagramme de Smith et réalisation d’un PCB avec pistes en cuivre de haute précision.",
+  "rftags": "Conception RF • Cadence AWR • Diagramme de Smith • Capteurs",
+
+  "iot": "Réseau de Capteurs IoT",
+  "iotsub": "Développement d’un système IoT distribué avec microcontrôleurs STM32 et communication sans fil. Mise en œuvre d’un réseau capteur-actionneur pour la surveillance environnementale.",
+  "iottags": "IoT • STM32 • Communication Sans Fil • Réseaux de Capteurs",
+
+  "antenna": "Optimisation d’Antenne Patch",
+  "antennasub": "Rétro-ingénierie et optimisation d’une antenne patch avec Cadence AWR. Atteint un coefficient de réflexion de -17 dB à la fréquence cible grâce à une optimisation systématique.",
+  "antennatags": "Conception Antenne • Rétro-ingénierie • Optimisation RF • Coefficient de Réflexion",
+
+  "solar": "Analyse de Panneaux Solaires",
+  "solarsub": "Étude approfondie des systèmes photovoltaïques incluant modélisation, simulation et caractérisation expérimentale. Analyse de l’efficacité de conversion énergétique et optimisation.",
+  "solartags": "Énergie Solaire • Électronique de Puissance • Énergies Renouvelables • Analyse Systémique"
+}
+,
+  "contact": {
+    "title": "Contactez-moi",
+    "text": "N'hésitez pas à me contacter par email :"
+  }
+}
