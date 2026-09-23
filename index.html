@@ -1,647 +1,632 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Azmin Yusmizan | Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <script defer src="script.js"></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <header>
-      <div class="nav-header">
-        <button class="hamburger" id="hamburger">&#9776;</button>
-        <h1>Azmin Yusmizan</h1>
-        <div class="language-dropdown">
-          <button id="langBtn">🌐 <span id="currentLang">EN</span></button>
-          <ul class="lang-menu" id="langMenu">
-            <li data-lang="en"><span class="code">EN</span> English</li>
-            <li data-lang="ms"><span class="code">MY</span> Bahasa Melayu</li>
-            <li data-lang="fr"><span class="code">FR</span> Français</li>
-            <li data-lang="es"><span class="code">ES</span> Español</li>
-          </ul>
-        </div>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title data-i18n="meta.title">Azmin Yusmizan | Electrical engineering, embedded systems and RF</title>
+  <meta name="description" content="Portfolio of Azmin Yusmizan, final-year electrical engineering student at INSA Lyon: LoRa radio protocols, bare-metal embedded firmware, GNSS, RF design and electronics." />
+  <meta name="author" content="Muhammad Azmin Muhamad Yusmizan" />
+  <link rel="canonical" href="https://m-azmin.github.io/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Azmin Yusmizan | Electrical engineering, embedded systems and RF" />
+  <meta property="og:description" content="Final-year electrical engineering student at INSA Lyon. Long-range radio links, bare-metal firmware and the circuits underneath them." />
+  <meta property="og:url" content="https://m-azmin.github.io/" />
+  <meta property="og:image" content="https://m-azmin.github.io/img/profile.jpg" />
+  <meta name="theme-color" content="#F3F4F0" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0E151C" media="(prefers-color-scheme: dark)" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23101C28'/%3E%3Cpath d='M5 24 L13 8 M13 24 L21 8 M21 24 L27 12' stroke='%23F2C230' stroke-width='2.6' stroke-linecap='round' fill='none'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.bunny.net" />
+  <link rel="stylesheet" href="https://fonts.bunny.net/css?family=red-hat-display:500,700,900|red-hat-text:400,400i,500,600|red-hat-mono:400,500&display=swap" />
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Muhammad Azmin Muhamad Yusmizan",
+    "alternateName": "Azmin Yusmizan",
+    "url": "https://m-azmin.github.io/",
+    "image": "https://m-azmin.github.io/img/profile.jpg",
+    "jobTitle": "Electrical engineering student",
+    "email": "mailto:muhammad-azmin.muhamad-yusmizan@insa-lyon.fr",
+    "address": { "@type": "PostalAddress", "addressLocality": "Villeurbanne", "addressCountry": "FR" },
+    "alumniOf": [
+      { "@type": "CollegeOrUniversity", "name": "IUT Paul Sabatier, Université Toulouse III" },
+      { "@type": "CollegeOrUniversity", "name": "IUT de Tours, Université de Tours" }
+    ],
+    "affiliation": { "@type": "CollegeOrUniversity", "name": "INSA Lyon" },
+    "knowsAbout": ["LoRa", "Embedded systems", "Embedded C", "GNSS", "RF design", "PCB design", "Analog electronics", "Signal processing", "Industrial automation"],
+    "sameAs": [
+      "https://www.linkedin.com/in/muhammad-azmin-muhamad-yusmizan-5a4367266/",
+      "https://github.com/m-azmin"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="nav.skip">Skip to content</a>
 
-      <nav>
-        <ul class="nav-links">
-          <li><a href="#home" data-i18n="nav.home">Home</a></li>
-          <li><a href="#about" data-i18n="nav.about">About</a></li>
-          <li>
-            <a href="#experience" data-i18n="nav.experience">Experience</a>
-          </li>
-          <li><a href="#education" data-i18n="nav.education">Education</a></li>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#top" aria-label="Azmin Yusmizan, home">Azmin Yusmizan</a>
+
+      <nav class="site-nav" aria-label="Main">
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks">
+          <span class="nav-toggle-bars" aria-hidden="true"></span>
+          <span data-i18n="nav.menu">Menu</span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#lora" data-i18n="nav.featured">LoRa project</a></li>
+          <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
           <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
-          <li><a href="#hobbies" data-i18n="nav.hobbies">Hobbies</a></li>
-          <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+          <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
+          <li><a href="#education" data-i18n="nav.education">Education</a></li>
+          <li><a href="#about" data-i18n="nav.about">About</a></li>
+          <li><a href="#contact" class="nav-cta" data-i18n="nav.contact">Contact</a></li>
         </ul>
       </nav>
-    </header>
 
-    <section id="home" class="section hero-section">
-      <div class="hero-wrapper">
-        <div class="hero-image">
-          <img src="img/profile.jpg" alt="Azmin Yusmizan" />
-        </div>
+      <div class="lang">
+        <button class="lang-btn" id="langBtn" aria-haspopup="true" aria-expanded="false" aria-controls="langMenu">
+          <svg aria-hidden="true" viewBox="0 0 20 20" width="16" height="16"><circle cx="10" cy="10" r="8" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M2 10h16M10 2c2.5 2.2 3.6 5 3.6 8s-1.1 5.8-3.6 8M10 2C7.5 4.2 6.4 7 6.4 10s1.1 5.8 3.6 8" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+          <span id="currentLang">EN</span>
+          <span class="visually-hidden" data-i18n="nav.lang">Change language</span>
+        </button>
+        <ul class="lang-menu" id="langMenu" hidden>
+          <li><button type="button" data-lang="en" lang="en">English</button></li>
+          <li><button type="button" data-lang="fr" lang="fr">Français</button></li>
+          <li><button type="button" data-lang="ms" lang="ms">Bahasa Melayu</button></li>
+          <li><button type="button" data-lang="es" lang="es">Español</button></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="wrap hero-grid">
         <div class="hero-text">
-          <h2><a data-i18n="home.greeting">Hello, I’m Azmin</a></h2>
-          <p>
-            <a data-i18n="home.subtitle"
-              >Electrical Engineering Student | Embedded Systems Enthusiast</a
-            >
+          <h1 class="hero-name">Azmin<br />Yusmizan</h1>
+          <p class="hero-lead" data-i18n="hero.lead">Final-year electrical engineering student at INSA Lyon. I build long-range radio links, bare-metal firmware and the circuits underneath them.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#lora" data-i18n="hero.cta1">See the LoRa project</a>
+            <a class="btn btn-ghost" href="#contact" data-i18n="hero.cta2">Get in touch</a>
+          </div>
+        </div>
+        <aside class="hero-card">
+          <img class="hero-photo" src="img/profile.jpg" alt="Portrait of Azmin Yusmizan" width="120" height="120" />
+          <dl class="hero-facts">
+            <div><dt data-i18n="hero.f1t">Studying</dt><dd data-i18n="hero.f1d">Génie Électrique, INSA Lyon</dd></div>
+            <div><dt data-i18n="hero.f2t">Focus</dt><dd data-i18n="hero.f2d">Embedded systems, LoRa and RF</dd></div>
+            <div><dt data-i18n="hero.f3t">Based in</dt><dd>Villeurbanne, Lyon</dd></div>
+            <div><dt data-i18n="hero.f4t">Languages</dt><dd data-i18n="hero.f4d">English, French, Malay</dd></div>
+          </dl>
+          <p class="hero-links">
+            <a href="https://www.linkedin.com/in/muhammad-azmin-muhamad-yusmizan-5a4367266/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://github.com/m-azmin" target="_blank" rel="noopener">GitHub</a>
+            <a href="mailto:muhammad-azmin.muhamad-yusmizan@insa-lyon.fr">Email</a>
           </p>
-          <a href="#projects" class="btn" data-i18n="home.cta">See My Work</a>
+        </aside>
+      </div>
+
+      <figure class="wrap scope">
+        <div class="scope-screen">
+          <div class="scope-readout scope-readout-top" aria-hidden="true">
+            <span class="ch ch1">CH1 <span data-i18n="hero.ch1">signal</span></span>
+            <span class="ch ch2">CH2 <span data-i18n="hero.ch2">frequency</span></span>
+            <span class="scope-params">869.4 MHz &nbsp; SF7 &nbsp; BW 125 kHz</span>
+          </div>
+          <svg class="scope-svg" viewBox="0 0 1000 360" preserveAspectRatio="none" role="img" aria-labelledby="scopeCap">
+            <g class="graticule">
+              <path d="M100 0V360M200 0V360M300 0V360M400 0V360M500 0V360M600 0V360M700 0V360M800 0V360M900 0V360M0 45H1000M0 90H1000M0 135H1000M0 180H1000M0 225H1000M0 270H1000M0 315H1000" />
+            </g>
+            <g class="graticule-axis">
+              <path d="M500 0V360M0 180H1000" />
+            </g>
+            <defs>
+              <clipPath id="sweep"><rect class="sweep-rect" x="0" y="0" width="1000" height="360" /></clipPath>
+            </defs>
+            <g clip-path="url(#sweep)">
+              <path class="trace trace-2" d="M0,328L100,212M100,328L200,212M200,328L300,212M300,328L400,212M400,212L500,328M500,212L600,328M600,256.1L638.0,212M638.0,328L700,256.1M700,307.1L782.0,212M782.0,328L800,307.1M800,229.4L815.0,212M815.0,328L900,229.4M900,281.6L960.0,212M960.0,328L1000,281.6" />
+              <path class="trace trace-1" d="M0.0,48.0 L0.7,50.9 L1.4,59.4 L2.1,72.2 L2.9,88.2 L3.6,105.8 L4.3,123.5 L5.0,139.9 L5.7,153.6 L6.4,163.9 L7.1,170.1 L7.9,172.0 L8.6,169.6 L9.3,163.4 L10.0,153.8 L10.7,141.8 L11.4,128.1 L12.1,113.6 L12.9,99.2 L13.6,85.6 L14.3,73.6 L15.0,63.5 L15.7,55.8 L16.4,50.7 L17.1,48.2 L17.9,48.4 L18.6,50.9 L19.3,55.7 L20.0,62.2 L20.7,70.3 L21.4,79.4 L22.1,89.3 L22.9,99.5 L23.6,109.7 L24.3,119.7 L25.0,129.2 L25.7,137.9 L26.4,145.8 L27.1,152.6 L27.9,158.5 L28.6,163.2 L29.3,166.9 L30.0,169.5 L30.7,171.2 L31.4,171.9 L32.1,171.9 L32.9,171.1 L33.6,169.6 L34.3,167.6 L35.0,165.2 L35.7,162.5 L36.4,159.5 L37.1,156.3 L37.9,153.0 L38.6,149.7 L39.3,146.4 L40.0,143.2 L40.7,140.1 L41.4,137.2 L42.1,134.4 L42.9,131.8 L43.6,129.4 L44.3,127.3 L45.0,125.4 L45.7,123.8 L46.4,122.4 L47.1,121.3 L47.9,120.5 L48.6,120.0 L49.3,119.7 L50.0,119.7 L50.7,120.0 L51.4,120.5 L52.1,121.3 L52.9,122.4 L53.6,123.8 L54.3,125.4 L55.0,127.3 L55.7,129.4 L56.4,131.8 L57.1,134.4 L57.9,137.2 L58.6,140.1 L59.3,143.2 L60.0,146.4 L60.7,149.7 L61.4,153.0 L62.1,156.3 L62.9,159.5 L63.6,162.5 L64.3,165.2 L65.0,167.6 L65.7,169.6 L66.4,171.1 L67.1,171.9 L67.9,171.9 L68.6,171.2 L69.3,169.5 L70.0,166.9 L70.7,163.2 L71.4,158.5 L72.1,152.6 L72.9,145.8 L73.6,137.9 L74.3,129.2 L75.0,119.7 L75.7,109.7 L76.4,99.5 L77.1,89.3 L77.9,79.4 L78.6,70.3 L79.3,62.2 L80.0,55.7 L80.7,50.9 L81.4,48.4 L82.1,48.2 L82.9,50.7 L83.6,55.8 L84.3,63.5 L85.0,73.6 L85.7,85.6 L86.4,99.2 L87.1,113.6 L87.9,128.1 L88.6,141.8 L89.3,153.8 L90.0,163.4 L90.7,169.6 L91.4,172.0 L92.1,170.1 L92.9,163.9 L93.6,153.6 L94.3,139.9 L95.0,123.5 L95.7,105.8 L96.4,88.2 L97.1,72.2 L97.9,59.4 L98.6,50.9 L99.3,48.0 L100.0,51.0 L100.0,51.0 L100.7,59.7 L101.4,72.9 L102.1,89.3 L102.9,107.2 L103.6,125.1 L104.3,141.6 L105.0,155.2 L105.7,165.1 L106.4,170.7 L107.1,171.9 L107.9,168.6 L108.6,161.4 L109.3,151.0 L110.0,138.1 L110.7,123.8 L111.4,108.9 L112.1,94.3 L112.9,80.9 L113.6,69.2 L114.3,59.8 L115.0,53.1 L115.7,49.2 L116.4,48.0 L117.1,49.6 L117.9,53.6 L118.6,59.7 L119.3,67.6 L120.0,76.8 L120.7,86.9 L121.4,97.6 L122.1,108.3 L122.9,118.9 L123.6,128.9 L124.3,138.1 L125.0,146.4 L125.7,153.6 L126.4,159.7 L127.1,164.5 L127.9,168.0 L128.6,170.4 L129.3,171.7 L130.0,172.0 L130.7,171.3 L131.4,169.8 L132.1,167.5 L132.9,164.7 L133.6,161.4 L134.3,157.8 L135.0,153.8 L135.7,149.7 L136.4,145.5 L137.1,141.3 L137.9,137.2 L138.6,133.1 L139.3,129.2 L140.0,125.4 L140.7,121.9 L141.4,118.6 L142.1,115.6 L142.9,112.8 L143.6,110.3 L144.3,108.1 L145.0,106.1 L145.7,104.4 L146.4,103.1 L147.1,102.0 L147.9,101.1 L148.6,100.6 L149.3,100.3 L150.0,100.3 L150.7,100.6 L151.4,101.1 L152.1,102.0 L152.9,103.1 L153.6,104.4 L154.3,106.1 L155.0,108.1 L155.7,110.3 L156.4,112.8 L157.1,115.6 L157.9,118.6 L158.6,121.9 L159.3,125.4 L160.0,129.2 L160.7,133.1 L161.4,137.2 L162.1,141.3 L162.9,145.5 L163.6,149.7 L164.3,153.8 L165.0,157.8 L165.7,161.4 L166.4,164.7 L167.1,167.5 L167.9,169.8 L168.6,171.3 L169.3,172.0 L170.0,171.7 L170.7,170.4 L171.4,168.0 L172.1,164.5 L172.9,159.7 L173.6,153.6 L174.3,146.4 L175.0,138.1 L175.7,128.9 L176.4,118.9 L177.1,108.3 L177.9,97.6 L178.6,86.9 L179.3,76.8 L180.0,67.6 L180.7,59.7 L181.4,53.6 L182.1,49.6 L182.9,48.0 L183.6,49.2 L184.3,53.1 L185.0,59.8 L185.7,69.2 L186.4,80.9 L187.1,94.3 L187.9,108.9 L188.6,123.8 L189.3,138.1 L190.0,151.0 L190.7,161.4 L191.4,168.6 L192.1,171.9 L192.9,170.7 L193.6,165.1 L194.3,155.2 L195.0,141.6 L195.7,125.1 L196.4,107.2 L197.1,89.3 L197.9,72.9 L198.6,59.7 L199.3,51.0 L200.0,59.8 L200.0,59.8 L200.7,73.3 L201.4,90.0 L202.1,108.3 L202.9,126.5 L203.6,143.0 L204.3,156.5 L205.0,166.1 L205.7,171.2 L206.4,171.6 L207.1,167.5 L207.9,159.5 L208.6,148.2 L209.3,134.6 L210.0,119.7 L210.7,104.4 L211.4,89.8 L212.1,76.5 L212.9,65.4 L213.6,56.8 L214.3,51.0 L215.0,48.3 L215.7,48.5 L216.4,51.4 L217.1,56.8 L217.9,64.2 L218.6,73.3 L219.3,83.6 L220.0,94.6 L220.7,105.8 L221.4,116.9 L222.1,127.6 L222.9,137.4 L223.6,146.2 L224.3,153.8 L225.0,160.2 L225.7,165.1 L226.4,168.7 L227.1,171.0 L227.9,171.9 L228.6,171.8 L229.3,170.5 L230.0,168.3 L230.7,165.4 L231.4,161.7 L232.1,157.6 L232.9,153.0 L233.6,148.2 L234.3,143.2 L235.0,138.1 L235.7,133.1 L236.4,128.1 L237.1,123.3 L237.9,118.6 L238.6,114.2 L239.3,110.0 L240.0,106.1 L240.7,102.5 L241.4,99.2 L242.1,96.2 L242.9,93.5 L243.6,91.1 L244.3,89.0 L245.0,87.2 L245.7,85.6 L246.4,84.4 L247.1,83.4 L247.9,82.6 L248.6,82.1 L249.3,81.9 L250.0,81.9 L250.7,82.1 L251.4,82.6 L252.1,83.4 L252.9,84.4 L253.6,85.6 L254.3,87.2 L255.0,89.0 L255.7,91.1 L256.4,93.5 L257.1,96.2 L257.9,99.2 L258.6,102.5 L259.3,106.1 L260.0,110.0 L260.7,114.2 L261.4,118.6 L262.1,123.3 L262.9,128.1 L263.6,133.1 L264.3,138.1 L265.0,143.2 L265.7,148.2 L266.4,153.0 L267.1,157.6 L267.9,161.7 L268.6,165.4 L269.3,168.3 L270.0,170.5 L270.7,171.8 L271.4,171.9 L272.1,171.0 L272.9,168.7 L273.6,165.1 L274.3,160.2 L275.0,153.8 L275.7,146.2 L276.4,137.4 L277.1,127.6 L277.9,116.9 L278.6,105.8 L279.3,94.6 L280.0,83.6 L280.7,73.3 L281.4,64.2 L282.1,56.8 L282.9,51.4 L283.6,48.5 L284.3,48.3 L285.0,51.0 L285.7,56.8 L286.4,65.4 L287.1,76.5 L287.9,89.8 L288.6,104.4 L289.3,119.7 L290.0,134.6 L290.7,148.2 L291.4,159.5 L292.1,167.5 L292.9,171.6 L293.6,171.2 L294.3,166.1 L295.0,156.5 L295.7,143.0 L296.4,126.5 L297.1,108.3 L297.9,90.0 L298.6,73.3 L299.3,59.8 L300.0,73.6 L300.0,73.6 L300.7,90.6 L301.4,109.2 L302.1,127.6 L302.9,144.2 L303.6,157.6 L304.3,166.9 L305.0,171.5 L305.7,171.3 L306.4,166.4 L307.1,157.6 L307.9,145.5 L308.6,131.3 L309.3,115.8 L310.0,100.3 L310.7,85.6 L311.4,72.7 L312.1,62.1 L312.9,54.3 L313.6,49.6 L314.3,48.0 L315.0,49.5 L315.7,53.8 L316.4,60.5 L317.1,69.2 L317.9,79.4 L318.6,90.6 L319.3,102.2 L320.0,113.9 L320.7,125.1 L321.4,135.6 L322.1,145.1 L322.9,153.2 L323.6,160.0 L324.3,165.2 L325.0,169.0 L325.7,171.2 L326.4,172.0 L327.1,171.5 L327.9,169.8 L328.6,167.0 L329.3,163.4 L330.0,159.0 L330.7,154.0 L331.4,148.7 L332.1,143.0 L332.9,137.2 L333.6,131.3 L334.3,125.4 L335.0,119.7 L335.7,114.2 L336.4,108.9 L337.1,103.9 L337.9,99.2 L338.6,94.9 L339.3,90.8 L340.0,87.2 L340.7,83.9 L341.4,80.9 L342.1,78.2 L342.9,75.8 L343.6,73.8 L344.3,72.0 L345.0,70.5 L345.7,69.2 L346.4,68.2 L347.1,67.4 L347.9,66.8 L348.6,66.4 L349.3,66.2 L350.0,66.2 L350.7,66.4 L351.4,66.8 L352.1,67.4 L352.9,68.2 L353.6,69.2 L354.3,70.5 L355.0,72.0 L355.7,73.8 L356.4,75.8 L357.1,78.2 L357.9,80.9 L358.6,83.9 L359.3,87.2 L360.0,90.8 L360.7,94.9 L361.4,99.2 L362.1,103.9 L362.9,108.9 L363.6,114.2 L364.3,119.7 L365.0,125.4 L365.7,131.3 L366.4,137.2 L367.1,143.0 L367.9,148.7 L368.6,154.0 L369.3,159.0 L370.0,163.4 L370.7,167.0 L371.4,169.8 L372.1,171.5 L372.9,172.0 L373.6,171.2 L374.3,169.0 L375.0,165.2 L375.7,160.0 L376.4,153.2 L377.1,145.1 L377.9,135.6 L378.6,125.1 L379.3,113.9 L380.0,102.2 L380.7,90.6 L381.4,79.4 L382.1,69.2 L382.9,60.5 L383.6,53.8 L384.3,49.5 L385.0,48.0 L385.7,49.6 L386.4,54.3 L387.1,62.1 L387.9,72.7 L388.6,85.6 L389.3,100.3 L390.0,115.8 L390.7,131.3 L391.4,145.5 L392.1,157.6 L392.9,166.4 L393.6,171.3 L394.3,171.5 L395.0,166.9 L395.7,157.6 L396.4,144.2 L397.1,127.6 L397.9,109.2 L398.6,90.6 L399.3,73.6 L400.0,90.8 L400.0,90.8 L400.7,73.8 L401.4,60.3 L402.1,51.6 L402.9,48.1 L403.6,49.9 L404.3,56.6 L405.0,67.6 L405.7,81.6 L406.4,97.6 L407.1,114.2 L407.9,130.2 L408.6,144.6 L409.3,156.5 L410.0,165.2 L410.7,170.4 L411.4,172.0 L412.1,170.0 L412.9,164.7 L413.6,156.7 L414.3,146.4 L415.0,134.6 L415.7,121.9 L416.4,108.9 L417.1,96.2 L417.9,84.4 L418.6,73.8 L419.3,64.8 L420.0,57.7 L420.7,52.5 L421.4,49.3 L422.1,48.0 L422.9,48.6 L423.6,50.9 L424.3,54.8 L425.0,59.8 L425.7,66.0 L426.4,72.9 L427.1,80.4 L427.9,88.2 L428.6,96.2 L429.3,104.2 L430.0,111.9 L430.7,119.4 L431.4,126.5 L432.1,133.1 L432.9,139.1 L433.6,144.6 L434.3,149.5 L435.0,153.8 L435.7,157.6 L436.4,160.8 L437.1,163.5 L437.9,165.7 L438.6,167.5 L439.3,169.0 L440.0,170.1 L440.7,170.8 L441.4,171.4 L442.1,171.8 L442.9,171.9 L443.6,172.0 L444.3,172.0 L445.0,171.9 L445.7,171.8 L446.4,171.6 L447.1,171.5 L447.9,171.4 L448.6,171.3 L449.3,171.2 L450.0,171.2 L450.7,171.3 L451.4,171.4 L452.1,171.5 L452.9,171.6 L453.6,171.8 L454.3,171.9 L455.0,172.0 L455.7,172.0 L456.4,171.9 L457.1,171.8 L457.9,171.4 L458.6,170.8 L459.3,170.1 L460.0,169.0 L460.7,167.5 L461.4,165.7 L462.1,163.5 L462.9,160.8 L463.6,157.6 L464.3,153.8 L465.0,149.5 L465.7,144.6 L466.4,139.1 L467.1,133.1 L467.9,126.5 L468.6,119.4 L469.3,111.9 L470.0,104.2 L470.7,96.2 L471.4,88.2 L472.1,80.4 L472.9,72.9 L473.6,66.0 L474.3,59.8 L475.0,54.8 L475.7,50.9 L476.4,48.6 L477.1,48.0 L477.9,49.3 L478.6,52.5 L479.3,57.7 L480.0,64.8 L480.7,73.8 L481.4,84.4 L482.1,96.2 L482.9,108.9 L483.6,121.9 L484.3,134.6 L485.0,146.4 L485.7,156.7 L486.4,164.7 L487.1,170.0 L487.9,172.0 L488.6,170.4 L489.3,165.2 L490.0,156.5 L490.7,144.6 L491.4,130.2 L492.1,114.2 L492.9,97.6 L493.6,81.6 L494.3,67.6 L495.0,56.6 L495.7,49.9 L496.4,48.1 L497.1,51.6 L497.9,60.3 L498.6,73.8 L499.3,90.8 L500.0,110.0 L500.0,110.0 L500.7,91.1 L501.4,74.2 L502.1,60.8 L502.9,52.0 L503.6,48.1 L504.3,49.5 L505.0,55.7 L505.7,66.0 L506.4,79.4 L507.1,94.9 L507.9,111.1 L508.6,127.0 L509.3,141.6 L510.0,153.8 L510.7,163.2 L511.4,169.3 L512.1,171.9 L512.9,171.1 L513.6,167.0 L514.3,160.2 L515.0,151.0 L515.7,140.1 L516.4,128.1 L517.1,115.6 L517.9,103.1 L518.6,91.1 L519.3,80.1 L520.0,70.5 L520.7,62.4 L521.4,56.1 L522.1,51.6 L522.9,48.9 L523.6,48.0 L524.3,48.8 L525.0,51.0 L525.7,54.6 L526.4,59.4 L527.1,65.0 L527.9,71.3 L528.6,78.2 L529.3,85.4 L530.0,92.7 L530.7,100.0 L531.4,107.2 L532.1,114.2 L532.9,120.8 L533.6,127.0 L534.3,132.8 L535.0,138.1 L535.7,143.0 L536.4,147.3 L537.1,151.2 L537.9,154.6 L538.6,157.6 L539.3,160.2 L540.0,162.3 L540.7,164.2 L541.4,165.7 L542.1,167.0 L542.9,168.0 L543.6,168.9 L544.3,169.5 L545.0,170.1 L545.7,170.4 L546.4,170.7 L547.1,171.0 L547.9,171.1 L548.6,171.2 L549.3,171.2 L550.0,171.2 L550.7,171.2 L551.4,171.1 L552.1,171.0 L552.9,170.7 L553.6,170.4 L554.3,170.1 L555.0,169.5 L555.7,168.9 L556.4,168.0 L557.1,167.0 L557.9,165.7 L558.6,164.2 L559.3,162.3 L560.0,160.2 L560.7,157.6 L561.4,154.6 L562.1,151.2 L562.9,147.3 L563.6,143.0 L564.3,138.1 L565.0,132.8 L565.7,127.0 L566.4,120.8 L567.1,114.2 L567.9,107.2 L568.6,100.0 L569.3,92.7 L570.0,85.4 L570.7,78.2 L571.4,71.3 L572.1,65.0 L572.9,59.4 L573.6,54.6 L574.3,51.0 L575.0,48.8 L575.7,48.0 L576.4,48.9 L577.1,51.6 L577.9,56.1 L578.6,62.4 L579.3,70.5 L580.0,80.1 L580.7,91.1 L581.4,103.1 L582.1,115.6 L582.9,128.1 L583.6,140.1 L584.3,151.0 L585.0,160.2 L585.7,167.0 L586.4,171.1 L587.1,171.9 L587.9,169.3 L588.6,163.2 L589.3,153.8 L590.0,141.6 L590.7,127.0 L591.4,111.1 L592.1,94.9 L592.9,79.4 L593.6,66.0 L594.3,55.7 L595.0,49.5 L595.7,48.1 L596.4,52.0 L597.1,60.8 L597.9,74.2 L598.6,91.1 L599.3,110.0 L600.0,129.2 L600.0,129.2 L600.7,124.4 L601.4,119.3 L602.1,113.8 L602.9,108.0 L603.6,102.0 L604.3,95.7 L605.0,89.4 L605.7,83.0 L606.4,76.7 L607.1,70.7 L607.9,65.0 L608.6,59.9 L609.3,55.5 L610.0,51.9 L610.7,49.4 L611.4,48.1 L612.1,48.2 L612.9,49.8 L613.6,52.9 L614.3,57.7 L615.0,64.0 L615.7,71.9 L616.4,81.2 L617.1,91.7 L617.9,103.1 L618.6,114.9 L619.3,126.9 L620.0,138.5 L620.7,149.1 L621.4,158.3 L622.1,165.5 L622.9,170.2 L623.6,172.0 L624.3,170.7 L625.0,166.1 L625.7,158.3 L626.4,147.6 L627.1,134.5 L627.9,119.6 L628.6,103.9 L629.3,88.3 L630.0,73.9 L630.7,61.8 L631.4,53.1 L632.1,48.5 L632.9,48.7 L633.6,53.9 L634.3,63.8 L635.0,77.8 L635.7,94.9 L636.4,113.6 L637.1,132.2 L637.9,149.0 L638.6,132.4 L639.3,113.9 L640.0,95.3 L640.7,78.3 L641.4,64.3 L642.1,54.3 L642.9,48.9 L643.6,48.4 L644.3,52.5 L645.0,60.8 L645.7,72.4 L646.4,86.4 L647.1,101.7 L647.9,117.3 L648.6,132.2 L649.3,145.5 L650.0,156.5 L650.7,164.8 L651.4,169.9 L652.1,172.0 L652.9,170.9 L653.6,167.0 L654.3,160.6 L655.0,152.2 L655.7,142.1 L656.4,131.1 L657.1,119.4 L657.9,107.7 L658.6,96.4 L659.3,85.7 L660.0,76.1 L660.7,67.8 L661.4,60.8 L662.1,55.4 L662.9,51.4 L663.6,49.0 L664.3,48.0 L665.0,48.4 L665.7,50.0 L666.4,52.6 L667.1,56.2 L667.9,60.5 L668.6,65.4 L669.3,70.8 L670.0,76.5 L670.7,82.3 L671.4,88.2 L672.1,94.1 L672.9,99.9 L673.6,105.4 L674.3,110.8 L675.0,115.8 L675.7,120.6 L676.4,125.0 L677.1,129.1 L677.9,132.8 L678.6,136.1 L679.3,139.2 L680.0,141.9 L680.7,144.3 L681.4,146.4 L682.1,148.2 L682.9,149.8 L683.6,151.1 L684.3,152.2 L685.0,153.0 L685.7,153.6 L686.4,154.1 L687.1,154.3 L687.9,154.3 L688.6,154.2 L689.3,153.8 L690.0,153.3 L690.7,152.5 L691.4,151.5 L692.1,150.3 L692.9,148.9 L693.6,147.2 L694.3,145.2 L695.0,142.9 L695.7,140.3 L696.4,137.4 L697.1,134.2 L697.9,130.6 L698.6,126.7 L699.3,122.4 L700.0,117.8 L700.0,117.8 L700.7,129.6 L701.4,140.5 L702.1,150.0 L702.9,158.0 L703.6,164.2 L704.3,168.6 L705.0,171.2 L705.7,172.0 L706.4,171.2 L707.1,168.9 L707.9,165.3 L708.6,160.5 L709.3,154.9 L710.0,148.6 L710.7,141.8 L711.4,134.7 L712.1,127.4 L712.9,120.1 L713.6,113.0 L714.3,106.1 L715.0,99.5 L715.7,93.3 L716.4,87.6 L717.1,82.3 L717.9,77.5 L718.6,73.2 L719.3,69.3 L720.0,65.9 L720.7,62.9 L721.4,60.3 L722.1,58.1 L722.9,56.3 L723.6,54.7 L724.3,53.4 L725.0,52.4 L725.7,51.5 L726.4,50.8 L727.1,50.3 L727.9,49.9 L728.6,49.6 L729.3,49.3 L730.0,49.2 L730.7,49.1 L731.4,49.0 L732.1,49.0 L732.9,49.1 L733.6,49.2 L734.3,49.4 L735.0,49.7 L735.7,50.0 L736.4,50.5 L737.1,51.1 L737.9,51.8 L738.6,52.8 L739.3,53.9 L740.0,55.3 L740.7,57.0 L741.4,59.0 L742.1,61.3 L742.9,64.0 L743.6,67.2 L744.3,70.8 L745.0,74.8 L745.7,79.4 L746.4,84.4 L747.1,89.8 L747.9,95.8 L748.6,102.1 L749.3,108.8 L750.0,115.8 L750.7,123.0 L751.4,130.3 L752.1,137.6 L752.9,144.6 L753.6,151.2 L754.3,157.3 L755.0,162.6 L755.7,166.9 L756.4,170.0 L757.1,171.7 L757.9,171.9 L758.6,170.4 L759.3,167.1 L760.0,161.9 L760.7,155.0 L761.4,146.4 L762.1,136.3 L762.9,125.0 L763.6,112.8 L764.3,100.3 L765.0,87.9 L765.7,76.2 L766.4,65.8 L767.1,57.4 L767.9,51.4 L768.6,48.3 L769.3,48.5 L770.0,52.2 L770.7,59.3 L771.4,69.6 L772.1,82.6 L772.9,97.7 L773.6,113.8 L774.3,129.9 L775.0,144.8 L775.7,157.5 L776.4,166.6 L777.1,171.4 L777.9,171.3 L778.6,166.0 L779.3,155.7 L780.0,141.2 L780.7,123.6 L781.4,104.5 L782.1,123.8 L782.9,141.5 L783.6,156.1 L784.3,166.3 L785.0,171.4 L785.7,171.3 L786.4,166.1 L787.1,156.6 L787.9,143.6 L788.6,128.3 L789.3,111.9 L790.0,95.7 L790.7,80.7 L791.4,67.9 L792.1,57.9 L792.9,51.3 L793.6,48.2 L794.3,48.7 L795.0,52.5 L795.7,59.2 L796.4,68.4 L797.1,79.4 L797.9,91.5 L798.6,104.3 L799.3,117.0 L800.0,129.2 L800.0,129.2 L800.7,115.6 L801.4,101.4 L802.1,87.4 L802.9,74.5 L803.6,63.3 L804.3,54.8 L805.0,49.5 L805.7,48.0 L806.4,50.7 L807.1,57.5 L807.9,68.2 L808.6,82.1 L809.3,98.4 L810.0,115.8 L810.7,133.1 L811.4,148.7 L812.1,161.1 L812.9,169.2 L813.6,172.0 L814.3,169.0 L815.0,172.0 L815.7,169.1 L816.4,160.6 L817.1,147.8 L817.9,131.8 L818.6,114.2 L819.3,96.5 L820.0,80.1 L820.7,66.4 L821.4,56.1 L822.1,49.9 L822.9,48.0 L823.6,50.4 L824.3,56.6 L825.0,66.2 L825.7,78.2 L826.4,91.9 L827.1,106.4 L827.9,120.8 L828.6,134.4 L829.3,146.4 L830.0,156.5 L830.7,164.2 L831.4,169.3 L832.1,171.8 L832.9,171.6 L833.6,169.1 L834.3,164.3 L835.0,157.8 L835.7,149.7 L836.4,140.6 L837.1,130.7 L837.9,120.5 L838.6,110.3 L839.3,100.3 L840.0,90.8 L840.7,82.1 L841.4,74.2 L842.1,67.4 L842.9,61.5 L843.6,56.8 L844.3,53.1 L845.0,50.5 L845.7,48.8 L846.4,48.1 L847.1,48.1 L847.9,48.9 L848.6,50.4 L849.3,52.4 L850.0,54.8 L850.7,57.5 L851.4,60.5 L852.1,63.7 L852.9,67.0 L853.6,70.3 L854.3,73.6 L855.0,76.8 L855.7,79.9 L856.4,82.8 L857.1,85.6 L857.9,88.2 L858.6,90.6 L859.3,92.7 L860.0,94.6 L860.7,96.2 L861.4,97.6 L862.1,98.7 L862.9,99.5 L863.6,100.0 L864.3,100.3 L865.0,100.3 L865.7,100.0 L866.4,99.5 L867.1,98.7 L867.9,97.6 L868.6,96.2 L869.3,94.6 L870.0,92.7 L870.7,90.6 L871.4,88.2 L872.1,85.6 L872.9,82.8 L873.6,79.9 L874.3,76.8 L875.0,73.6 L875.7,70.3 L876.4,67.0 L877.1,63.7 L877.9,60.5 L878.6,57.5 L879.3,54.8 L880.0,52.4 L880.7,50.4 L881.4,48.9 L882.1,48.1 L882.9,48.1 L883.6,48.8 L884.3,50.5 L885.0,53.1 L885.7,56.8 L886.4,61.5 L887.1,67.4 L887.9,74.2 L888.6,82.1 L889.3,90.8 L890.0,100.3 L890.7,110.3 L891.4,120.5 L892.1,130.7 L892.9,140.6 L893.6,149.7 L894.3,157.8 L895.0,164.3 L895.7,169.1 L896.4,171.6 L897.1,171.8 L897.9,169.3 L898.6,164.2 L899.3,156.5 L900.0,146.4 L900.0,146.4 L900.7,149.3 L901.4,151.8 L902.1,154.0 L902.9,156.0 L903.6,157.6 L904.3,159.0 L905.0,160.2 L905.7,161.1 L906.4,161.9 L907.1,162.5 L907.9,162.9 L908.6,163.2 L909.3,163.4 L910.0,163.4 L910.7,163.2 L911.4,162.9 L912.1,162.5 L912.9,161.9 L913.6,161.1 L914.3,160.2 L915.0,159.0 L915.7,157.6 L916.4,156.0 L917.1,154.0 L917.9,151.8 L918.6,149.3 L919.3,146.4 L920.0,143.2 L920.7,139.6 L921.4,135.6 L922.1,131.3 L922.9,126.5 L923.6,121.3 L924.3,115.8 L925.0,110.0 L925.7,103.9 L926.4,97.6 L927.1,91.1 L927.9,84.6 L928.6,78.2 L929.3,72.0 L930.0,66.2 L930.7,60.8 L931.4,56.2 L932.1,52.5 L932.9,49.7 L933.6,48.2 L934.3,48.1 L935.0,49.5 L935.7,52.5 L936.4,57.1 L937.1,63.3 L937.9,71.1 L938.6,80.4 L939.3,90.8 L940.0,102.2 L940.7,114.2 L941.4,126.2 L942.1,137.9 L942.9,148.7 L943.6,157.9 L944.3,165.2 L945.0,170.1 L945.7,172.0 L946.4,170.7 L947.1,166.2 L947.9,158.5 L948.6,147.8 L949.3,134.6 L950.0,119.7 L950.7,103.9 L951.4,88.2 L952.1,73.8 L952.9,61.7 L953.6,53.0 L954.3,48.5 L955.0,48.8 L955.7,54.0 L956.4,64.0 L957.1,78.2 L957.9,95.4 L958.6,114.2 L959.3,132.8 L960.0,113.9 L960.7,94.9 L961.4,77.5 L962.1,63.3 L962.9,53.4 L963.6,48.5 L964.3,48.8 L965.0,53.9 L965.7,63.3 L966.4,76.1 L967.1,91.1 L967.9,107.2 L968.6,123.3 L969.3,138.1 L970.0,151.0 L970.7,161.1 L971.4,168.0 L972.1,171.5 L972.9,171.6 L973.6,168.4 L974.3,162.3 L975.0,153.8 L975.7,143.5 L976.4,131.8 L977.1,119.4 L977.9,106.9 L978.6,94.9 L979.3,83.6 L980.0,73.6 L980.7,65.0 L981.4,58.1 L982.1,53.0 L982.9,49.7 L983.6,48.1 L984.3,48.3 L985.0,49.9 L985.7,53.0 L986.4,57.2 L987.1,62.4 L987.9,68.4 L988.6,74.9 L989.3,81.9 L990.0,89.0 L990.7,96.2 L991.4,103.3 L992.1,110.3 L992.9,116.9 L993.6,123.3 L994.3,129.2 L995.0,134.6 L995.7,139.6 L996.4,144.2 L997.1,148.2 L997.9,151.8 L998.6,155.0 L999.3,157.8 L1000.0,160.2" />
+            </g>
+          </svg>
+          <div class="scope-readout scope-readout-bottom" aria-hidden="true">
+            <span data-i18n="hero.seg1">preamble</span>
+            <span data-i18n="hero.seg2">sync</span>
+            <span data-i18n="hero.seg3">data</span>
+          </div>
+        </div>
+        <figcaption id="scopeCap" data-i18n="hero.caption">A stylized LoRa frame, the modulation behind my latest project: preamble upchirps, sync downchirps, then data symbols. Channel 1 is the baseband signal, channel 2 its instantaneous frequency.</figcaption>
+      </figure>
+    </section>
+
+    <!-- FEATURED CASE STUDY -->
+    <section class="section case" id="lora" aria-labelledby="loraTitle">
+      <div class="wrap">
+        <header class="case-head">
+          <p class="case-context" data-i18n="case.context">Featured project, Num'axes R&amp;D, October 2025 to February 2026</p>
+          <h2 id="loraTitle" class="case-title" data-i18n="case.title">Tracking hunting dogs where there is no network</h2>
+        </header>
+
+        <div class="case-intro">
+          <div class="prose">
+            <p data-i18n="case.p1">A hunter following several dogs through dense forest needs to see where each one is, make a collar beep to find it, and keep receiving positions when a ridge cuts the radio link. Commercial products either rely on a cellular subscription or stop at two dogs with no relay.</p>
+            <p data-i18n="case.p2">During my R&amp;D internship at Num'axes I designed, built and validated a prototype that does all of this over LoRa, peer to peer: no gateway, no smartphone, no network operator. I wrote the radio protocol and the firmware for both the collars and the handheld remotes.</p>
+          </div>
+
+          <table class="spec">
+            <caption data-i18n="case.specCap">Prototype characteristics</caption>
+            <tbody>
+              <tr><th scope="row" data-i18n="case.s1t">Radio</th><td data-i18n="case.s1d">LoRa peer to peer, 869.4 MHz (EU868), SF7, 125 kHz, CR 4/5, 14 dBm</td></tr>
+              <tr><th scope="row" data-i18n="case.s2t">Group size</th><td data-i18n="case.s2d">Up to 9 collars and 3 remotes, no infrastructure</td></tr>
+              <tr><th scope="row" data-i18n="case.s3t">Position frame</th><td data-i18n="case.s3d">8 bytes, 41.2 ms on air (was 11 bytes, 51.5 ms: <strong>−19.9%</strong>)</td></tr>
+              <tr><th scope="row" data-i18n="case.s4t">Command frame</th><td data-i18n="case.s4d">4 bytes, 36.1 ms on air (was 7 bytes, 41.2 ms: <strong>−12.4%</strong>)</td></tr>
+              <tr><th scope="row" data-i18n="case.s5t">Channel load</th><td data-i18n="case.s5d">G ≈ 0.068 with a full group, about <strong>87%</strong> first-try delivery (pure ALOHA model)</td></tr>
+              <tr><th scope="row" data-i18n="case.s6t">Hardware</th><td>Microchip WLR089U0, u-blox MAX-M10S, LIS2DW12</td></tr>
+              <tr><th scope="row" data-i18n="case.s7t">Firmware</th><td data-i18n="case.s7d">C, bare-metal, event-driven; one codebase built for both roles</td></tr>
+              <tr><th scope="row" data-i18n="case.s8t">Estimated autonomy</th><td data-i18n="case.s8d">Collar ≈ 117 h, remote ≈ 27 h on 2000 mAh (prototype, sleep modes not yet enabled)</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <figure class="diagram">
+          <svg viewBox="0 0 760 330" role="img" aria-labelledby="diagCap">
+            <defs>
+              <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                <path d="M0 0L10 5L0 10z" class="d-arrow" />
+              </marker>
+            </defs>
+            <!-- links -->
+            <line class="d-link" x1="120" y1="250" x2="150" y2="95" />
+            <line class="d-link" x1="120" y1="250" x2="330" y2="80" />
+            <line class="d-link d-lost" x1="120" y1="250" x2="620" y2="85" />
+            <line class="d-link" x1="640" y1="255" x2="625" y2="100" />
+            <!-- ridge blocking the direct link -->
+            <path class="d-terrain" d="M325 212 L362 150 L378 166 L400 124 L446 212 Z" />
+            <g class="d-x" transform="translate(386 158)"><path d="M-8 -8L8 8M8 -8L-8 8" /></g>
+            <text class="d-note" x="386" y="232" text-anchor="middle" data-i18n="case.dTerrain">ridge</text>
+            <text class="d-note" x="470" y="178" text-anchor="start" data-i18n="case.dLost">direct link lost</text>
+            <!-- relay path -->
+            <path class="d-relay" d="M150 268 C 330 322, 470 322, 612 274" marker-end="url(#arrow)" />
+            <text class="d-relay-label" x="385" y="322" text-anchor="middle">REQ → OFFER → GRANT → FWD</text>
+            <!-- collars -->
+            <g class="d-collar" transform="translate(150 80)"><circle r="16" /><text y="5" text-anchor="middle">1</text></g>
+            <g class="d-collar" transform="translate(330 65)"><circle r="16" /><text y="5" text-anchor="middle">2</text></g>
+            <g class="d-collar" transform="translate(620 70)"><circle r="16" /><text y="5" text-anchor="middle">3</text></g>
+            <text class="d-label" x="470" y="40" text-anchor="middle" data-i18n="case.dCollars">GNSS collars, one position every 6 s</text>
+            <!-- remotes -->
+            <g class="d-remote" transform="translate(120 250)"><rect x="-18" y="-24" width="36" height="48" rx="6" /><text y="5" text-anchor="middle">A</text></g>
+            <g class="d-remote" transform="translate(640 255)"><rect x="-18" y="-24" width="36" height="48" rx="6" /><text y="5" text-anchor="middle">B</text></g>
+            <text class="d-label" x="60" y="300" text-anchor="start" data-i18n="case.dOwner">Remote A (owner)</text>
+            <text class="d-label" x="700" y="300" text-anchor="end" data-i18n="case.dHelper">Remote B (helper)</text>
+          </svg>
+          <figcaption id="diagCap" data-i18n="case.diagCap">When remote A loses collar 3 behind terrain, it asks the best-placed remote to relay. One helper at a time, every step bounded by a timeout, and each forwarded message carries an ID and a hop limit so nothing is transmitted twice.</figcaption>
+        </figure>
+
+        <div class="case-points">
+          <article>
+            <h3 data-i18n="case.h1">A protocol sized for airtime</h3>
+            <p data-i18n="case.t1">I started with verbose frames for debugging, then designed compact v2 frames: positions packed as signed 24-bit coordinates (10<sup>−4</sup> degree) with a fix flag, commands tagged with a sequence number. Every command (beep, vibration, mute, volume) is acknowledged end to end; duplicates are recognized and re-acknowledged without being executed twice. Pairing only accepts requests inside a time window.</p>
+          </article>
+          <article>
+            <h3 data-i18n="case.h2">Relaying without flooding the channel</h3>
+            <p data-i18n="case.t2">The owner's remote picks a helper from how recently it heard the dog and how close it is by GNSS. Commands go through a request, offer, grant and forward handshake, with the acknowledgement routed back to the owner. Positions are forwarded under a time-limited lease. If the best helper times out, the next candidate is tried.</p>
+          </article>
+          <article>
+            <h3 data-i18n="case.h3">Reading a competitor's radio from its SPI bus</h3>
+            <p data-i18n="case.t3">To ground our design choices, I measured a competing tracker's channels on a spectrum analyzer, then tapped the SPI bus between its microcontroller and LoRa transceiver with a logic analyzer. Decoding the register writes against the transceiver datasheet revealed its real settings (SF8, 62.5 kHz). That analysis is why we chose SF7 at 125 kHz: shorter airtime, better suited to many nodes.</p>
+          </article>
+          <article>
+            <h3 data-i18n="case.h4">An immobility alarm that ignores breathing</h3>
+            <p data-i18n="case.t4">GNSS drifts too much under tree cover to tell whether a pointing dog has stopped, so the collar uses an accelerometer instead. The algorithm tracks changes between samples to cancel gravity, smooths them with an IIR filter and applies hysteresis: 5 s of stillness raises the alarm, 400 ms of clear movement clears it.</p>
+          </article>
+        </div>
+
+        <div class="case-bottom">
+          <div>
+            <h3 data-i18n="case.h5">Validated from the logs up</h3>
+            <p data-i18n="case.t5">Every event is logged over UART with its radio metrics, and each scenario (pairing, commands, GNSS, relay, alarm) has a reproducible test with pass criteria. A few lines from the test campaign:</p>
+            <pre class="log" aria-label="Excerpt of firmware test logs"><code>Radio configured for P2P 869.4 MHz SF7/BW125/CR4_5
+RX len=8 RSSI=-104 SNR=7 | GPSv2 g=3 rid=2 dog=1 fix=1
+PAIR IGNORED: window closed
+DUP CMD ignored (seq=12)
+RELAY: REQ → OFFER → GRANT → FWD → CMD_ACK
+GPS_RELAY: REQ → GPS_RELAY: ACK OK → RELAY: GPS_FWD</code></pre>
+          </div>
+          <div>
+            <h3 data-i18n="case.h6">What I would do next</h3>
+            <p data-i18n="case.t6">The remote is the autonomy bottleneck at about 27 h, so the largest gain will come from duty-cycled reception rather than fewer transmissions. After that: a dedicated PCB and enclosure, adaptive GNSS reporting when the dog is still, collision backoff, and a wider field campaign in dense, hilly terrain.</p>
+            <ul class="chips" aria-label="Tools and technologies">
+              <li>Embedded C</li><li>WLR089U0</li><li>LoRa P2P</li><li>u-blox GNSS</li><li>NMEA</li><li>SPI</li><li>I²C</li><li>UART</li><li>Microchip Studio</li><li>MPLAB ICD 5</li><li>Logic analyzer</li><li>Tektronix MDO</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="about" class="about-section">
-      <h2><a data-i18n="about.title">About Me</a></h2>
+    <!-- EXPERIENCE -->
+    <section class="section" id="experience" aria-labelledby="expTitle">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="expTitle" data-i18n="exp.title">Experience</h2>
+          <p data-i18n="exp.lead">Two internships at Num'axes, a French company that designs and sells electronic devices for dog training, containment and tracking across Europe and Asia.</p>
+        </div>
 
-      <div class="about-card">
+        <ol class="timeline">
+          <li class="tl-item">
+            <div class="tl-date" data-i18n="exp.1date">Oct 2025 – Feb 2026</div>
+            <div class="tl-body">
+              <div class="tl-org">
+                <img src="img/num'axes2.jpg" alt="Num'axes logo" width="44" height="44" loading="lazy" />
+                <div>
+                  <h3 data-i18n="exp.1role">R&amp;D engineering intern, embedded systems and radio</h3>
+                  <p class="tl-meta">Num'axes, Olivet, France</p>
+                </div>
+              </div>
+              <ul class="tl-points">
+                <li data-i18n="exp.1b1">Designed and validated an infrastructure-free LoRa tracking prototype for up to 9 GNSS collars and 3 handheld remotes.</li>
+                <li data-i18n="exp.1b2">Specified the application protocol: compact frames cutting time-on-air by up to 19.9%, end-to-end acknowledged commands with deduplication, and time-windowed pairing.</li>
+                <li data-i18n="exp.1b3">Built a controlled relay mechanism with message IDs, hop limits and sequential fallback to keep tracking dogs when the direct link drops.</li>
+                <li data-i18n="exp.1b4">Wrote layered bare-metal C firmware on the Microchip WLR089U0 (BSP, radio HAL, protocol, services, UI), integrating u-blox GNSS and an accelerometer-based immobility alarm.</li>
+                <li data-i18n="exp.1b5">Reverse-engineered a competitor's radio link by spectrum analysis and SPI bus sniffing; the findings set our radio parameters.</li>
+              </ul>
+              <a class="tl-more" href="#lora" data-i18n="exp.1more">Read the full case study</a>
+            </div>
+          </li>
+          <li class="tl-item">
+            <div class="tl-date" data-i18n="exp.2date">Apr – Jul 2024</div>
+            <div class="tl-body">
+              <div class="tl-org">
+                <img src="img/num'axes2.jpg" alt="" width="44" height="44" loading="lazy" />
+                <div>
+                  <h3 data-i18n="exp.2role">Electronics engineering intern</h3>
+                  <p class="tl-meta">Num'axes, Olivet, France</p>
+                </div>
+              </div>
+              <ul class="tl-points">
+                <li data-i18n="exp.2b1">Designed a custom PCB for a dog collar system, covering both the analog and digital schematics and the board layout.</li>
+                <li data-i18n="exp.2b2">Simulated circuits in LTspice and validated them on protoboard before committing to layout.</li>
+                <li data-i18n="exp.2b3">Iterated through testing, component validation and debugging in an R&amp;D team, under real product constraints such as EMC and form factor.</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects" aria-labelledby="projTitle">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="projTitle" data-i18n="proj.title">Projects</h2>
+          <p data-i18n="proj.lead">Academic and industrial projects from IUT Paul Sabatier, INSA Lyon and Num'axes, from analog front ends to radio and automation.</p>
+        </div>
+
+        <div class="filters" role="group" aria-label="Filter projects by field">
+          <button class="filter-btn" data-filter="all" aria-pressed="true"><span data-i18n="proj.fAll">All</span> <span class="count"></span></button>
+          <button class="filter-btn" data-filter="rf" aria-pressed="false"><span data-i18n="proj.fRf">Radio and RF</span> <span class="count"></span></button>
+          <button class="filter-btn" data-filter="embedded" aria-pressed="false"><span data-i18n="proj.fEmb">Embedded</span> <span class="count"></span></button>
+          <button class="filter-btn" data-filter="electronics" aria-pressed="false"><span data-i18n="proj.fEle">Electronics</span> <span class="count"></span></button>
+          <button class="filter-btn" data-filter="signal" aria-pressed="false"><span data-i18n="proj.fSig">Signal and data</span> <span class="count"></span></button>
+          <button class="filter-btn" data-filter="automation" aria-pressed="false"><span data-i18n="proj.fAuto">Automation</span> <span class="count"></span></button>
+          <button class="filter-btn" data-filter="energy" aria-pressed="false"><span data-i18n="proj.fEnergy">Energy</span> <span class="count"></span></button>
+        </div>
+
+        <ul class="project-list" id="projectList">
+          <li class="project project-featured" data-category="rf embedded">
+            <div class="project-thumb thumb-lora" aria-hidden="true">
+              <svg viewBox="0 0 160 110" preserveAspectRatio="none"><path d="M0 95L40 15M40 95L80 15M80 15L120 95M120 60L137.5 15M137.5 95L160 60" /></svg>
+            </div>
+            <div class="project-body">
+              <p class="project-org">Num'axes, 2025–2026</p>
+              <h3 data-i18n="proj.lora">LoRa multi-dog tracking system</h3>
+              <p data-i18n="proj.loraD">Infrastructure-free tracking over LoRa with GNSS collars, acknowledged commands, a controlled relay and an immobility alarm.</p>
+              <ul class="tags"><li>LoRa</li><li>GNSS</li><li>Embedded C</li><li>Protocol design</li></ul>
+              <a class="project-link" href="#lora" data-i18n="proj.loraL">Read the case study</a>
+            </div>
+          </li>
+          <li class="project" data-category="electronics">
+            <img class="project-thumb" src="img/sonometer.jpg" alt="Analog sound level meter prototype" loading="lazy" />
+            <div class="project-body">
+              <p class="project-org">INSA Lyon</p>
+              <h3 data-i18n="proj.sono">Analog sound level meter</h3>
+              <p data-i18n="proj.sonoD">A complete sonometer built from the ground up: circuit design, LTspice simulation, prototyping and PCB fabrication, grounded in acoustic measurement principles.</p>
+              <ul class="tags"><li>PCB design</li><li>LTspice</li><li>Circuit analysis</li><li>Prototyping</li></ul>
+            </div>
+          </li>
+          <li class="project" data-category="electronics embedded">
+            <img class="project-thumb" src="img/dustsensor.jpg" alt="Environmental dust sensor" loading="lazy" />
+            <div class="project-body">
+              <p class="project-org">INSA Lyon</p>
+              <h3 data-i18n="proj.dust">Environmental dust sensor</h3>
+              <p data-i18n="proj.dustD">Dust detection system with a custom circuit and embedded software, with a focus on sensor calibration for environmental monitoring.</p>
+              <ul class="tags"><li>Sensors</li><li>Embedded systems</li><li>Circuit design</li><li>Testing</li></ul>
+            </div>
+          </li>
+          <li class="project" data-category="automation">
+            <img class="project-thumb" src="img/factoryio.jpg" alt="Simulated automated sorting line" loading="lazy" />
+            <div class="project-body">
+              <p class="project-org">INSA Lyon</p>
+              <h3 data-i18n="proj.sort">Automated sorting system</h3>
+              <p data-i18n="proj.sortD">GRAFCET-based control of an industrial line that sorts parts by color and number, with a complete workflow across several control stations.</p>
+              <ul class="tags"><li>GRAFCET</li><li>Automation</li><li>Industrial systems</li></ul>
+            </div>
+          </li>
+          <li class="project" data-category="signal">
+            <img class="project-thumb" src="img/brain.jpg" alt="Brain scan images used for classification" loading="lazy" />
+            <div class="project-body">
+              <p class="project-org">INSA Lyon</p>
+              <h3 data-i18n="proj.med">Medical image classification</h3>
+              <p data-i18n="proj.medD">Machine-learning algorithms for brain image analysis and classification, applying numerical analysis and data processing to diagnostic support.</p>
+              <ul class="tags"><li>Image processing</li><li>Data analysis</li><li>C++</li></ul>
+            </div>
+          </li>
+          <li class="project" data-category="energy">
+            <img class="project-thumb" src="img/REGELEC.jpg" alt="REGELEC startup project" loading="lazy" />
+            <div class="project-body">
+              <p class="project-org">INSA Lyon</p>
+              <h3 data-i18n="proj.reg">REGELEC smart energy startup</h3>
+              <p data-i18n="proj.regD">Co-founded a student startup developing intelligent electrical regulation: business plan, prototype and a mobile app to optimize consumption.</p>
+              <ul class="tags"><li>Entrepreneurship</li><li>Energy</li><li>Mobile app</li></ul>
+            </div>
+          </li>
+          <li class="project" data-category="electronics embedded">
+            <img class="project-thumb" src="img/linefollower.jpg" alt="Line follower robot" loading="lazy" />
+            <div class="project-body">
+              <p class="project-org">IUT Paul Sabatier</p>
+              <h3 data-i18n="proj.line">Autonomous line follower robot</h3>
+              <p data-i18n="proj.lineD">A complete robot from schematic to PCB, integrating sensors, motors and path-following control.</p>
+              <ul class="tags"><li>Robotics</li><li>PCB</li><li>Control</li></ul>
+            </div>
+          </li>
+          <li class="project" data-category="electronics embedded">
+            <img class="project-thumb" src="img/smartcar.jpg" alt="Multi-function smart car" loading="lazy" />
+            <div class="project-body">
+              <p class="project-org">IUT Paul Sabatier</p>
+              <h3 data-i18n="proj.car">Multi-function smart car</h3>
+              <p data-i18n="proj.carD">Autonomous vehicle controlled from a smartphone, with multiple sensors and wireless communication.</p>
+              <ul class="tags"><li>IoT</li><li>PCB</li><li>Mobile control</li><li>Wireless</li></ul>
+            </div>
+          </li>
+          <li class="project" data-category="automation">
+            <img class="project-thumb" src="img/auto.jpg" alt="Pneumatic control station" loading="lazy" />
+            <div class="project-body">
+              <p class="project-org">IUT Paul Sabatier</p>
+              <h3 data-i18n="proj.pneu">Industrial pneumatic control</h3>
+              <p data-i18n="proj.pneuD">Pneumatic handling station programmed in TIA Portal, part of a team project linking several automated stations.</p>
+              <ul class="tags"><li>TIA Portal</li><li>Pneumatics</li><li>Industrial control</li></ul>
+            </div>
+          </li>
+          <li class="project" data-category="embedded">
+            <img class="project-thumb" src="img/sensor3d.jpg" alt="3D distance scanner" loading="lazy" />
+            <div class="project-body">
+              <p class="project-org">IUT Paul Sabatier</p>
+              <h3 data-i18n="proj.scan">3D distance scanner</h3>
+              <p data-i18n="proj.scanD">3D scanning and data acquisition system built on an STM32 microcontroller with distance sensors and servo motors.</p>
+              <ul class="tags"><li>STM32</li><li>Servo motors</li><li>Distance sensors</li></ul>
+            </div>
+          </li>
+          <li class="project" data-category="electronics signal">
+            <img class="project-thumb" src="img/ecg.png" alt="Electrocardiograph signal" loading="lazy" />
+            <div class="project-body">
+              <p class="project-org">IUT Paul Sabatier</p>
+              <h3 data-i18n="proj.ecg">Electrocardiograph</h3>
+              <p data-i18n="proj.ecgD">ECG acquisition chain with analog amplifiers, filters and signal conditioning for biomedical signals.</p>
+              <ul class="tags"><li>Biomedical</li><li>Amplifiers</li><li>Filters</li></ul>
+            </div>
+          </li>
+          <li class="project" data-category="electronics signal">
+            <img class="project-thumb" src="img/digitalfilter.jpg" alt="Analog filter board" loading="lazy" />
+            <div class="project-body">
+              <p class="project-org">IUT Paul Sabatier</p>
+              <h3 data-i18n="proj.filt">Analog filter design</h3>
+              <p data-i18n="proj.filtD">Anti-aliasing and smoothing filters, designed and implemented on PCB for signal conditioning.</p>
+              <ul class="tags"><li>Analog filters</li><li>Anti-aliasing</li><li>PCB design</li></ul>
+            </div>
+          </li>
+          <li class="project" data-category="embedded signal">
+            <img class="project-thumb" src="img/digitaleffect.jpg" alt="Digital guitar effects setup" loading="lazy" />
+            <div class="project-body">
+              <p class="project-org">IUT Paul Sabatier</p>
+              <h3 data-i18n="proj.audio">Digital audio effects</h3>
+              <p data-i18n="proj.audioD">Real-time guitar effects written in C, including reverb and distortion.</p>
+              <ul class="tags"><li>C</li><li>DSP</li><li>Real-time audio</li></ul>
+            </div>
+          </li>
+          <li class="project" data-category="rf">
+            <img class="project-thumb" src="img/capteurliq.jpg" alt="RF liquid detection sensor" loading="lazy" />
+            <div class="project-body">
+              <p class="project-org">IUT Paul Sabatier</p>
+              <h3 data-i18n="proj.liq">RF liquid detection sensor</h3>
+              <p data-i18n="proj.liqD">RF sensor that tells water from ethanol, designed in Cadence AWR with Smith chart analysis and a custom PCB with precise copper traces.</p>
+              <ul class="tags"><li>RF design</li><li>Cadence AWR</li><li>Smith chart</li></ul>
+            </div>
+          </li>
+          <li class="project" data-category="rf embedded">
+            <img class="project-thumb" src="img/iotnetworl.jpg" alt="IoT sensor network" loading="lazy" />
+            <div class="project-body">
+              <p class="project-org">IUT Paul Sabatier</p>
+              <h3 data-i18n="proj.iot">IoT sensor network</h3>
+              <p data-i18n="proj.iotD">Distributed sensor-actuator network on STM32 microcontrollers with wireless links, for environmental monitoring and control.</p>
+              <ul class="tags"><li>IoT</li><li>STM32</li><li>Wireless</li><li>Sensor networks</li></ul>
+            </div>
+          </li>
+          <li class="project" data-category="rf">
+            <img class="project-thumb" src="img/antenne.jpg" alt="Patch antenna" loading="lazy" />
+            <div class="project-body">
+              <p class="project-org">IUT Paul Sabatier</p>
+              <h3 data-i18n="proj.ant">Patch antenna optimization</h3>
+              <p data-i18n="proj.antD">Reverse-engineered and optimized a patch antenna in Cadence AWR, reaching a −17 dB reflection coefficient at the target frequency.</p>
+              <ul class="tags"><li>Antenna design</li><li>Cadence AWR</li><li>RF optimization</li></ul>
+            </div>
+          </li>
+          <li class="project" data-category="energy">
+            <img class="project-thumb" src="img/solar.jpg" alt="Solar panels" loading="lazy" />
+            <div class="project-body">
+              <p class="project-org">IUT Paul Sabatier</p>
+              <h3 data-i18n="proj.solar">Solar panel analysis</h3>
+              <p data-i18n="proj.solarD">Photovoltaic modeling, simulation and experimental characterization to analyze conversion efficiency.</p>
+              <ul class="tags"><li>Solar energy</li><li>Power electronics</li><li>Characterization</li></ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills" aria-labelledby="skillsTitle">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="skillsTitle" data-i18n="skills.title">Skills and tools</h2>
+          <p data-i18n="skills.lead">What I have used on real hardware, in internships and projects.</p>
+        </div>
+        <div class="skills">
+          <div class="skill-group">
+            <h3 data-i18n="skills.g1">Radio and RF</h3>
+            <p data-i18n="skills.g1d">LoRa peer-to-peer links and airtime budgeting under EU868 rules, SX127x-class transceivers, Cadence AWR, Smith chart analysis, patch antennas, spectrum measurements.</p>
+          </div>
+          <div class="skill-group">
+            <h3 data-i18n="skills.g2">Embedded systems</h3>
+            <p data-i18n="skills.g2d">Bare-metal, event-driven C; Microchip WLR089U0 and STM32; UART, SPI, I²C; NMEA GNSS parsing; Microchip Studio, MPLAB ICD 5, logic-analyzer debugging.</p>
+          </div>
+          <div class="skill-group">
+            <h3 data-i18n="skills.g3">Electronics</h3>
+            <p data-i18n="skills.g3d">Analog and digital schematics, LTspice simulation, PCB layout, analog filters and amplifier chains, protoboard prototyping, bench testing with EMC in mind.</p>
+          </div>
+          <div class="skill-group">
+            <h3 data-i18n="skills.g4">Signal and software</h3>
+            <p data-i18n="skills.g4d">Real-time DSP in C, IIR filtering, image processing in C++, protocol and state-machine design.</p>
+          </div>
+          <div class="skill-group">
+            <h3 data-i18n="skills.g5">Automation</h3>
+            <p data-i18n="skills.g5d">Siemens TIA Portal, GRAFCET, pneumatic actuation, multi-station industrial control.</p>
+          </div>
+          <div class="skill-group">
+            <h3 data-i18n="skills.g6">Lab and method</h3>
+            <p data-i18n="skills.g6d">Oscilloscopes (including mixed-domain), spectrum and logic analyzers; incremental validation, instrumented logging, reproducible test scenarios.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="section" id="education" aria-labelledby="eduTitle">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="eduTitle" data-i18n="edu.title">Education</h2>
+          <p data-i18n="edu.lead">From Malaysia to three French institutions, each step adding a new technical culture.</p>
+        </div>
+        <ol class="timeline">
+          <li class="tl-item">
+            <div class="tl-date" data-i18n="edu.1date">2024 – present</div>
+            <div class="tl-body">
+              <h3>INSA Lyon</h3>
+              <p data-i18n="edu.1d">Diplôme d'ingénieur (Master's level) in Electrical Engineering, with a focus on embedded systems, electronics and automation.</p>
+            </div>
+          </li>
+          <li class="tl-item">
+            <div class="tl-date">2022 – 2024</div>
+            <div class="tl-body">
+              <h3>IUT Paul Sabatier, Université Toulouse III</h3>
+              <p data-i18n="edu.2d">DUT/BUT in Electrical Engineering and Industrial Informatics (GEII): automation, microcontrollers and signal processing.</p>
+            </div>
+          </li>
+          <li class="tl-item">
+            <div class="tl-date">2021 – 2022</div>
+            <div class="tl-body">
+              <h3>IUT de Tours, Université de Tours</h3>
+              <p data-i18n="edu.3d">French language and scientific foundation year to join the French higher education system.</p>
+            </div>
+          </li>
+          <li class="tl-item">
+            <div class="tl-date">2016 – 2020</div>
+            <div class="tl-body">
+              <h3>Sekolah Menengah Sains Jeli, Malaysia</h3>
+              <p data-i18n="edu.4d">Science secondary school, with a focus on physics, mathematics and the sciences.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about" aria-labelledby="aboutTitle">
+      <div class="wrap about">
         <div class="about-text">
-          <p>
-            <a data-i18n="about.description1">
-              I’m Azmin Yusmizan, an electrical engineering student with a deep
-              passion for innovation, embedded systems, and sustainable
-              technologies. Over the years, I’ve cultivated a strong technical
-              foundation in electronics, PCB design, signal processing, and
-              automation — shaped by a unique international journey across
-              Malaysia and France.
-            </a>
-          </p>
-          <p>
-            <a data-i18n="about.description2">
-              Studying at institutions like INSA Lyon, IUT Paul Sabatier
-              Toulouse, and Université de Tours has exposed me to diverse
-              technical cultures and collaborative projects, pushing me to be
-              both detail-oriented and adaptable. Whether it’s building smart
-              energy systems, programming embedded devices, or simulating
-              high-frequency antennas, I enjoy turning complex ideas into
-              practical, elegant solutions.
-            </a>
-          </p>
-          <p>
-            <a data-i18n="about.description3"
-              >Beyond academics, I’m driven by curiosity, creativity, and a love
-              for continuous learning. I find joy in reading, cooking,
-              sketching, and playing the guitar — all of which balance the
-              intensity of engineering with moments of calm and expression.</a
-            >
-          </p>
+          <h2 id="aboutTitle" data-i18n="about.title">About me</h2>
+          <div class="prose">
+            <p data-i18n="about.p1">I'm Azmin, an electrical engineering student from Malaysia. I have studied in France since 2021, first in Tours, then Toulouse, now Lyon. Working across different schools and technical cultures has made me detail-oriented and adaptable.</p>
+            <p data-i18n="about.p2">What I enjoy most is the step from idea to working hardware: measuring before concluding, finding out why something doesn't work, fixing it, and documenting it while it's fresh. Whether it's a radio protocol, a filter board or an antenna, I like solutions that are practical and clean.</p>
+            <p data-i18n="about.p3">Away from the bench, reading, cooking, running, drawing, guitar and travel keep me curious and balanced.</p>
+          </div>
         </div>
-
-        <div class="about-image">
-          <img
-            src="img/about-laptop.jpg"
-            alt="Laptop or profile-related image"
-          />
-        </div>
-      </div>
-
-      <div class="stats-container">
-        <div class="stat-box">
-          <strong>4+</strong><br /><a data-i18n="about.years"
-            >Years in France</a
-          >
-        </div>
-        <div class="stat-box">
-          <strong>3</strong><br /><a data-i18n="about.countries"
-            >Countries Studied</a
-          >
-        </div>
-        <div class="stat-box">
-          <strong>12+</strong><br /><a data-i18n="about.project"
-            >Technical Projects</a
-          >
-        </div>
+        <ul class="hobbies" aria-label="Hobbies">
+          <li><img src="img/reading.jpg" alt="" loading="lazy" /><span data-i18n="hob.read">Reading</span></li>
+          <li><img src="img/cooking.jpg" alt="" loading="lazy" /><span data-i18n="hob.cook">Cooking Malaysian food</span></li>
+          <li><img src="img/jogging.jpg" alt="" loading="lazy" /><span data-i18n="hob.jog">Jogging</span></li>
+          <li><img src="img/digitalart.jpg" alt="" loading="lazy" /><span data-i18n="hob.art">Digital and traditional art</span></li>
+          <li><img src="img/guitar.jpg" alt="" loading="lazy" /><span data-i18n="hob.guitar">Acoustic guitar</span></li>
+          <li><img src="img/traveling.jpg" alt="" loading="lazy" /><span data-i18n="hob.travel">Traveling in Europe and Asia</span></li>
+        </ul>
       </div>
     </section>
 
-    <section id="experience" class="section fade-in">
-      <h2><a data-i18n="experience.bigtitle">Experience</a></h2>
-      <div class="timeline">
-        <div class="edu-card experience">
-          <div class="edu-icon">
-            <img src="img/num'axes2.jpg" alt="Num'axes Logo" />
-          </div>
-          <div class="edu-content">
-            <h3>
-              <a data-i18n="experience.title"
-                >Num’axes – Engineering Internship</a
-              >
-            </h3>
-            <span class="edu-date"
-              ><a data-i18n="experience.date">April – July 2024</a></span
-            >
-            <p>
-              <a data-i18n="experience.sub1">
-                I completed a 3-month internship at <strong>Num’axes</strong>, a
-                French company known for designing electronic devices for pet
-                training, tracking, and behavior.
-              </a>
-            </p>
-            <p>
-              <a data-i18n="experience.sub2">
-                My mission was to design and realize a custom PCB for a dog
-                collar system. I handled the analog and digital schematic
-                design, circuit simulation (LTSpice), protoboard testing, and
-                PCB layout. The project involved iterative testing, component
-                validation, and debugging within an R&D environment.
-              </a>
-            </p>
-            <p>
-              <a data-i18n="experience.sub3">
-                This experience enhanced my practical skills in electronics,
-                teamwork, and product development under real-world constraints
-                such as EMC and form factor.
-              </a>
-            </p>
-          </div>
+    <!-- CONTACT -->
+    <section class="section contact" id="contact" aria-labelledby="contactTitle">
+      <div class="wrap contact-grid">
+        <div>
+          <h2 id="contactTitle" data-i18n="contact.title">Let's talk</h2>
+          <p class="contact-lead" data-i18n="contact.lead">A question about a project, or an opportunity in embedded systems or RF? Write to me directly or use the form.</p>
+          <dl class="contact-list">
+            <div><dt>Email</dt><dd><a href="mailto:muhammad-azmin.muhamad-yusmizan@insa-lyon.fr">muhammad-azmin.muhamad-yusmizan@insa-lyon.fr</a></dd></div>
+            <div><dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/muhammad-azmin-muhamad-yusmizan-5a4367266/" target="_blank" rel="noopener">Muhammad Azmin Muhamad Yusmizan</a></dd></div>
+            <div><dt>GitHub</dt><dd><a href="https://github.com/m-azmin" target="_blank" rel="noopener">github.com/m-azmin</a></dd></div>
+            <div><dt data-i18n="contact.loc">Location</dt><dd>Villeurbanne, Lyon, France</dd></div>
+          </dl>
         </div>
+
+        <form class="contact-form" id="contactForm" action="https://formspree.io/f/movwovaa" method="POST">
+          <input type="hidden" name="_subject" value="New message from m-azmin.github.io" />
+          <div class="hp" aria-hidden="true">
+            <label>Leave this field empty <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" /></label>
+          </div>
+          <div class="field">
+            <label for="fName" data-i18n="form.name">Name</label>
+            <input id="fName" type="text" name="name" autocomplete="name" required maxlength="120" />
+          </div>
+          <div class="field">
+            <label for="fEmail" data-i18n="form.email">Email</label>
+            <input id="fEmail" type="email" name="email" autocomplete="email" required maxlength="200" />
+          </div>
+          <div class="field">
+            <label for="fMsg" data-i18n="form.msg">Message</label>
+            <textarea id="fMsg" name="message" rows="6" required maxlength="5000"></textarea>
+          </div>
+          <div class="field field-check">
+            <input id="fConsent" type="checkbox" name="consent" value="yes" required />
+            <label for="fConsent" data-i18n="form.consent">I agree that the details I enter are used only to reply to my message, as described in the <a href="privacy.html">privacy policy</a>.</label>
+          </div>
+          <button class="btn btn-primary" type="submit" data-i18n="form.send">Send message</button>
+          <p class="form-status" role="status" aria-live="polite">
+            <span data-state="sending" hidden data-i18n="form.sending">Sending…</span>
+            <span data-state="ok" hidden data-i18n="form.ok">Thanks, your message was sent. I'll reply by email.</span>
+            <span data-state="error" hidden data-i18n="form.error">Your message couldn't be sent. Please try again, or email me directly.</span>
+          </p>
+        </form>
       </div>
     </section>
+  </main>
 
-    <section id="education" class="section fade-in">
-      <h2><a data-i18n="education.title">Education</a></h2>
-      <div class="timeline">
-        <div class="edu-card">
-          <div class="edu-icon">🎓</div>
-          <div class="edu-content">
-            <h3>INSA Lyon</h3>
-            <span class="edu-date"
-              ><a data-i18n="education.date1">2024 – Present</a></span
-            >
-            <p>
-              <a data-i18n="education.sub1">
-                Master's degree in Electrical Engineering with specialization in
-                embedded systems, electronics, and automation.
-              </a>
-            </p>
-          </div>
-        </div>
-
-        <div class="edu-card">
-          <div class="edu-icon">🔌</div>
-          <div class="edu-content">
-            <h3>IUT Paul Sabatier Toulouse III</h3>
-            <span class="edu-date"
-              ><a data-i18n="education.date2">2022 – 2024</a></span
-            >
-            <p>
-              <a data-i18n="education.sub2">
-                DUT/BUT in Electrical Engineering and Industrial Informatics.
-                Gained practical experience in automation, microcontrollers, and
-                signal processing.
-              </a>
-            </p>
-          </div>
-        </div>
-
-        <div class="edu-card">
-          <div class="edu-icon">🗣️</div>
-          <div class="edu-content">
-            <h3>IUT de Tours – Université de Tours</h3>
-            <span class="edu-date"
-              ><a data-i18n="education.date3">2021 – 2022</a></span
-            >
-            <p>
-              <a data-i18n="education.sub3">
-                Completed a French language and scientific foundation year for
-                integration into the French higher education system.
-              </a>
-            </p>
-          </div>
-        </div>
-
-        <div class="edu-card">
-          <div class="edu-icon">🏫</div>
-          <div class="edu-content">
-            <h3>Sekolah Menengah Sains Jeli</h3>
-            <span class="edu-date"
-              ><a data-i18n="education.date4">2016 – 2020</a></span
-            >
-            <p>
-              <a data-i18n="education.sub4">
-                Malaysian Science Secondary School. Focused on physics,
-                mathematics, and general sciences.
-              </a>
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="projects" class="section fade-in">
-      <h2 data-i18n="projects.title">Projects</h2>
-      <div class="project-grid">
-        <div class="project-filters">
-          <button
-            class="filter-btn active"
-            data-filter="all"
-            data-i18n="projects.all"
-          >
-            All
-          </button>
-          <button
-            class="filter-btn"
-            data-filter="electronics"
-            data-i18n="projects.electronic"
-          >
-            Electronics
-          </button>
-          <button
-            class="filter-btn"
-            data-filter="embedded"
-            data-i18n="projects.embedded"
-          >
-            Embedded Systems
-          </button>
-          <button
-            class="filter-btn"
-            data-filter="automation"
-            data-i18n="projects.automation"
-          >
-            Automation
-          </button>
-          <button class="filter-btn" data-filter="rf" data-i18n="projects.rf">
-            RF & Antennas
-          </button>
-          <button
-            class="filter-btn"
-            data-filter="signal"
-            data-i18n="projects.signal"
-          >
-            Signal Processing
-          </button>
-          <button
-            class="filter-btn"
-            data-filter="management"
-            data-i18n="projects.management"
-          >
-            Management
-          </button>
-        </div>
-
-        <div class="project-card" data-category="electronics">
-          <span class="badge">INSA Lyon</span>
-          <img src="img/sonometer.jpg" alt="Brain image" />
-          <h3 data-i18n="projects.sonometer">Analog Sonometer</h3>
-          <p data-i18n="projects.sonometersub">
-            Designed and built a complete sonometer from ground up, including
-            circuit design, LTspice simulation, prototyping, and PCB
-            fabrication. Comprehensive study of acoustic measurement principles.
-          </p>
-          <div class="tags" data-i18n="projects.sonometertags">
-            PCB Design • LTspice • Circuit Analysis • Prototyping
-          </div>
-        </div>
-
-        <div class="project-card" data-category="electronics">
-          <span class="badge">INSA Lyon</span>
-          <img src="img/dustsensor.jpg" alt="Brain image" />
-          <h3 data-i18n="projects.dust">Environmental Dust Sensor</h3>
-          <p data-i18n="projects.dustsub">
-            Developed an advanced dust detection system with custom circuit
-            design and embedded programming. Focused on sensor calibration and
-            environmental monitoring applications.
-          </p>
-          <div class="tags" data-i18n="projects.dusttags">
-            Sensors • Embedded Systems • Circuit Design • Testing
-          </div>
-        </div>
-
-        <div class="project-card" data-category="automation">
-          <span class="badge">INSA Lyon</span>
-          <img src="img/factoryio.jpg" alt="Brain image" />
-          <h3 data-i18n="projects.auto">Automated Sorting System</h3>
-          <p data-i18n="projects.autosub">
-            Created GRAFCET-based automation system for industrial piece sorting
-            by color and number. Implemented complete factory automation
-            workflow with multiple control stations.
-          </p>
-          <div class="tags" data-i18n="projects.autotags">
-            GRAFCET • Automation • Factory Systems • Sorting Systems
-          </div>
-        </div>
-
-        <div class="project-card" data-category="all">
-          <span class="badge">INSA Lyon</span>
-          <img src="img/brain.jpg" alt="Brain image" />
-          <h3 data-i18n="projects.clanu">Medical Image Classification</h3>
-          <p data-i18n="projects.clanusub">
-            Developed machine learning algorithms for brain image analysis and
-            classification. Applied numerical analysis techniques and data
-            processing for medical diagnostics.
-          </p>
-          <div class="tags" data-i18n="projects.clanutags">
-            Image Processing • Data Analysis • C++
-          </div>
-        </div>
-
-        <div class="project-card" data-category="management">
-          <span class="badge">INSA Lyon</span>
-          <img src="img/REGELEC.jpg" alt="Regelec" />
-          <h3 data-i18n="projects.regelec">REGELEC Smart Energy Startup</h3>
-          <p data-i18n="projects.regelecsub">
-            Co-founded startup developing intelligent electrical regulation
-            systems. Business plan, prototype, and mobile app for optimized
-            consumption.
-          </p>
-          <div class="tags" data-i18n="projects.regelectags">
-            Startup • Energy • Mobile App
-          </div>
-        </div>
-
-        <div class="project-card" data-category="electronics embedded">
-          <span class="badge">IUT Paul Sabatier</span>
-          <img src="img/linefollower.jpg" alt="Line follower robot" />
-          <h3 data-i18n="projects.line">Autonomous Line Follower Robot</h3>
-          <p data-i18n="projects.linesub">
-            Designed complete robotic system from schematic to PCB. Integrated
-            sensors, motors, and path-following control algorithms.
-          </p>
-          <div class="tags" data-i18n="projects.linetags">
-            Robotics • PCB • Control
-          </div>
-        </div>
-
-        <div class="project-card" data-category="electronics embedded">
-          <span class="badge">IUT Paul Sabatier</span>
-          <img src="img/smartcar.jpg" alt="Line follower robot" />
-          <h3 data-i18n="projects.smartcar">Multi-Function Smart Car</h3>
-          <p data-i18n="projects.smartcarsub">
-            Advanced autonomous vehicle with smartphone integration, multiple
-            sensors, wireless communication, and versatile functionality for
-            various applications.
-          </p>
-          <div class="tags" data-i18n="projects.smartcartags">
-            IoT • PCB • Mobile Control • Wireless Communication • Multi-function
-            Systems
-          </div>
-        </div>
-
-        <div class="project-card" data-category="automation">
-          <span class="badge">IUT Paul Sabatier</span>
-          <img src="img/auto.jpg" alt="Line follower robot" />
-          <h3 data-i18n="projects.pneumatic">Industrial Pneumatic Control</h3>
-          <p data-i18n="projects.pneumaticsub">
-            Developed pneumatic control station using TIA Portal for automated
-            piece handling. Collaborated in team-based industrial automation
-            project with multiple interconnected stations.
-          </p>
-          <div class="tags" data-i18n="projects.pneumatictags">
-            TIA Portal • Pneumatics • Industrial Control • Team Project
-          </div>
-        </div>
-
-        <div class="project-card" data-category="embedded">
-          <span class="badge">IUT Paul Sabatier</span>
-          <img src="img/sensor3d.jpg" alt="Line follower robot" />
-          <h3 data-i18n="projects.scan">3D Distance Scanner</h3>
-          <p data-i18n="projects.scansub">
-            Built 3D scanning system using STM32 microcontroller, distance
-            sensors, and servo motors. Created comprehensive scanning and data
-            acquisition system.
-          </p>
-          <div class="tags" data-i18n="projects.scantags">
-            STM32 • Servo Motors • Distance Sensors • 3D Scanning
-          </div>
-        </div>
-
-        <div class="project-card" data-category="electronics">
-          <span class="badge">IUT Paul Sabatier</span>
-          <img src="img/ecg.png" alt="Line follower robot" />
-          <h3 data-i18n="projects.ecg">Electrocardiograph System</h3>
-          <p data-i18n="projects.ecgsub">
-            Designed complete ECG acquisition system with analog amplifiers,
-            filters, and signal conditioning circuits for biomedical signal
-            processing.
-          </p>
-          <div class="tags" data-i18n="projects.ecgtags">
-            Biomedical • Amplifiers • Filters • Signal Processing
-          </div>
-        </div>
-
-        <div class="project-card" data-category="electronics">
-          <span class="badge">IUT Paul Sabatier</span>
-          <img src="img/digitalfilter.jpg" alt="Line follower robot" />
-          <h3 data-i18n="projects.filter">Analog Filter Design</h3>
-          <p data-i18n="projects.filtersub">
-            Developed specialized analog filters including anti-aliasing and
-            smoothing filters. Complete PCB design and implementation for signal
-            conditioning applications.
-          </p>
-          <div class="tags" data-i18n="projects.filtertags">
-            Analog Filters • Anti-aliasing • PCB Design • Signal Conditioning
-          </div>
-        </div>
-
-        <div class="project-card" data-category="embedded signal">
-          <span class="badge">IUT Paul Sabatier</span>
-          <img src="img/digitaleffect.jpg" alt="Line follower robot" />
-          <h3 data-i18n="projects.audio">Digital Audio Effects</h3>
-          <p data-i18n="projects.audiosub">
-            Programmed digital signal processing algorithms in C for guitar
-            effects including reverb, distortion, and rock effects. Real-time
-            audio processing implementation.
-          </p>
-          <div class="tags" data-i18n="projects.audiotags">
-            C Programming • Audio Processing • Guitar Effects • Digital Signal
-            Processing
-          </div>
-        </div>
-
-        <div class="project-card" data-category="rf">
-          <span class="badge">IUT Paul Sabatier</span>
-          <img src="img/capteurliq.jpg" alt="Line follower robot" />
-          <h3 data-i18n="projects.rfc">RF Liquid Detection Sensor</h3>
-          <p data-i18n="projects.rfsub">
-            Designed RF-based sensor for liquid differentiation (water/ethanol)
-            using Cadence AWR. Implemented Smith chart analysis and custom PCB
-            with precision copper traces.
-          </p>
-          <div class="tags" data-i18n="projects.rftags">
-            RF Design • Cadence AWR • Smith Chart • Sensor Design
-          </div>
-        </div>
-
-        <div class="project-card" data-category="rf embedded">
-          <span class="badge">IUT Paul Sabatier</span>
-          <img src="img/iotnetworl.jpg" alt="Line follower robot" />
-          <h3 data-i18n="projects.iot">IoT Sensor Network</h3>
-          <p data-i18n="projects.iotsub">
-            Developed distributed IoT system with STM32 microcontrollers and
-            wireless communication. Implemented sensor-actuator network for
-            environmental monitoring and control.
-          </p>
-          <div class="tags" data-i18n="projects.iottags">
-            IoT • STM32 • Wireless Communication • Sensor Networks
-          </div>
-        </div>
-
-        <div class="project-card" data-category="rf">
-          <span class="badge">IUT Paul Sabatier</span>
-          <img src="img/antenne.jpg" alt="Line follower robot" />
-          <h3 data-i18n="projects.antenna">Patch Antenna Optimization</h3>
-          <p data-i18n="projects.antennasub">
-            Reverse-engineered and optimized patch antenna design using Cadence
-            AWR. Achieved -17dB reflection coefficient at target frequency
-            through systematic optimization.
-          </p>
-          <div class="tags" data-i18n="projects.antennatags">
-            Antenna Design • Reverse Engineering • RF Optimization • Reflection
-            Coefficient
-          </div>
-        </div>
-
-        <div class="project-card" data-category="all">
-          <span class="badge">IUT Paul Sabatier</span>
-          <img src="img/solar.jpg" alt="Line follower robot" />
-          <h3 data-i18n="projects.solar">Solar Panel Analysis</h3>
-          <p data-i18n="projects.solarsub">
-            Comprehensive study of photovoltaic systems including modeling,
-            simulation, and experimental characterization. Analysis of solar
-            energy conversion efficiency and optimization.
-          </p>
-          <div class="tags" data-i18n="projects.solarsub">
-            Solar Energy • Power Electronics • Renewable Energy • System
-            Analysis
-          </div>
-        </div>
-
-        <!-- Add more cards here -->
-      </div>
-    </section>
-
-    <section id="hobbies" class="section fade-in">
-      <h2 data-i18n="hobbies.title">Hobbies</h2>
-      <div class="project-grid">
-        <div class="project-card">
-          <img src="img/reading.jpg" alt="Reading books" />
-          <h3 data-i18n="hobbies.read">Reading</h3>
-          <p data-i18n="hobbies.readsub">
-            I enjoy immersing myself in literature, science articles, and
-            history to expand my knowledge and imagination.
-          </p>
-        </div>
-
-        <div class="project-card">
-          <img src="img/cooking.jpg" alt="Cooking" />
-          <h3 data-i18n="hobbies.cook">Cooking</h3>
-          <p data-i18n="hobbies.cooksub">
-            I find peace in the kitchen — experimenting with Malaysian dishes
-            and learning world cuisines.
-          </p>
-        </div>
-
-        <div class="project-card">
-          <img src="img/jogging.jpg" alt="Jogging" />
-          <h3 data-i18n="hobbies.jog">Jogging</h3>
-          <p data-i18n="hobbies.jogsub">
-            Jogging clears my mind and keeps me energized, especially in nature
-            or around campus parks.
-          </p>
-        </div>
-
-        <div class="project-card">
-          <img src="img/digitalart.jpg" alt="Art" />
-          <h3 data-i18n="hobbies.art">Digital & Traditional Art</h3>
-          <p data-i18n="hobbies.artsub">
-            I explore both digital illustrations and traditional sketches as a
-            form of creative expression.
-          </p>
-        </div>
-
-        <div class="project-card">
-          <img src="img/guitar.jpg" alt="Guitar" />
-          <h3 data-i18n="hobbies.guitar">Playing Guitar</h3>
-          <p data-i18n="hobbies.guitarsub">
-            Music helps me relax — I love playing acoustic melodies and learning
-            new chords on my guitar.
-          </p>
-        </div>
-
-        <div class="project-card">
-          <img src="img/traveling.jpg" alt="Guitar" />
-          <h3 data-i18n="hobbies.travel">Traveling</h3>
-          <p data-i18n="hobbies.travelsub">
-            Sometimes when life gets a bit hard, traveling is the only solution!
-            I love to travel to new countries and I've visited a lot of
-            countries before mostly in Europe and Asia.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="section fade-in">
-      <h2 data-i18n="contact.title">Contact Me</h2>
-
-      <div class="contact-grid">
-        <div class="contact-item">
-          <div class="contact-icon">📧</div>
-          <div class="contact-info">
-            <h4>Email</h4>
-            <a href="mailto:muhammad-azmin.muhamad-yusmizan@insa-lyon.fr"
-              >muhammad-azmin.muhamad-yusmizan@insa-lyon.fr</a
-            >
-          </div>
-        </div>
-
-        <div class="contact-item">
-          <div class="contact-icon">💼</div>
-          <div class="contact-info">
-            <h4>LinkedIn</h4>
-            <a
-              href="https://www.linkedin.com/in/muhammad-azmin-muhamad-yusmizan-5a4367266/"
-              target="_blank"
-              >linkedin.com/in/muhammad-azmin-muhamad-yusmizan-5a4367266/</a
-            >
-          </div>
-        </div>
-
-        <div class="contact-item">
-          <div class="contact-icon">🐱</div>
-          <div class="contact-info">
-            <h4>GitHub</h4>
-            <a href="https://github.com/m-azmin" target="_blank"
-              >github.com/m-azmin</a
-            >
-          </div>
-        </div>
-
-        <div class="contact-item">
-          <div class="contact-icon">📍</div>
-          <div class="contact-info">
-            <h4 data-i18n="contact.loc">Location</h4>
-            <p>Villeurbanne, Lyon, France</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <form
-      class="contact-form"
-      action="https://formspree.io/f/movwovaa"
-      method="POST"
-    >
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea
-        name="message"
-        rows="4"
-        placeholder="Your Message"
-        required
-      ></textarea>
-      <button type="submit" data-i18n="contact.send">Send</button>
-    </form>
-
-    <footer>
-      <p>© 2025 Azmin Yusmizan. All rights reserved.</p>
-    </footer>
-  </body>
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>© <span class="year">2026</span> Muhammad Azmin Muhamad Yusmizan</p>
+      <p class="footer-links">
+        <a href="privacy.html" data-i18n="footer.privacy">Privacy policy</a>
+        <a href="#top" data-i18n="footer.top">Back to top</a>
+      </p>
+    </div>
+  </footer>
+</body>
 </html>
