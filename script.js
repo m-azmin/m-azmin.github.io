@@ -1,4 +1,4 @@
-/* Azmin Yusmizan portfolio: shared script for index.html and privacy.html */
+/* Azmin Yusmizan portfolio: shared script for index.html and privacy.html (v3) */
 (function () {
   "use strict";
 
@@ -149,6 +149,7 @@
     if (!navToggle || !navLinks) return;
     navLinks.classList.remove("is-open");
     navToggle.setAttribute("aria-expanded", "false");
+    document.documentElement.classList.remove("nav-open");
   }
 
   if (navToggle && navLinks) {
@@ -156,6 +157,7 @@
       var open = !navLinks.classList.contains("is-open");
       navLinks.classList.toggle("is-open", open);
       navToggle.setAttribute("aria-expanded", String(open));
+      document.documentElement.classList.toggle("nav-open", open);
     });
 
     navLinks.addEventListener("click", function (e) {
@@ -170,7 +172,7 @@
     });
 
     window.addEventListener("resize", function () {
-      if (window.innerWidth > 1080) closeNav();
+      if (window.innerWidth > 833) closeNav();
     });
   }
 
@@ -276,6 +278,70 @@
           submit.disabled = false;
         });
     });
+  }
+
+  /* ---------- Scroll reveal ---------- */
+  // Elements fade up as they enter the viewport. Anything already above the
+  // fold line (fast scroll, keyboard End, anchor jump) is revealed too, so no
+  // content can ever stay hidden.
+
+  var pending = Array.prototype.slice.call(document.querySelectorAll(".reveal"));
+  var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  function revealAll() {
+    pending.forEach(function (el) {
+      el.classList.add("is-in");
+    });
+    pending = [];
+  }
+
+  if (reduceMotion || !("IntersectionObserver" in window)) {
+    revealAll();
+  } else {
+    var ticking = false;
+    var checkReveals = function () {
+      ticking = false;
+      var limit = window.innerHeight * 0.94;
+      pending = pending.filter(function (el) {
+        if (el.getBoundingClientRect().top < limit) {
+          el.classList.add("is-in");
+          return false;
+        }
+        return true;
+      });
+      if (!pending.length) {
+        window.removeEventListener("scroll", onRevealScroll);
+        window.removeEventListener("resize", onRevealScroll);
+      }
+    };
+    var onRevealScroll = function () {
+      if (!ticking) {
+        ticking = true;
+        window.requestAnimationFrame(checkReveals);
+      }
+    };
+    window.addEventListener("scroll", onRevealScroll, { passive: true });
+    window.addEventListener("resize", onRevealScroll);
+    window.addEventListener("beforeprint", revealAll);
+    checkReveals();
+  }
+
+  /* ---------- Hairline under the nav once the page scrolls ---------- */
+
+  var gnav = document.getElementById("gnav");
+  var firstSection = document.getElementById("lora");
+  if (gnav) {
+    var onScroll = function () {
+      gnav.classList.toggle("is-scrolled", window.scrollY > 4);
+      // Back in the hero: no nav item is "current".
+      if (navLinks && firstSection && firstSection.getBoundingClientRect().top > window.innerHeight * 0.5) {
+        navLinks.querySelectorAll("a[aria-current]").forEach(function (a) {
+          a.removeAttribute("aria-current");
+        });
+      }
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
   }
 
   /* ---------- Footer year ---------- */
