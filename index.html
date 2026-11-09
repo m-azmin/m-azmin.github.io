@@ -4,21 +4,28 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title data-i18n="meta.title">Azmin Yusmizan | Electrical engineering, embedded systems and RF</title>
-  <meta name="description" content="Portfolio of Azmin Yusmizan, final-year electrical engineering student at INSA Lyon: LoRa radio protocols, bare-metal embedded firmware, GNSS, RF design and electronics." />
+  <meta name="description" content="Portfolio of Azmin Yusmizan, final-year electrical engineering student at INSA Lyon with an exchange semester at Sogang University, Seoul: LoRa radio protocols, bare-metal embedded firmware, GNSS, RF design and electronics." />
   <meta name="author" content="Muhammad Azmin Muhamad Yusmizan" />
   <link rel="canonical" href="https://m-azmin.github.io/" />
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Azmin Yusmizan" />
+  <meta property="og:locale" content="en_GB" />
   <meta property="og:title" content="Azmin Yusmizan | Electrical engineering, embedded systems and RF" />
-  <meta property="og:description" content="Final-year electrical engineering student at INSA Lyon. Long-range radio links, bare-metal firmware and the circuits underneath them." />
+  <meta property="og:description" content="Final-year electrical engineering student at INSA Lyon, focused on RF and embedded systems. Long-range radio links, bare-metal firmware and the circuits underneath them." />
   <meta property="og:url" content="https://m-azmin.github.io/" />
   <meta property="og:image" content="https://m-azmin.github.io/img/profile.jpg" />
+  <meta property="og:image:width" content="640" />
+  <meta property="og:image:height" content="640" />
+  <meta property="og:image:alt" content="Portrait of Azmin Yusmizan" />
+  <meta name="twitter:card" content="summary" />
   <meta name="theme-color" content="#ffffff" />
+  <meta name="color-scheme" content="light" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231d1d1f'/%3E%3Cpath d='M6 23 L12 9 M12 23 L19 9 M19 23 L26 11' stroke='%23ffffff' stroke-width='2.6' stroke-linecap='round' fill='none'/%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.bunny.net" />
   <link rel="stylesheet" href="https://fonts.bunny.net/css?family=inter:400,500,600,700&display=swap" />
-  <link rel="stylesheet" href="style.css?v=3" />
+  <link rel="stylesheet" href="style.css?v=4" />
   <script>document.documentElement.classList.add('js');</script>
-  <script defer src="script.js?v=3"></script>
+  <script defer src="script.js?v=4"></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -30,12 +37,15 @@
     "jobTitle": "Electrical engineering student",
     "email": "mailto:muhammad-azmin.muhamad-yusmizan@insa-lyon.fr",
     "address": { "@type": "PostalAddress", "addressLocality": "Villeurbanne", "addressCountry": "FR" },
+    "nationality": { "@type": "Country", "name": "Malaysia" },
+    "knowsLanguage": ["ms", "en", "fr", "id", "es"],
     "alumniOf": [
+      { "@type": "CollegeOrUniversity", "name": "Sogang University", "address": { "@type": "PostalAddress", "addressLocality": "Seoul", "addressCountry": "KR" } },
       { "@type": "CollegeOrUniversity", "name": "IUT Paul Sabatier, Université Toulouse III" },
       { "@type": "CollegeOrUniversity", "name": "IUT de Tours, Université de Tours" }
     ],
     "affiliation": { "@type": "CollegeOrUniversity", "name": "INSA Lyon" },
-    "knowsAbout": ["LoRa", "Embedded systems", "Embedded C", "GNSS", "RF design", "PCB design", "Analog electronics", "Signal processing", "Industrial automation"],
+    "knowsAbout": ["LoRa", "Radio-frequency engineering", "Antennas", "Microwave communication", "Embedded systems", "Embedded C", "GNSS", "PCB design", "Analog electronics", "Signal processing", "Industrial automation"],
     "sameAs": [
       "https://www.linkedin.com/in/azmin-yusmizan-5a4367266/",
       "https://github.com/m-azmin"
@@ -50,7 +60,7 @@
     <div class="gnav-inner">
       <a class="gnav-brand" href="#top" aria-label="Azmin Yusmizan, home">Azmin Yusmizan</a>
 
-      <nav class="gnav-nav" aria-label="Main">
+      <nav class="gnav-nav" aria-label="Main" data-i18n-label="aria.nav">
         <ul class="nav-links" id="navLinks">
           <li><a href="#lora" data-i18n="nav.featured">LoRa project</a></li>
           <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
@@ -89,13 +99,21 @@
     <!-- ================= HERO ================= -->
     <section class="hero" id="top">
       <div class="container hero-head">
-        <img class="hero-photo reveal" src="img/profile.jpg" alt="Portrait of Azmin Yusmizan" width="112" height="112" />
+        <img class="hero-photo reveal" src="img/profile.jpg" alt="Portrait of Azmin Yusmizan" width="112" height="112" fetchpriority="high" />
         <h1 class="hero-name reveal">Azmin Yusmizan</h1>
-        <p class="hero-lead reveal" data-i18n="hero.lead">Final-year electrical engineering student at INSA Lyon. I build long-range radio links, bare-metal firmware and the circuits underneath them.</p>
+        <p class="hero-lead reveal" data-i18n="hero.lead">Final-year electrical engineering student at INSA Lyon, focused on RF and embedded systems. I build long-range radio links, bare-metal firmware and the circuits underneath them.</p>
+        <ul class="hero-focus reveal" aria-label="Areas of interest" data-i18n-label="aria.focus">
+          <li data-i18n="hero.a1">Embedded systems</li>
+          <li data-i18n="hero.a2">Wireless and LoRa</li>
+          <li data-i18n="hero.a3">RF engineering</li>
+          <li data-i18n="hero.a4">Electronics and hardware</li>
+          <li data-i18n="hero.a5">Signal processing</li>
+        </ul>
         <div class="hero-actions reveal">
           <a class="btn btn-primary" href="#lora" data-i18n="hero.cta1">See the LoRa project</a>
           <a class="btn btn-secondary" href="#contact" data-i18n="hero.cta2">Get in touch</a>
         </div>
+        <p class="hero-avail reveal"><span class="status-dot" aria-hidden="true"></span><span data-i18n="hero.avail">Available for a 6-month final-year internship (PFE) from February 2027</span></p>
       </div>
 
       <figure class="container-wide scope reveal">
@@ -130,7 +148,7 @@
       <div class="container">
         <dl class="glance reveal">
           <div><dt data-i18n="hero.f1t">Studying</dt><dd data-i18n="hero.f1d">Génie Électrique, INSA Lyon</dd></div>
-          <div><dt data-i18n="hero.f2t">Focus</dt><dd data-i18n="hero.f2d">Embedded systems, LoRa and RF</dd></div>
+          <div><dt data-i18n="hero.f2t">Exchange semester</dt><dd data-i18n="hero.f2d">Sogang University, Seoul</dd></div>
           <div><dt data-i18n="hero.f3t">Based in</dt><dd>Villeurbanne, Lyon</dd></div>
           <div><dt data-i18n="hero.f4t">Languages</dt><dd data-i18n="hero.f4d">English, French, Malay</dd></div>
         </dl>
@@ -154,18 +172,69 @@
       </div>
 
       <div class="container-wide">
-        <h3 class="tiles-title reveal" data-i18n="case.specCap">Prototype characteristics</h3>
-        <div class="bento">
-          <div class="tile tile-wide reveal"><p class="tile-label" data-i18n="case.s1t">Radio</p><p class="tile-value" data-i18n="case.s1d">LoRa peer to peer, 869.4 MHz (EU868), SF7, 125 kHz, CR 4/5, 14 dBm</p></div>
-          <div class="tile reveal"><p class="tile-label" data-i18n="case.s2t">Group size</p><p class="tile-value" data-i18n="case.s2d">Up to 9 collars and 3 remotes, no infrastructure</p></div>
-          <div class="tile reveal"><p class="tile-label" data-i18n="case.s3t">Position frame</p><p class="tile-value" data-i18n="case.s3d">8 bytes, 41.2 ms on air (was 11 bytes, 51.5 ms: <strong>−19.9%</strong>)</p></div>
-          <div class="tile reveal"><p class="tile-label" data-i18n="case.s4t">Command frame</p><p class="tile-value" data-i18n="case.s4d">4 bytes, 36.1 ms on air (was 7 bytes, 41.2 ms: <strong>−12.4%</strong>)</p></div>
-          <div class="tile reveal"><p class="tile-label" data-i18n="case.s5t">Channel load</p><p class="tile-value" data-i18n="case.s5d">G ≈ 0.068 with a full group, about <strong>87%</strong> first-try delivery (pure ALOHA model)</p></div>
-          <div class="tile reveal"><p class="tile-label" data-i18n="case.s6t">Hardware</p><p class="tile-value">Microchip WLR089U0, u-blox MAX-M10S, LIS2DW12</p></div>
-          <div class="tile reveal"><p class="tile-label" data-i18n="case.s7t">Firmware</p><p class="tile-value" data-i18n="case.s7d">C, bare-metal, event-driven; one codebase built for both roles</p></div>
-          <div class="tile reveal"><p class="tile-label" data-i18n="case.s8t">Estimated autonomy</p><p class="tile-value" data-i18n="case.s8d">Collar ≈ 117 h, remote ≈ 27 h on 2000 mAh (prototype, sleep modes not yet enabled)</p></div>
-        </div>
+        <!-- Results at a glance -->
+        <dl class="stats reveal">
+          <div><dt data-i18n="case.k1">collars and remotes in one group, with no infrastructure</dt><dd>9 + 3</dd></div>
+          <div><dt data-i18n="case.k2">time on air for a position frame, from 51.5 to 41.2 ms</dt><dd data-i18n="case.k2v">−19.9%</dd></div>
+          <div><dt data-i18n="case.k3">first-try delivery with a full group (pure ALOHA model)</dt><dd data-i18n="case.k3v">≈ 87%</dd></div>
+          <div><dt data-i18n="case.k4">estimated collar autonomy on 2000 mAh</dt><dd data-i18n="case.k4v">≈ 117 h</dd></div>
+        </dl>
 
+        <!-- Architecture -->
+        <h3 class="tiles-title reveal" data-i18n="case.archT">System architecture</h3>
+        <figure class="tile arch reveal">
+          <div class="arch-nodes">
+            <div class="arch-node">
+              <p class="arch-node-title"><span class="arch-badge arch-badge-collar" aria-hidden="true">1–9</span><span data-i18n="arch.collar">GNSS collar</span></p>
+              <ul class="arch-parts">
+                <li><strong>WLR089U0</strong><span data-i18n="arch.d1">MCU and LoRa transceiver</span></li>
+                <li><strong>MAX-M10S</strong><span data-i18n="arch.d2">GNSS receiver</span></li>
+                <li><strong>LIS2DW12</strong><span data-i18n="arch.d3">Accelerometer</span></li>
+                <li><strong data-i18n="arch.d4n">Beeper</strong><span data-i18n="arch.d4">Sound and vibration</span></li>
+              </ul>
+            </div>
+            <div class="arch-link" aria-hidden="true">
+              <span class="arch-link-line"></span>
+              <span class="arch-link-label">LoRa P2P<br />869.4 MHz<br />SF7 / 125 kHz</span>
+              <span class="arch-link-line"></span>
+            </div>
+            <div class="arch-node">
+              <p class="arch-node-title"><span class="arch-badge arch-badge-remote" aria-hidden="true">A–C</span><span data-i18n="arch.remote">Handheld remote</span></p>
+              <ul class="arch-parts">
+                <li><strong>WLR089U0</strong><span data-i18n="arch.d1">MCU and LoRa transceiver</span></li>
+                <li><strong>GNSS</strong><span data-i18n="arch.d6">Distance to each dog</span></li>
+                <li><strong data-i18n="arch.d5n">Display</strong><span data-i18n="arch.d5">Positions and alarms</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="arch-fw">
+            <p class="arch-fw-title"><span data-i18n="arch.fw">Firmware layers</span> <span class="arch-fw-note" data-i18n="arch.fwNote">one bare-metal C codebase, built for both roles</span></p>
+            <ol class="arch-stack">
+              <li data-i18n="arch.l1"><strong>UI</strong><span>Display, alarms and user commands</span></li>
+              <li data-i18n="arch.l2"><strong>Services</strong><span>Pairing, commands, GNSS, relay, immobility alarm</span></li>
+              <li data-i18n="arch.l3"><strong>Protocol</strong><span>Compact frames, acknowledgements, deduplication, timeouts</span></li>
+              <li data-i18n="arch.l4"><strong>Radio HAL</strong><span>LoRa transceiver control, RSSI and SNR</span></li>
+              <li data-i18n="arch.l5"><strong>BSP</strong><span>UART, SPI, I²C</span></li>
+            </ol>
+          </div>
+          <figcaption data-i18n="case.archCap">Collars and remotes share the same radio module and the same layered firmware; the build selects the role. Nothing else is needed in the field: no gateway, no phone, no network.</figcaption>
+        </figure>
+
+        <!-- Specification -->
+        <h3 class="tiles-title reveal" data-i18n="case.specCap">Prototype characteristics</h3>
+        <dl class="tile spec reveal">
+          <div><dt data-i18n="case.s1t">Radio</dt><dd data-i18n="case.s1d">LoRa peer to peer, 869.4 MHz (EU868), SF7, 125 kHz, CR 4/5, 14 dBm</dd></div>
+          <div><dt data-i18n="case.s2t">Group size</dt><dd data-i18n="case.s2d">Up to 9 collars and 3 remotes, no infrastructure</dd></div>
+          <div><dt data-i18n="case.s3t">Position frame</dt><dd data-i18n="case.s3d">8 bytes, 41.2 ms on air (was 11 bytes, 51.5 ms: <strong>−19.9%</strong>)</dd></div>
+          <div><dt data-i18n="case.s4t">Command frame</dt><dd data-i18n="case.s4d">4 bytes, 36.1 ms on air (was 7 bytes, 41.2 ms: <strong>−12.4%</strong>)</dd></div>
+          <div><dt data-i18n="case.s5t">Channel load</dt><dd data-i18n="case.s5d">G ≈ 0.068 with a full group, about <strong>87%</strong> first-try delivery (pure ALOHA model)</dd></div>
+          <div><dt data-i18n="case.s6t">Hardware</dt><dd>Microchip WLR089U0, u-blox MAX-M10S, LIS2DW12</dd></div>
+          <div><dt data-i18n="case.s7t">Firmware</dt><dd data-i18n="case.s7d">C, bare-metal, event-driven; one codebase built for both roles</dd></div>
+          <div><dt data-i18n="case.s8t">Estimated autonomy</dt><dd data-i18n="case.s8d">Collar ≈ 117 h, remote ≈ 27 h on 2000 mAh (prototype, sleep modes not yet enabled)</dd></div>
+        </dl>
+
+        <!-- Relay -->
+        <h3 class="tiles-title reveal" data-i18n="case.relayT">Keeping the link when terrain gets in the way</h3>
         <figure class="tile diagram reveal">
           <div class="diagram-scroll">
           <svg viewBox="0 0 760 330" role="img" aria-labelledby="diagCap">
@@ -197,27 +266,29 @@
           <figcaption id="diagCap" data-i18n="case.diagCap">When remote A loses collar 3 behind terrain, it asks the best-placed remote to relay. One helper at a time, every step bounded by a timeout, and each forwarded message carries an ID and a hop limit so nothing is transmitted twice.</figcaption>
         </figure>
 
-        <div class="tile-grid-2">
+        <!-- Engineering notes -->
+        <h3 class="tiles-title reveal" data-i18n="case.notesT">How it was engineered</h3>
+        <div class="tile-grid-2 notes">
           <article class="tile reveal">
-            <h3 data-i18n="case.h1">A protocol sized for airtime</h3>
+            <h4 data-i18n="case.h1">A protocol sized for airtime</h4>
             <p data-i18n="case.t1">I started with verbose frames for debugging, then designed compact v2 frames: positions packed as signed 24-bit coordinates (10<sup>−4</sup> degree) with a fix flag, commands tagged with a sequence number. Every command (beep, vibration, mute, volume) is acknowledged end to end; duplicates are recognized and re-acknowledged without being executed twice. Pairing only accepts requests inside a time window.</p>
           </article>
           <article class="tile reveal">
-            <h3 data-i18n="case.h2">Relaying without flooding the channel</h3>
+            <h4 data-i18n="case.h2">Relaying without flooding the channel</h4>
             <p data-i18n="case.t2">The owner's remote picks a helper from how recently it heard the dog and how close it is by GNSS. Commands go through a request, offer, grant and forward handshake, with the acknowledgement routed back to the owner. Positions are forwarded under a time-limited lease. If the best helper times out, the next candidate is tried.</p>
           </article>
           <article class="tile reveal">
-            <h3 data-i18n="case.h3">Reading a competitor's radio from its SPI bus</h3>
+            <h4 data-i18n="case.h3">Reading a competitor's radio from its SPI bus</h4>
             <p data-i18n="case.t3">To ground our design choices, I measured a competing tracker's channels on a spectrum analyzer, then tapped the SPI bus between its microcontroller and LoRa transceiver with a logic analyzer. Decoding the register writes against the transceiver datasheet revealed its real settings (SF8, 62.5 kHz). That analysis is why we chose SF7 at 125 kHz: shorter airtime, better suited to many nodes.</p>
           </article>
           <article class="tile reveal">
-            <h3 data-i18n="case.h4">An immobility alarm that ignores breathing</h3>
+            <h4 data-i18n="case.h4">An immobility alarm that ignores breathing</h4>
             <p data-i18n="case.t4">GNSS drifts too much under tree cover to tell whether a pointing dog has stopped, so the collar uses an accelerometer instead. The algorithm tracks changes between samples to cancel gravity, smooths them with an IIR filter and applies hysteresis: 5 s of stillness raises the alarm, 400 ms of clear movement clears it.</p>
           </article>
           <article class="tile reveal">
-            <h3 data-i18n="case.h5">Validated from the logs up</h3>
+            <h4 data-i18n="case.h5">Validated from the logs up</h4>
             <p data-i18n="case.t5">Every event is logged over UART with its radio metrics, and each scenario (pairing, commands, GNSS, relay, alarm) has a reproducible test with pass criteria. A few lines from the test campaign:</p>
-            <pre class="log" aria-label="Excerpt of firmware test logs"><code>Radio configured for P2P 869.4 MHz SF7/BW125/CR4_5
+            <pre class="log" aria-label="Excerpt of firmware test logs" data-i18n-label="aria.log" tabindex="0"><code>Radio configured for P2P 869.4 MHz SF7/BW125/CR4_5
 RX len=8 RSSI=-104 SNR=7 | GPSv2 g=3 rid=2 dog=1 fix=1
 PAIR IGNORED: window closed
 DUP CMD ignored (seq=12)
@@ -225,12 +296,16 @@ RELAY: REQ → OFFER → GRANT → FWD → CMD_ACK
 GPS_RELAY: REQ → GPS_RELAY: ACK OK → RELAY: GPS_FWD</code></pre>
           </article>
           <article class="tile reveal">
-            <h3 data-i18n="case.h6">What I would do next</h3>
+            <h4 data-i18n="case.h6">What I would do next</h4>
             <p data-i18n="case.t6">The remote is the autonomy bottleneck at about 27 h, so the largest gain will come from duty-cycled reception rather than fewer transmissions. After that: a dedicated PCB and enclosure, adaptive GNSS reporting when the dog is still, collision backoff, and a wider field campaign in dense, hilly terrain.</p>
-            <ul class="tech-list" aria-label="Tools and technologies">
-              <li>Embedded C</li><li>WLR089U0</li><li>LoRa P2P</li><li>u-blox GNSS</li><li>NMEA</li><li>SPI</li><li>I²C</li><li>UART</li><li>Microchip Studio</li><li>MPLAB ICD 5</li><li>Logic analyzer</li><li>Tektronix MDO</li>
-            </ul>
           </article>
+        </div>
+
+        <div class="case-tools reveal">
+          <p class="case-tools-title" data-i18n="case.toolsT">Tools and technologies</p>
+          <ul class="tech-list">
+            <li>Embedded C</li><li>WLR089U0</li><li>LoRa P2P</li><li>u-blox GNSS</li><li>NMEA</li><li>SPI</li><li>I²C</li><li>UART</li><li>Python</li><li>Microchip Studio</li><li>MPLAB ICD 5</li><li>Logic analyzer</li><li>Tektronix MDO</li>
+          </ul>
         </div>
       </div>
     </section>
@@ -243,37 +318,47 @@ GPS_RELAY: REQ → GPS_RELAY: ACK OK → RELAY: GPS_FWD</code></pre>
       </div>
       <div class="container-wide exp-list">
         <article class="exp-card reveal">
-          <div class="exp-top">
-            <img class="exp-logo" src="img/num'axes2.jpg" alt="Num'axes logo" width="56" height="56" loading="lazy" />
+          <header class="exp-top">
+            <img class="exp-logo" src="img/numaxes-logo.jpg" alt="Num'axes logo" width="56" height="56" loading="lazy" decoding="async" />
             <div class="exp-heading">
               <p class="exp-date" data-i18n="exp.1date">Oct 2025 – Feb 2026</p>
-              <h3 data-i18n="exp.1role">R&amp;D engineering intern, embedded systems and radio</h3>
+              <h3 data-i18n="exp.1role">R&amp;D assistant, RF and embedded systems</h3>
               <p class="exp-meta">Num'axes, Olivet, France</p>
             </div>
+          </header>
+          <div class="exp-body">
+            <ul class="exp-points">
+              <li data-i18n="exp.1b1"><strong>System.</strong> Designed and validated an infrastructure-free LoRa tracking prototype for up to 9 GNSS collars and 3 handheld remotes.</li>
+              <li data-i18n="exp.1b2"><strong>Protocol.</strong> Specified compact frames that cut time on air by up to 19.9%, end-to-end acknowledged commands with deduplication and time-windowed pairing, all sized for the EU868 duty cycle.</li>
+              <li data-i18n="exp.1b3"><strong>Relay.</strong> Built a controlled remote-to-remote relay with message IDs, hop limits and sequential fallback, to keep tracking dogs when the direct link drops.</li>
+              <li data-i18n="exp.1b4"><strong>Firmware.</strong> Wrote layered bare-metal C on the Microchip WLR089U0 (BSP, radio HAL, protocol, services, UI), integrating u-blox GNSS and an accelerometer-based immobility alarm.</li>
+              <li data-i18n="exp.1b5"><strong>RF analysis.</strong> Reverse-engineered a competitor's radio link by spectrum analysis and SPI bus sniffing, then characterized LoRa settings (SF, BW and CR against RSSI and SNR) with Python scripts to settle on SF7 at 125 kHz.</li>
+            </ul>
+            <ul class="chips" aria-label="Tools and technologies" data-i18n-label="aria.tools">
+              <li>Embedded C</li><li>LoRa P2P</li><li>GNSS</li><li>WLR089U0</li><li>Python</li><li>Spectrum analyzer</li><li>Logic analyzer</li>
+            </ul>
+            <a class="link-arrow" href="#lora" data-i18n="exp.1more">Read the full case study</a>
           </div>
-          <ul class="exp-points">
-            <li data-i18n="exp.1b1">Designed and validated an infrastructure-free LoRa tracking prototype for up to 9 GNSS collars and 3 handheld remotes.</li>
-            <li data-i18n="exp.1b2">Specified the application protocol: compact frames cutting time-on-air by up to 19.9%, end-to-end acknowledged commands with deduplication, and time-windowed pairing.</li>
-            <li data-i18n="exp.1b3">Built a controlled relay mechanism with message IDs, hop limits and sequential fallback to keep tracking dogs when the direct link drops.</li>
-            <li data-i18n="exp.1b4">Wrote layered bare-metal C firmware on the Microchip WLR089U0 (BSP, radio HAL, protocol, services, UI), integrating u-blox GNSS and an accelerometer-based immobility alarm.</li>
-            <li data-i18n="exp.1b5">Reverse-engineered a competitor's radio link by spectrum analysis and SPI bus sniffing; the findings set our radio parameters.</li>
-          </ul>
-          <a class="link-arrow" href="#lora" data-i18n="exp.1more">Read the full case study</a>
         </article>
         <article class="exp-card reveal">
-          <div class="exp-top">
-            <img class="exp-logo" src="img/num'axes2.jpg" alt="" width="56" height="56" loading="lazy" />
+          <header class="exp-top">
+            <img class="exp-logo" src="img/numaxes-logo.jpg" alt="" width="56" height="56" loading="lazy" decoding="async" />
             <div class="exp-heading">
               <p class="exp-date" data-i18n="exp.2date">Apr – Jul 2024</p>
-              <h3 data-i18n="exp.2role">Electronics engineering intern</h3>
+              <h3 data-i18n="exp.2role">R&amp;D intern, electronics</h3>
               <p class="exp-meta">Num'axes, Olivet, France</p>
             </div>
+          </header>
+          <div class="exp-body">
+            <ul class="exp-points">
+              <li data-i18n="exp.2b1"><strong>PCB design.</strong> Designed the analog and digital schematics and routed a compact PCB for an anti-bark collar, through to the manufacturing files.</li>
+              <li data-i18n="exp.2b2"><strong>Simulation.</strong> Simulated the circuits in LTspice and validated them on protoboard before committing to layout.</li>
+              <li data-i18n="exp.2b3"><strong>Validation.</strong> Bench-tested piezo sensing and trigger thresholds, debugged within the R&amp;D team under real product constraints such as EMC and form factor, and delivered a working prototype.</li>
+            </ul>
+            <ul class="chips" aria-label="Tools and technologies" data-i18n-label="aria.tools">
+              <li>PCB design</li><li>LTspice</li><li>Analog electronics</li><li>Bench testing</li>
+            </ul>
           </div>
-          <ul class="exp-points">
-            <li data-i18n="exp.2b1">Designed a custom PCB for a dog collar system, covering both the analog and digital schematics and the board layout.</li>
-            <li data-i18n="exp.2b2">Simulated circuits in LTspice and validated them on protoboard before committing to layout.</li>
-            <li data-i18n="exp.2b3">Iterated through testing, component validation and debugging in an R&amp;D team, under real product constraints such as EMC and form factor.</li>
-          </ul>
         </article>
       </div>
     </section>
@@ -287,14 +372,14 @@ GPS_RELAY: REQ → GPS_RELAY: ACK OK → RELAY: GPS_FWD</code></pre>
 
       <div class="container-wide">
         <div class="filters-scroll">
-          <div class="filters" role="group" aria-label="Filter projects by field">
-            <button class="filter-btn" data-filter="all" aria-pressed="true"><span data-i18n="proj.fAll">All</span> <span class="count"></span></button>
-            <button class="filter-btn" data-filter="rf" aria-pressed="false"><span data-i18n="proj.fRf">Radio and RF</span> <span class="count"></span></button>
-            <button class="filter-btn" data-filter="embedded" aria-pressed="false"><span data-i18n="proj.fEmb">Embedded</span> <span class="count"></span></button>
-            <button class="filter-btn" data-filter="electronics" aria-pressed="false"><span data-i18n="proj.fEle">Electronics</span> <span class="count"></span></button>
-            <button class="filter-btn" data-filter="signal" aria-pressed="false"><span data-i18n="proj.fSig">Signal and data</span> <span class="count"></span></button>
-            <button class="filter-btn" data-filter="automation" aria-pressed="false"><span data-i18n="proj.fAuto">Automation</span> <span class="count"></span></button>
-            <button class="filter-btn" data-filter="energy" aria-pressed="false"><span data-i18n="proj.fEnergy">Energy</span> <span class="count"></span></button>
+          <div class="filters" role="group" aria-label="Filter projects by field" data-i18n-label="aria.filters">
+            <button class="filter-btn" type="button" data-filter="all" aria-pressed="true"><span data-i18n="proj.fAll">All</span> <span class="count"></span></button>
+            <button class="filter-btn" type="button" data-filter="rf" aria-pressed="false"><span data-i18n="proj.fRf">Radio and RF</span> <span class="count"></span></button>
+            <button class="filter-btn" type="button" data-filter="embedded" aria-pressed="false"><span data-i18n="proj.fEmb">Embedded</span> <span class="count"></span></button>
+            <button class="filter-btn" type="button" data-filter="electronics" aria-pressed="false"><span data-i18n="proj.fEle">Electronics</span> <span class="count"></span></button>
+            <button class="filter-btn" type="button" data-filter="signal" aria-pressed="false"><span data-i18n="proj.fSig">Signal and data</span> <span class="count"></span></button>
+            <button class="filter-btn" type="button" data-filter="automation" aria-pressed="false"><span data-i18n="proj.fAuto">Automation</span> <span class="count"></span></button>
+            <button class="filter-btn" type="button" data-filter="energy" aria-pressed="false"><span data-i18n="proj.fEnergy">Energy</span> <span class="count"></span></button>
           </div>
         </div>
 
@@ -311,89 +396,53 @@ GPS_RELAY: REQ → GPS_RELAY: ACK OK → RELAY: GPS_FWD</code></pre>
               <a class="link-arrow" href="#lora" data-i18n="proj.loraL">Read the case study</a>
             </div>
           </li>
+          <li class="project" data-category="rf">
+            <img class="project-media" src="img/antenne.jpg" alt="Patch antenna" width="768" height="1024" loading="lazy" decoding="async" />
+            <div class="project-body">
+              <p class="project-org">IUT Paul Sabatier</p>
+              <h3 data-i18n="proj.ant">Patch antenna optimization</h3>
+              <p class="project-desc" data-i18n="proj.antD">Reverse-engineered and optimized a patch antenna in Cadence AWR, reaching a −17 dB reflection coefficient at the target frequency.</p>
+              <ul class="tags"><li>Antenna design</li><li>Cadence AWR</li><li>RF optimization</li></ul>
+            </div>
+          </li>
+          <li class="project" data-category="rf">
+            <img class="project-media" src="img/capteurliq.jpg" alt="RF liquid detection sensor" width="768" height="1024" loading="lazy" decoding="async" />
+            <div class="project-body">
+              <p class="project-org">IUT Paul Sabatier</p>
+              <h3 data-i18n="proj.liq">RF liquid detection sensor</h3>
+              <p class="project-desc" data-i18n="proj.liqD">RF sensor that tells water from ethanol, designed in Cadence AWR with Smith chart analysis and a custom PCB with precise copper traces.</p>
+              <ul class="tags"><li>RF design</li><li>Cadence AWR</li><li>Smith chart</li></ul>
+            </div>
+          </li>
           <li class="project" data-category="electronics">
-            <img class="project-media" src="img/sonometer.jpg" alt="Analog sound level meter prototype" loading="lazy" />
+            <img class="project-media" src="img/sonometer.jpg" alt="Analog sound level meter prototype" width="900" height="1200" loading="lazy" decoding="async" />
             <div class="project-body">
               <p class="project-org">INSA Lyon</p>
               <h3 data-i18n="proj.sono">Analog sound level meter</h3>
-              <p class="project-desc" data-i18n="proj.sonoD">A complete sonometer built from the ground up: circuit design, LTspice simulation, prototyping and PCB fabrication, grounded in acoustic measurement principles.</p>
-              <ul class="tags"><li>PCB design</li><li>LTspice</li><li>Circuit analysis</li><li>Prototyping</li></ul>
+              <p class="project-desc" data-i18n="proj.sonoD">A complete sonometer: analog front end around an EM100TFT microphone, a three-LED threshold display, LTspice simulation, then PCB fabrication and testing.</p>
+              <ul class="tags"><li>Analog front end</li><li>LTspice</li><li>PCB design</li></ul>
             </div>
           </li>
-          <li class="project" data-category="electronics embedded">
-            <img class="project-media" src="img/dustsensor.jpg" alt="Environmental dust sensor" loading="lazy" />
-            <div class="project-body">
-              <p class="project-org">INSA Lyon</p>
-              <h3 data-i18n="proj.dust">Environmental dust sensor</h3>
-              <p class="project-desc" data-i18n="proj.dustD">Dust detection system with a custom circuit and embedded software, with a focus on sensor calibration for environmental monitoring.</p>
-              <ul class="tags"><li>Sensors</li><li>Embedded systems</li><li>Circuit design</li><li>Testing</li></ul>
-            </div>
-          </li>
-          <li class="project" data-category="automation">
-            <img class="project-media" src="img/factoryio.jpg" alt="Simulated automated sorting line" loading="lazy" />
-            <div class="project-body">
-              <p class="project-org">INSA Lyon</p>
-              <h3 data-i18n="proj.sort">Automated sorting system</h3>
-              <p class="project-desc" data-i18n="proj.sortD">GRAFCET-based control of an industrial line that sorts parts by color and number, with a complete workflow across several control stations.</p>
-              <ul class="tags"><li>GRAFCET</li><li>Automation</li><li>Industrial systems</li></ul>
-            </div>
-          </li>
-          <li class="project" data-category="signal">
-            <img class="project-media" src="img/brain.jpg" alt="Brain scan images used for classification" loading="lazy" />
-            <div class="project-body">
-              <p class="project-org">INSA Lyon</p>
-              <h3 data-i18n="proj.med">Medical image classification</h3>
-              <p class="project-desc" data-i18n="proj.medD">Machine-learning algorithms for brain image analysis and classification, applying numerical analysis and data processing to diagnostic support.</p>
-              <ul class="tags"><li>Image processing</li><li>Data analysis</li><li>C++</li></ul>
-            </div>
-          </li>
-          <li class="project" data-category="energy">
-            <img class="project-media" src="img/REGELEC.jpg" alt="REGELEC startup project" loading="lazy" />
-            <div class="project-body">
-              <p class="project-org">INSA Lyon</p>
-              <h3 data-i18n="proj.reg">REGELEC smart energy startup</h3>
-              <p class="project-desc" data-i18n="proj.regD">Co-founded a student startup developing intelligent electrical regulation: business plan, prototype and a mobile app to optimize consumption.</p>
-              <ul class="tags"><li>Entrepreneurship</li><li>Energy</li><li>Mobile app</li></ul>
-            </div>
-          </li>
-          <li class="project" data-category="electronics embedded">
-            <img class="project-media" src="img/linefollower.jpg" alt="Line follower robot" loading="lazy" />
+          <li class="project" data-category="embedded signal">
+            <img class="project-media" src="img/digitaleffect.jpg" alt="Digital guitar effects setup" width="1024" height="768" loading="lazy" decoding="async" />
             <div class="project-body">
               <p class="project-org">IUT Paul Sabatier</p>
-              <h3 data-i18n="proj.line">Autonomous line follower robot</h3>
-              <p class="project-desc" data-i18n="proj.lineD">A complete robot from schematic to PCB, integrating sensors, motors and path-following control.</p>
-              <ul class="tags"><li>Robotics</li><li>PCB</li><li>Control</li></ul>
+              <h3 data-i18n="proj.audio">Digital audio effects</h3>
+              <p class="project-desc" data-i18n="proj.audioD">Real-time guitar effects in C on an STM32 Nucleo, including reverb and distortion, with an anti-aliasing filter at the input and smoothing at the output.</p>
+              <ul class="tags"><li>C</li><li>STM32</li><li>DSP</li><li>Real-time audio</li></ul>
             </div>
           </li>
-          <li class="project" data-category="electronics embedded">
-            <img class="project-media" src="img/smartcar.jpg" alt="Multi-function smart car" loading="lazy" />
+          <li class="project" data-category="rf embedded">
+            <img class="project-media" src="img/iotnetworl.jpg" alt="IoT sensor network" width="768" height="1024" loading="lazy" decoding="async" />
             <div class="project-body">
               <p class="project-org">IUT Paul Sabatier</p>
-              <h3 data-i18n="proj.car">Multi-function smart car</h3>
-              <p class="project-desc" data-i18n="proj.carD">Autonomous vehicle controlled from a smartphone, with multiple sensors and wireless communication.</p>
-              <ul class="tags"><li>IoT</li><li>PCB</li><li>Mobile control</li><li>Wireless</li></ul>
-            </div>
-          </li>
-          <li class="project" data-category="automation">
-            <img class="project-media" src="img/auto.jpg" alt="Pneumatic control station" loading="lazy" />
-            <div class="project-body">
-              <p class="project-org">IUT Paul Sabatier</p>
-              <h3 data-i18n="proj.pneu">Industrial pneumatic control</h3>
-              <p class="project-desc" data-i18n="proj.pneuD">Pneumatic handling station programmed in TIA Portal, part of a team project linking several automated stations.</p>
-              <ul class="tags"><li>TIA Portal</li><li>Pneumatics</li><li>Industrial control</li></ul>
-            </div>
-          </li>
-          <li class="project" data-category="embedded">
-            <img class="project-media" src="img/sensor3d.jpg" alt="3D distance scanner" loading="lazy" />
-            <div class="project-body">
-              <p class="project-org">IUT Paul Sabatier</p>
-              <h3 data-i18n="proj.scan">3D distance scanner</h3>
-              <p class="project-desc" data-i18n="proj.scanD">3D scanning and data acquisition system built on an STM32 microcontroller with distance sensors and servo motors.</p>
-              <ul class="tags"><li>STM32</li><li>Servo motors</li><li>Distance sensors</li></ul>
+              <h3 data-i18n="proj.iot">IoT sensor network</h3>
+              <p class="project-desc" data-i18n="proj.iotD">Distributed sensor-actuator network on STM32 microcontrollers with wireless links, for environmental monitoring and control.</p>
+              <ul class="tags"><li>IoT</li><li>STM32</li><li>Wireless</li><li>Sensor networks</li></ul>
             </div>
           </li>
           <li class="project" data-category="electronics signal">
-            <img class="project-media" src="img/ecg.png" alt="Electrocardiograph signal" loading="lazy" />
+            <img class="project-media" src="img/ecg.png" alt="Electrocardiograph signal" width="320" height="234" loading="lazy" decoding="async" />
             <div class="project-body">
               <p class="project-org">IUT Paul Sabatier</p>
               <h3 data-i18n="proj.ecg">Electrocardiograph</h3>
@@ -402,7 +451,7 @@ GPS_RELAY: REQ → GPS_RELAY: ACK OK → RELAY: GPS_FWD</code></pre>
             </div>
           </li>
           <li class="project" data-category="electronics signal">
-            <img class="project-media" src="img/digitalfilter.jpg" alt="Analog filter board" loading="lazy" />
+            <img class="project-media" src="img/digitalfilter.jpg" alt="Analog filter board" width="1024" height="796" loading="lazy" decoding="async" />
             <div class="project-body">
               <p class="project-org">IUT Paul Sabatier</p>
               <h3 data-i18n="proj.filt">Analog filter design</h3>
@@ -410,44 +459,71 @@ GPS_RELAY: REQ → GPS_RELAY: ACK OK → RELAY: GPS_FWD</code></pre>
               <ul class="tags"><li>Analog filters</li><li>Anti-aliasing</li><li>PCB design</li></ul>
             </div>
           </li>
-          <li class="project" data-category="embedded signal">
-            <img class="project-media" src="img/digitaleffect.jpg" alt="Digital guitar effects setup" loading="lazy" />
+          <li class="project" data-category="electronics embedded">
+            <img class="project-media" src="img/dustsensor.jpg" alt="Environmental dust sensor" width="1429" height="614" loading="lazy" decoding="async" />
             <div class="project-body">
-              <p class="project-org">IUT Paul Sabatier</p>
-              <h3 data-i18n="proj.audio">Digital audio effects</h3>
-              <p class="project-desc" data-i18n="proj.audioD">Real-time guitar effects written in C, including reverb and distortion.</p>
-              <ul class="tags"><li>C</li><li>DSP</li><li>Real-time audio</li></ul>
+              <p class="project-org">INSA Lyon</p>
+              <h3 data-i18n="proj.dust">Environmental dust sensor</h3>
+              <p class="project-desc" data-i18n="proj.dustD">Dust detection system with a custom circuit and embedded software, with a focus on sensor calibration for environmental monitoring.</p>
+              <ul class="tags"><li>Sensors</li><li>Embedded systems</li><li>Circuit design</li><li>Testing</li></ul>
             </div>
           </li>
-          <li class="project" data-category="rf">
-            <img class="project-media" src="img/capteurliq.jpg" alt="RF liquid detection sensor" loading="lazy" />
+          <li class="project" data-category="embedded">
+            <img class="project-media" src="img/sensor3d.jpg" alt="3D distance scanner" width="768" height="1024" loading="lazy" decoding="async" />
             <div class="project-body">
               <p class="project-org">IUT Paul Sabatier</p>
-              <h3 data-i18n="proj.liq">RF liquid detection sensor</h3>
-              <p class="project-desc" data-i18n="proj.liqD">RF sensor that tells water from ethanol, designed in Cadence AWR with Smith chart analysis and a custom PCB with precise copper traces.</p>
-              <ul class="tags"><li>RF design</li><li>Cadence AWR</li><li>Smith chart</li></ul>
+              <h3 data-i18n="proj.scan">3D distance scanner</h3>
+              <p class="project-desc" data-i18n="proj.scanD">3D scanning and data acquisition system built on an STM32 microcontroller with distance sensors and servo motors.</p>
+              <ul class="tags"><li>STM32</li><li>Servo motors</li><li>Distance sensors</li></ul>
             </div>
           </li>
-          <li class="project" data-category="rf embedded">
-            <img class="project-media" src="img/iotnetworl.jpg" alt="IoT sensor network" loading="lazy" />
+          <li class="project" data-category="electronics embedded">
+            <img class="project-media" src="img/linefollower.jpg" alt="Line follower robot" width="1200" height="1000" loading="lazy" decoding="async" />
             <div class="project-body">
               <p class="project-org">IUT Paul Sabatier</p>
-              <h3 data-i18n="proj.iot">IoT sensor network</h3>
-              <p class="project-desc" data-i18n="proj.iotD">Distributed sensor-actuator network on STM32 microcontrollers with wireless links, for environmental monitoring and control.</p>
-              <ul class="tags"><li>IoT</li><li>STM32</li><li>Wireless</li><li>Sensor networks</li></ul>
+              <h3 data-i18n="proj.line">Autonomous line follower robot</h3>
+              <p class="project-desc" data-i18n="proj.lineD">A complete robot from schematic to PCB, integrating sensors, motors and path-following control.</p>
+              <ul class="tags"><li>Robotics</li><li>PCB</li><li>Control</li></ul>
             </div>
           </li>
-          <li class="project" data-category="rf">
-            <img class="project-media" src="img/antenne.jpg" alt="Patch antenna" loading="lazy" />
+          <li class="project" data-category="electronics embedded">
+            <img class="project-media" src="img/smartcar.jpg" alt="Multi-function smart car" width="903" height="1024" loading="lazy" decoding="async" />
             <div class="project-body">
               <p class="project-org">IUT Paul Sabatier</p>
-              <h3 data-i18n="proj.ant">Patch antenna optimization</h3>
-              <p class="project-desc" data-i18n="proj.antD">Reverse-engineered and optimized a patch antenna in Cadence AWR, reaching a −17 dB reflection coefficient at the target frequency.</p>
-              <ul class="tags"><li>Antenna design</li><li>Cadence AWR</li><li>RF optimization</li></ul>
+              <h3 data-i18n="proj.car">Multi-function smart car</h3>
+              <p class="project-desc" data-i18n="proj.carD">Autonomous vehicle controlled from a smartphone, with multiple sensors and wireless communication.</p>
+              <ul class="tags"><li>IoT</li><li>PCB</li><li>Mobile control</li><li>Wireless</li></ul>
+            </div>
+          </li>
+          <li class="project" data-category="signal">
+            <img class="project-media" src="img/brain.jpg" alt="Brain scan images used for classification" width="477" height="477" loading="lazy" decoding="async" />
+            <div class="project-body">
+              <p class="project-org">INSA Lyon</p>
+              <h3 data-i18n="proj.med">Medical image classification</h3>
+              <p class="project-desc" data-i18n="proj.medD">Machine-learning algorithms for brain image analysis and classification, applying numerical analysis and data processing to diagnostic support.</p>
+              <ul class="tags"><li>Image processing</li><li>Data analysis</li><li>C++</li></ul>
+            </div>
+          </li>
+          <li class="project" data-category="automation">
+            <img class="project-media" src="img/factoryio.jpg" alt="Simulated automated sorting line" width="1024" height="609" loading="lazy" decoding="async" />
+            <div class="project-body">
+              <p class="project-org">INSA Lyon</p>
+              <h3 data-i18n="proj.sort">Automated sorting system</h3>
+              <p class="project-desc" data-i18n="proj.sortD">GRAFCET-based control of an industrial line that sorts parts by color and number, with a complete workflow across several control stations.</p>
+              <ul class="tags"><li>GRAFCET</li><li>Automation</li><li>Industrial systems</li></ul>
+            </div>
+          </li>
+          <li class="project" data-category="automation">
+            <img class="project-media" src="img/auto.jpg" alt="Pneumatic control station" width="768" height="1024" loading="lazy" decoding="async" />
+            <div class="project-body">
+              <p class="project-org">IUT Paul Sabatier</p>
+              <h3 data-i18n="proj.pneu">Industrial pneumatic control</h3>
+              <p class="project-desc" data-i18n="proj.pneuD">Pneumatic handling station programmed in TIA Portal, part of a team project linking several automated stations.</p>
+              <ul class="tags"><li>TIA Portal</li><li>Pneumatics</li><li>Industrial control</li></ul>
             </div>
           </li>
           <li class="project" data-category="energy">
-            <img class="project-media" src="img/solar.jpg" alt="Solar panels" loading="lazy" />
+            <img class="project-media" src="img/solar.jpg" alt="Solar panels" width="768" height="1024" loading="lazy" decoding="async" />
             <div class="project-body">
               <p class="project-org">IUT Paul Sabatier</p>
               <h3 data-i18n="proj.solar">Solar panel analysis</h3>
@@ -455,7 +531,23 @@ GPS_RELAY: REQ → GPS_RELAY: ACK OK → RELAY: GPS_FWD</code></pre>
               <ul class="tags"><li>Solar energy</li><li>Power electronics</li><li>Characterization</li></ul>
             </div>
           </li>
+          <li class="project" data-category="energy">
+            <img class="project-media" src="img/REGELEC.jpg" alt="REGELEC startup project" width="500" height="500" loading="lazy" decoding="async" />
+            <div class="project-body">
+              <p class="project-org">INSA Lyon</p>
+              <h3 data-i18n="proj.reg">REGELEC smart energy startup</h3>
+              <p class="project-desc" data-i18n="proj.regD">Co-founded a student startup developing intelligent electrical regulation: business plan, prototype and a mobile app to optimize consumption.</p>
+              <ul class="tags"><li>Entrepreneurship</li><li>Energy</li><li>Mobile app</li></ul>
+            </div>
+          </li>
         </ul>
+
+        <p class="project-more" id="projectMoreWrap" hidden>
+          <button class="btn btn-secondary" type="button" id="projectMore" aria-expanded="false" aria-controls="projectList">
+            <span data-state="more" data-i18n="proj.more">Show all projects</span>
+            <span data-state="less" hidden data-i18n="proj.less">Show fewer projects</span>
+          </button>
+        </p>
       </div>
     </section>
 
@@ -466,12 +558,36 @@ GPS_RELAY: REQ → GPS_RELAY: ACK OK → RELAY: GPS_FWD</code></pre>
         <p class="intro reveal" data-i18n="skills.lead">What I have used on real hardware, in internships and projects.</p>
       </div>
       <div class="container-wide skills">
-        <div class="skill reveal"><h3 data-i18n="skills.g1">Radio and RF</h3><p data-i18n="skills.g1d">LoRa peer-to-peer links and airtime budgeting under EU868 rules, SX127x-class transceivers, Cadence AWR, Smith chart analysis, patch antennas, spectrum measurements.</p></div>
-        <div class="skill reveal"><h3 data-i18n="skills.g2">Embedded systems</h3><p data-i18n="skills.g2d">Bare-metal, event-driven C; Microchip WLR089U0 and STM32; UART, SPI, I²C; NMEA GNSS parsing; Microchip Studio, MPLAB ICD 5, logic-analyzer debugging.</p></div>
-        <div class="skill reveal"><h3 data-i18n="skills.g3">Electronics</h3><p data-i18n="skills.g3d">Analog and digital schematics, LTspice simulation, PCB layout, analog filters and amplifier chains, protoboard prototyping, bench testing with EMC in mind.</p></div>
-        <div class="skill reveal"><h3 data-i18n="skills.g4">Signal and software</h3><p data-i18n="skills.g4d">Real-time DSP in C, IIR filtering, image processing in C++, protocol and state-machine design.</p></div>
-        <div class="skill reveal"><h3 data-i18n="skills.g5">Automation</h3><p data-i18n="skills.g5d">Siemens TIA Portal, GRAFCET, pneumatic actuation, multi-station industrial control.</p></div>
-        <div class="skill reveal"><h3 data-i18n="skills.g6">Lab and method</h3><p data-i18n="skills.g6d">Oscilloscopes (including mixed-domain), spectrum and logic analyzers; incremental validation, instrumented logging, reproducible test scenarios.</p></div>
+        <div class="skill reveal">
+          <h3 data-i18n="skills.g1">Radio and RF</h3>
+          <p data-i18n="skills.g1d">Peer-to-peer LoRa links, airtime and duty-cycle budgeting under EU868 rules, antennas and propagation, Smith chart analysis and spectrum measurements.</p>
+          <ul class="chips"><li>LoRa</li><li>SX127x</li><li>GNSS / NMEA</li><li>EU868</li><li>Cadence AWR</li></ul>
+        </div>
+        <div class="skill reveal">
+          <h3 data-i18n="skills.g2">Embedded systems</h3>
+          <p data-i18n="skills.g2d">Bare-metal, event-driven C firmware, from board support and drivers up to the protocol and the user interface.</p>
+          <ul class="chips"><li>C</li><li>WLR089U0</li><li>STM32</li><li>UART / SPI / I²C</li><li>MPLAB X</li><li>Microchip Studio</li><li>STM32CubeIDE</li></ul>
+        </div>
+        <div class="skill reveal">
+          <h3 data-i18n="skills.g3">Electronics</h3>
+          <p data-i18n="skills.g3d">Analog and digital schematics, simulation, PCB layout, analog filters and amplifier chains, bench testing with EMC in mind.</p>
+          <ul class="chips"><li>Altium Designer</li><li>LTspice</li></ul>
+        </div>
+        <div class="skill reveal">
+          <h3 data-i18n="skills.g4">Signal and software</h3>
+          <p data-i18n="skills.g4d">Real-time DSP and IIR filtering, image processing, test automation, protocol and state-machine design.</p>
+          <ul class="chips"><li>C / C++</li><li>Python</li><li>MATLAB / Simulink</li><li>VHDL</li></ul>
+        </div>
+        <div class="skill reveal">
+          <h3 data-i18n="skills.g5">Automation</h3>
+          <p data-i18n="skills.g5d">PLC programming and sequential control for multi-station industrial lines, including pneumatic actuation.</p>
+          <ul class="chips"><li>Siemens TIA Portal</li><li>GRAFCET</li></ul>
+        </div>
+        <div class="skill reveal">
+          <h3 data-i18n="skills.g6">Lab and method</h3>
+          <p data-i18n="skills.g6d">Mixed-domain oscilloscopes, spectrum and logic analyzers; incremental validation, instrumented logging and reproducible test scenarios.</p>
+          <ul class="chips"><li>Tektronix MDO</li><li>MPLAB ICD 5</li></ul>
+        </div>
       </div>
     </section>
 
@@ -479,25 +595,53 @@ GPS_RELAY: REQ → GPS_RELAY: ACK OK → RELAY: GPS_FWD</code></pre>
     <section class="section section-grey" id="education" aria-labelledby="eduTitle">
       <div class="container section-head">
         <h2 id="eduTitle" class="headline reveal" data-i18n="edu.title">Education</h2>
-        <p class="intro reveal" data-i18n="edu.lead">From Malaysia to three French institutions, each step adding a new technical culture.</p>
+        <p class="intro reveal" data-i18n="edu.lead">From Malaysia to France, with a semester in South Korea: three countries, each adding a new technical culture.</p>
       </div>
       <div class="container">
         <ol class="edu-list reveal">
           <li>
-            <p class="edu-date" data-i18n="edu.1date">2024 – present</p>
-            <div><h3>INSA Lyon</h3><p data-i18n="edu.1d">Diplôme d'ingénieur (Master's level) in Electrical Engineering, with a focus on embedded systems, electronics and automation.</p></div>
+            <p class="edu-date" data-i18n="edu.1date">2024 – 2027 (expected)</p>
+            <div class="edu-body">
+              <h3>INSA Lyon</h3>
+              <p class="edu-meta" data-i18n="edu.1loc">Villeurbanne, France</p>
+              <p data-i18n="edu.1d">Diplôme d'ingénieur (Master's level) in Electrical Engineering, now in my fifth and final year: embedded systems, electronics and automation, with a personal focus on RF and telecommunications.</p>
+            </div>
+          </li>
+          <li class="edu-exchange">
+            <p class="edu-date" data-i18n="edu.sDate">Mar – Jun 2026</p>
+            <div class="edu-body">
+              <h3>Sogang University</h3>
+              <p class="edu-meta"><span data-i18n="edu.sLoc">Seoul, South Korea</span><span class="edu-badge" data-i18n="edu.sBadge">International exchange</span></p>
+              <p data-i18n="edu.sd">Exchange semester in the Department of Electronic Engineering, as part of my INSA Lyon degree. I studied antennas and microwave communication alongside optimization and medical ultrasound, in a new academic system and a new country.</p>
+              <p class="edu-sub" data-i18n="edu.sCw">Coursework</p>
+              <ul class="chips" lang="en">
+                <li>Antenna Engineering</li><li>Microwave Communication</li><li>Optimization Theory</li><li>Introduction to Medical Ultrasound</li>
+              </ul>
+            </div>
           </li>
           <li>
             <p class="edu-date">2022 – 2024</p>
-            <div><h3>IUT Paul Sabatier, Université Toulouse III</h3><p data-i18n="edu.2d">DUT/BUT in Electrical Engineering and Industrial Informatics (GEII): automation, microcontrollers and signal processing.</p></div>
+            <div class="edu-body">
+              <h3>IUT Paul Sabatier, Université Toulouse III</h3>
+              <p class="edu-meta" data-i18n="edu.2loc">Toulouse, France</p>
+              <p data-i18n="edu.2d">DUT/BUT in Electrical Engineering and Industrial Informatics (GEII): automation, microcontrollers and signal processing.</p>
+            </div>
           </li>
           <li>
             <p class="edu-date">2021 – 2022</p>
-            <div><h3>IUT de Tours, Université de Tours</h3><p data-i18n="edu.3d">French language and scientific foundation year to join the French higher education system.</p></div>
+            <div class="edu-body">
+              <h3>IUT de Tours, Université de Tours</h3>
+              <p class="edu-meta" data-i18n="edu.3loc">Tours, France</p>
+              <p data-i18n="edu.3d">French language and scientific foundation year to join the French higher education system.</p>
+            </div>
           </li>
           <li>
             <p class="edu-date">2016 – 2020</p>
-            <div><h3>Sekolah Menengah Sains Jeli, Malaysia</h3><p data-i18n="edu.4d">Science secondary school, with a focus on physics, mathematics and the sciences.</p></div>
+            <div class="edu-body">
+              <h3>Sekolah Menengah Sains Jeli</h3>
+              <p class="edu-meta" data-i18n="edu.4loc">Jeli, Malaysia</p>
+              <p data-i18n="edu.4d">Science secondary school, with a focus on physics, mathematics and the sciences.</p>
+            </div>
           </li>
         </ol>
       </div>
@@ -509,17 +653,31 @@ GPS_RELAY: REQ → GPS_RELAY: ACK OK → RELAY: GPS_FWD</code></pre>
         <h2 id="aboutTitle" class="headline reveal" data-i18n="about.title">About me</h2>
       </div>
       <div class="container about-text">
-        <p class="about-lead reveal" data-i18n="about.p1">I'm Azmin, an electrical engineering student from Malaysia. I have studied in France since 2021, first in Tours, then Toulouse, now Lyon. Working across different schools and technical cultures has made me detail-oriented and adaptable.</p>
+        <p class="about-lead reveal" data-i18n="about.p1">I'm Azmin, an electrical engineering student from Malaysia. I have studied in France since 2021, in Tours, Toulouse and now Lyon, with an exchange semester in Seoul along the way. Moving between schools, languages and technical cultures has made me detail-oriented and adaptable.</p>
         <p class="reveal" data-i18n="about.p2">What I enjoy most is the step from idea to working hardware: measuring before concluding, finding out why something doesn't work, fixing it, and documenting it while it's fresh. Whether it's a radio protocol, a filter board or an antenna, I like solutions that are practical and clean.</p>
         <p class="reveal" data-i18n="about.p3">Away from the bench, reading, cooking, running, drawing, guitar and travel keep me curious and balanced.</p>
       </div>
-      <ul class="container-wide hobbies" aria-label="Hobbies">
-        <li class="reveal"><img src="img/reading.jpg" alt="" loading="lazy" /><span data-i18n="hob.read">Reading</span></li>
-        <li class="reveal"><img src="img/cooking.jpg" alt="" loading="lazy" /><span data-i18n="hob.cook">Cooking Malaysian food</span></li>
-        <li class="reveal"><img src="img/jogging.jpg" alt="" loading="lazy" /><span data-i18n="hob.jog">Jogging</span></li>
-        <li class="reveal"><img src="img/digitalart.jpg" alt="" loading="lazy" /><span data-i18n="hob.art">Digital and traditional art</span></li>
-        <li class="reveal"><img src="img/guitar.jpg" alt="" loading="lazy" /><span data-i18n="hob.guitar">Acoustic guitar</span></li>
-        <li class="reveal"><img src="img/traveling.jpg" alt="" loading="lazy" /><span data-i18n="hob.travel">Traveling in Europe and Asia</span></li>
+      <div class="container">
+        <dl class="spoken reveal">
+          <dt data-i18n="about.langT">Languages I work in</dt>
+          <dd>
+            <ul>
+              <li data-i18n="about.l1"><strong>Malay</strong> native</li>
+              <li data-i18n="about.l2"><strong>English</strong> fluent</li>
+              <li data-i18n="about.l3"><strong>French</strong> fluent</li>
+              <li data-i18n="about.l4"><strong>Indonesian</strong> fluent</li>
+              <li data-i18n="about.l5"><strong>Spanish</strong> beginner</li>
+            </ul>
+          </dd>
+        </dl>
+      </div>
+      <ul class="container-wide hobbies" aria-label="Hobbies" data-i18n-label="aria.hobbies">
+        <li class="reveal"><img src="img/reading.jpg" alt="" width="640" height="640" loading="lazy" decoding="async" /><span data-i18n="hob.read">Reading</span></li>
+        <li class="reveal"><img src="img/cooking.jpg" alt="" width="640" height="640" loading="lazy" decoding="async" /><span data-i18n="hob.cook">Cooking Malaysian food</span></li>
+        <li class="reveal"><img src="img/jogging.jpg" alt="" width="640" height="640" loading="lazy" decoding="async" /><span data-i18n="hob.jog">Jogging</span></li>
+        <li class="reveal"><img src="img/digitalart.jpg" alt="" width="640" height="640" loading="lazy" decoding="async" /><span data-i18n="hob.art">Digital and traditional art</span></li>
+        <li class="reveal"><img src="img/guitar.jpg" alt="" width="640" height="640" loading="lazy" decoding="async" /><span data-i18n="hob.guitar">Acoustic guitar</span></li>
+        <li class="reveal"><img src="img/traveling.jpg" alt="" width="640" height="640" loading="lazy" decoding="async" /><span data-i18n="hob.travel">Traveling in Europe and Asia</span></li>
       </ul>
     </section>
 
@@ -527,10 +685,11 @@ GPS_RELAY: REQ → GPS_RELAY: ACK OK → RELAY: GPS_FWD</code></pre>
     <section class="section section-grey" id="contact" aria-labelledby="contactTitle">
       <div class="container section-head">
         <h2 id="contactTitle" class="headline reveal" data-i18n="contact.title">Let's talk</h2>
-        <p class="intro reveal" data-i18n="contact.lead">A question about a project, or an opportunity in embedded systems or RF? Write to me directly or use the form.</p>
+        <p class="intro reveal" data-i18n="contact.lead">I'm looking for a 6-month final-year internship (PFE) from February 2027 in RF, telecommunications or embedded systems, in France or elsewhere in Europe. Write to me directly or use the form.</p>
       </div>
       <div class="container-wide contact-grid">
         <dl class="contact-card reveal">
+          <div><dt data-i18n="contact.avT">Availability</dt><dd><span class="status-dot" aria-hidden="true"></span><span data-i18n="contact.avD">6-month internship from February 2027</span></dd></div>
           <div><dt>Email</dt><dd><a href="mailto:muhammad-azmin.muhamad-yusmizan@insa-lyon.fr">muhammad-azmin.muhamad-yusmizan@insa-lyon.fr</a></dd></div>
           <div><dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/azmin-yusmizan-5a4367266/" target="_blank" rel="noopener">Azmin Yusmizan</a></dd></div>
           <div><dt>GitHub</dt><dd><a href="https://github.com/m-azmin" target="_blank" rel="noopener">github.com/m-azmin</a></dd></div>
@@ -573,6 +732,8 @@ GPS_RELAY: REQ → GPS_RELAY: ACK OK → RELAY: GPS_FWD</code></pre>
     <div class="container-wide footer-inner">
       <p>© <span class="year">2026</span> Muhammad Azmin Muhamad Yusmizan</p>
       <p class="footer-links">
+        <a href="https://www.linkedin.com/in/azmin-yusmizan-5a4367266/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/m-azmin" target="_blank" rel="noopener">GitHub</a>
         <a href="privacy.html" data-i18n="footer.privacy">Privacy policy</a>
         <a href="#top" data-i18n="footer.top">Back to top</a>
       </p>
