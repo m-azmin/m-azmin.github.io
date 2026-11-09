@@ -1,4 +1,4 @@
-/* Azmin Yusmizan portfolio: shared script for index.html and privacy.html (v3) */
+/* Azmin Yusmizan portfolio: shared script for index.html and privacy.html (v4) */
 (function () {
   "use strict";
 
@@ -17,6 +17,12 @@
   var i18nEls = Array.prototype.slice.call(document.querySelectorAll("[data-i18n]"));
   var originals = i18nEls.map(function (el) {
     return el.innerHTML;
+  });
+
+  // Accessible names (aria-label) are translated through data-i18n-label.
+  var labelEls = Array.prototype.slice.call(document.querySelectorAll("[data-i18n-label]"));
+  var originalLabels = labelEls.map(function (el) {
+    return el.getAttribute("aria-label");
   });
 
   function readStored() {
@@ -44,6 +50,10 @@
       var key = el.getAttribute("data-i18n");
       var value = dict ? dict[key] : null;
       el.innerHTML = typeof value === "string" ? value : originals[i];
+    });
+    labelEls.forEach(function (el, i) {
+      var value = dict ? dict[el.getAttribute("data-i18n-label")] : null;
+      el.setAttribute("aria-label", typeof value === "string" ? value : originalLabels[i]);
     });
   }
 
@@ -117,6 +127,22 @@
       setLanguage(btn.getAttribute("data-lang"));
       closeLangMenu();
       langBtn.focus();
+    });
+
+    // Arrow keys, Home and End move between the languages.
+    langMenu.addEventListener("keydown", function (e) {
+      var items = Array.prototype.slice.call(langMenu.querySelectorAll("button[data-lang]"));
+      var i = items.indexOf(document.activeElement);
+      var next = -1;
+      if (e.key === "ArrowDown") next = (i + 1) % items.length;
+      else if (e.key === "ArrowUp") next = (i - 1 + items.length) % items.length;
+      else if (e.key === "Home") next = 0;
+      else if (e.key === "End") next = items.length - 1;
+      else if (e.key === "Tab") closeLangMenu();
+      if (next !== -1) {
+        e.preventDefault();
+        items[next].focus();
+      }
     });
 
     document.addEventListener("click", function (e) {
@@ -218,6 +244,44 @@
     return (el.getAttribute("data-category") || "").split(/\s+/).filter(Boolean);
   }
 
+  // On desktop and tablet the unfiltered grid opens on a first selection;
+  // "Show all projects" reveals the rest. Choosing a field always lists
+  // every match. On phones the grid is a swipeable gallery and stays whole.
+  var projectList = document.getElementById("projectList");
+  var moreWrap = document.getElementById("projectMoreWrap");
+  var moreBtn = document.getElementById("projectMore");
+  var VISIBLE_PROJECTS = 7;
+  var expanded = false;
+  var activeFilter = "all";
+
+  function syncCollapse() {
+    if (!projectList || !moreWrap || !moreBtn) return;
+    var collapsible = activeFilter === "all" && projects.length > VISIBLE_PROJECTS;
+    projectList.classList.toggle("is-collapsed", collapsible && !expanded);
+    moreWrap.hidden = !collapsible;
+    moreBtn.setAttribute("aria-expanded", String(expanded));
+    moreBtn.querySelectorAll("[data-state]").forEach(function (el) {
+      el.hidden = el.getAttribute("data-state") !== (expanded ? "less" : "more");
+    });
+  }
+
+  if (moreBtn) {
+    moreBtn.addEventListener("click", function () {
+      expanded = !expanded;
+      syncCollapse();
+      if (expanded) {
+        var firstNew = projects[VISIBLE_PROJECTS];
+        var link = firstNew && firstNew.querySelector("a, h3");
+        if (link && link.tagName === "H3") link.setAttribute("tabindex", "-1");
+        if (link) link.focus({ preventScroll: true });
+      } else {
+        document.getElementById("projects").scrollIntoView();
+        moreBtn.focus({ preventScroll: true });
+      }
+    });
+  }
+  syncCollapse();
+
   filterBtns.forEach(function (btn) {
     var filter = btn.getAttribute("data-filter");
     var count = filter === "all"
@@ -235,6 +299,8 @@
       projects.forEach(function (p) {
         p.hidden = !(filter === "all" || categoriesOf(p).indexOf(filter) !== -1);
       });
+      activeFilter = filter;
+      syncCollapse();
     });
   });
 
